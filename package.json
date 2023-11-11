@@ -1,0 +1,42 @@
+{
+	"name": "nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"lint:js": "eslint",
+		"lint:prettier": "prettier --check --ignore-path .prettierignore .",
+		"lint": "yarn lint:js && yarn lint:prettier",
+		"lintfix": "prettier --write --list-different --ignore-path .prettierignore . && yarn lint:js --fix",
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@iconify/json": "^2.2.137",
+		"@nuxt/devtools": "latest",
+		"@nuxt/types": "^2.17.2",
+		"@nuxtjs/eslint-config-typescript": "^12.1.0",
+		"@nuxtseo/module": "^2.0.0-beta.39",
+		"@typescript-eslint/parser": "^6.9.0",
+		"eslint": "^8.52.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.1",
+		"eslint-plugin-vue": "^9.18.0",
+		"nuxt": "^3.8.0",
+		"prettier": "^3.0.3",
+		"prettier-plugin-tailwindcss": "^0.5.6",
+		"typescript": "^5.2.2",
+		"vite-svg-loader": "^4.0.0",
+		"vue": "^3.3.7",
+		"vue-eslint-parser": "^9.3.2",
+		"vue-router": "^4.2.5"
+	},
+	"dependencies": {
+		"@nuxt/content": "^2.8.5",
+		"@nuxt/image": "^1.0.0",
+		"@nuxt/ui": "^2.9.0",
+		"zod": "^3.22.4"
+	}
+}
