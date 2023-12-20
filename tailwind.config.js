@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
 	plugins: [],
@@ -15,14 +14,13 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'sans': ['"Inter"', ...defaultTheme.fontFamily.sans],
-				'comfort': ['"Comfortaa"', ...defaultTheme.fontFamily.sans]
-				},
+				sans: ['"Inter"', "sans-serif", "system-ui"],
+				teko: ['"Teko"', "sans-serif", "system-ui"]
+			},
 			keyframes: {
-				spinGradient: {
-					"0%": { "background-position": "0% 50%" },
-					"50%": { "background-position": "100% 50%" },
-					"100%": { "background-position": "0% 50%" }
+				spin: {
+					"0%": { transform: "rotate(0deg)" },
+					"100%": { transform: "rotate(360deg)" }
 				}
 			}
 		}

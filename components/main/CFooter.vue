@@ -1,5 +1,5 @@
 <template>
-	<footer>
+	<footer class="backdrop-blur">
 		<div class="mx-auto bg-neutral-900 border-t border-neutral-800">
 			<div
 				class="md:flex justify-center content-center md:gap-24 gap-0 py-7 px-2"
@@ -17,7 +17,7 @@
 				<div
 					class="md:my-0 md:px-0 my-4 px-4 md:w-80 w-full md:text-left text-center"
 				>
-					<h6 class="md:text-3xl text-4xl font-comfort font-bold my-2">
+					<h6 class="md:text-3xl text-4xl font-teko font-bold my-2">
 						Find me on Social Media
 					</h6>
 					<div class="mb-4">
@@ -37,7 +37,7 @@
 						/></UButton>
 						<UButton
 							aria-hidden="true"
-							to="https://www.linkedin.com/in/cunisaraanimation"
+							to="https://www.linkedin.com/in/davide-cuni"
 							target="_blank"
 							size="sm"
 							color="white"
@@ -60,7 +60,7 @@
 				<div
 					class="md:my-0 md:px-0 my-4 px-4 md:w-80 w-full md:text-left text-center"
 				>
-					<h6 class="md:text-3xl text-4xl font-comfort font-bold my-2">
+					<h6 class="md:text-3xl text-4xl font-teko font-bold my-2">
 						Connect with me
 					</h6>
 					<div class="mb-4">

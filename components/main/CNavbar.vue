@@ -1,14 +1,16 @@
 <template>
-	<header class="sticky top-0 z-50 w-full border-b border-neutral-800 bg-neutral-900/75 backdrop-blur">
+	<header
+		class="sticky top-0 z-50 w-full border-b border-neutral-800 bg-neutral-900/75 backdrop-blur select-none"
+	>
 		<!-- Desktop Menu -->
 		<nav
-			class="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8"
+			class="mx-auto flex max-w-7xl items-center justify-between p-1.5 lg:px-8"
 			aria-label="Global"
 		>
 			<div class="flex lg:flex-1">
-				<SiteLink to="/" class="p-1.5 h-8 w-auto">
-					<span class="sr-only">Davide Cuni</span>
-					<span>Logo</span>
+				<SiteLink to="/" class="w-auto">
+					<span class="sr-only">Davide Cuni Logo</span>
+					<CLogo class="h-12 w-12" />
 				</SiteLink>
 			</div>
 			<div class="flex lg:hidden">
@@ -27,30 +29,36 @@
 				</button>
 			</div>
 			<div
-				class="text-white tracking-wider text-base font-semibold font-comfort leading-6 hidden lg:flex lg:gap-x-12"
+				class="text-white tracking-wider text-2xl font-semibold font-teko leading-6 hidden lg:flex lg:gap-x-12"
 			>
 				<SiteLink to="/" class="group transition duration-200">
 					Home
 					<span
-						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-blue-500"
+						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
 					></span>
 				</SiteLink>
 				<SiteLink to="/projects" class="group transition duration-200">
 					Projects
 					<span
-						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-blue-500"
+						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
+					></span>
+				</SiteLink>
+				<SiteLink to="/blog" class="group transition duration-200">
+					Blog
+					<span
+						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
 					></span>
 				</SiteLink>
 				<SiteLink to="/about" class="group transition duration-200">
 					About
 					<span
-						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-blue-500"
+						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
 					></span>
 				</SiteLink>
 				<SiteLink to="/contact" class="group transition duration-200">
 					Contact
 					<span
-						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-blue-500"
+						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
 					></span>
 				</SiteLink>
 			</div>
@@ -60,9 +68,9 @@
 			<UCard class="flex flex-col flex-1">
 				<template #header>
 					<div class="flex items-center justify-between">
-						<SiteLink to="/" class="h-8 w-auto">
-							<span class="sr-only">Davide Cuni</span>
-							<span>Logo</span>
+						<SiteLink to="/" class="w-auto">
+							<span class="sr-only">Davide Cuni Logo</span>
+							<CLogo class="w-12 h-12" />
 						</SiteLink>
 						<button
 							type="button"
@@ -75,28 +83,36 @@
 					</div>
 				</template>
 				<div class="mt-6 flow-root">
-					<div class="py-6 text-base font-semibold font-comfort text-white text-center">
+					<div
+						class="py-6 text-2xl font-semibold font-teko text-white text-center"
+					>
 						<SiteLink
 							to="/"
-							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 text-xl hover:bg-neutral-800"
+							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
 							@click="mobileMenuOpen = false"
 							>Home</SiteLink
 						>
 						<SiteLink
 							to="/projects"
-							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 text-xl hover:bg-neutral-800"
+							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
 							@click="mobileMenuOpen = false"
 							>Projects</SiteLink
 						>
 						<SiteLink
+							to="/blog"
+							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
+							@click="mobileMenuOpen = false"
+							>Blog</SiteLink
+						>
+						<SiteLink
 							to="/about"
-							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 text-xl hover:bg-neutral-800"
+							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
 							@click="mobileMenuOpen = false"
 							>About</SiteLink
 						>
 						<SiteLink
 							to="/contact"
-							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 text-xl hover:bg-neutral-800"
+							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
 							@click="mobileMenuOpen = false"
 							>Contact</SiteLink
 						>
@@ -108,6 +124,7 @@
 </template>
 
 <script setup lang="ts">
+	import CLogo from "~/assets/svg/logo_web_white.svg?component";
 	import { ref } from "vue";
 	const mobileMenuOpen = ref(false);
 </script>

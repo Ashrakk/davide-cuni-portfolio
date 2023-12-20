@@ -15,11 +15,9 @@ export default defineNuxtConfig({
 	site: {
 		url: "http://localhost:3000/",
 		name: "Davide Cuni Portfolio",
-		description:
-			"Portfolio website of Davide Cuni - Full Stack Developer",
+		description: "Portfolio website of Davide Cuni - Full Stack Developer",
 		defaultLocale: "en",
-		identity: { type: "Person" },
-		
+		identity: { type: "Person" }
 	},
 
 	// SEO Sitemap
@@ -46,7 +44,7 @@ export default defineNuxtConfig({
 		"@nuxt/ui",
 		"@nuxt/image",
 		"@nuxt/content",
-		"@nuxtseo/module",
+		"@nuxtseo/module"
 		/*
 		[
 			"nuxt-mail",
@@ -89,7 +87,7 @@ export default defineNuxtConfig({
 		prerender: {
 			crawlLinks: true,
 			routes: ["/"]
-		},
+		}
 		//preset: "azure"
 	},
 

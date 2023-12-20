@@ -12,11 +12,7 @@ module.exports = {
 		extraFileExtensions: [".vue"]
 	},
 	plugins: ["vue", "@typescript-eslint", "prettier"],
-	ignorePatterns: [
-		".output/*",
-		".nuxt/*",
-		"dist/*"
-	],
+	ignorePatterns: [".output/*", ".nuxt/*", "dist/*"],
 	env: {
 		node: true,
 		browser: true
