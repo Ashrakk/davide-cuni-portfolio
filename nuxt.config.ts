@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+import { prefix } from "#tailwind-config";
+import { tokenToString } from "typescript";
 import svgLoader from "vite-svg-loader";
 
 export default defineNuxtConfig({
@@ -76,7 +78,15 @@ export default defineNuxtConfig({
 		plugins: [
 			svgLoader({
 				svgoConfig: {
-					multipass: true
+					multipass: true,
+					plugins: [ 
+						{
+							name: "cleanupIds",
+							params: {
+								minify: false
+							}
+						}
+					]
 				}
 			})
 		],

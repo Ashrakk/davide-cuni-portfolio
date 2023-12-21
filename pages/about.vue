@@ -48,7 +48,7 @@
 							>
 								<div class="p-2 z-10">
 									<Logo_C class="h-20 w-20 p-2"></Logo_C>
-									<div class="font-teko text-2xl uppercase text-center">C</div>
+									<div class="font-teko text-2xl uppercase text-center">C++</div>
 								</div>
 							</div>
 							<div
@@ -116,15 +116,70 @@
 					</div>
 				</div>
 			</div>
+			<div class="flex flex-col-reverse lg:flex-row-reverse gap-8 mt-8 md:mt-24">
+				<div class="flex-1 md:p-0 p-2">
+					<h3 class="font-teko text-4xl text-center custom_text_glow">
+						Frameworks and Tools
+					</h3>
+					<div class="mt-4">
+						<div class="flex flex-row justify-center my-4">
+							<div
+								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
+							>
+								<div class="p-2 z-10">
+									<Logo_Nuxt class="h-20 w-20"></Logo_Nuxt>
+									<div class="font-teko text-2xl uppercase text-center">
+										Nuxt 3
+									</div>
+								</div>
+							</div>
+							<div
+								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
+							>
+								<div class="p-2 z-10">
+									<Logo_WP class="h-20 w-20"></Logo_WP>
+									<div class="font-teko text-2xl uppercase text-center">
+										Wordpress
+									</div>
+								</div>
+							</div>
+							<div
+								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
+							>
+								<div class="p-2 z-10">
+									<Logo_JM class="h-20 w-20"></Logo_JM>
+									<div class="font-teko text-2xl uppercase text-center">
+										Joomla
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex-1 md:p-0 p-2">
+					<div class="text-xl md:my-4 my-8">
+						Post high school, my curiosity led me to delve into Digital Marketing Management at JobsAcademy. 
+						This post-diploma school equipped me with practical techniques and insights derived from real-world projects, 
+						enhancing my ability to design captivating websites and boosting productivity in collaborative settings.
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
 	import Logo_CSharp from "~/assets/svg/programming/Logo_C_sharp.svg?component";
-	import Logo_C from "~/assets/svg/programming/CLang.svg?component";
+	import Logo_C from "~/assets/svg/programming/cplus.svg?component";
 	import Logo_TS from "~/assets/svg/programming/ts-logo-128.svg?component";
 	import Logo_PHP from "~/assets/svg/programming/php-logo.svg?component";
 	import Logo_CSS from "~/assets/svg/programming/css_logo.svg?component";
 	import Logo_SQL from "~/assets/svg/programming/sql_logo.svg?component";
+
+	import Logo_Nuxt from "~/assets/svg/frameworks/icon-green.svg?component";
+	import Logo_PS from "~/assets/svg/frameworks/Adobe_Photoshop_CC_icon.svg?component";
+	import Logo_AI from "~/assets/svg/frameworks/Adobe_Illustrator_CC_icon.svg?component";
+	import Logo_WP from "~/assets/svg/frameworks/wp-logo-white.svg?component";
+	import Logo_JM from "~/assets/svg/frameworks/joomla.svg?component";
+	import Logo_Godot from "~/assets/svg/frameworks/godot_color.svg?component";
 </script>

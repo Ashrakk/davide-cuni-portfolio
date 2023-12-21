@@ -26,6 +26,6 @@
 </template>
 
 <script lang="ts" setup>
-	import LogoTest from "~/assets/svg/programming/Logo_C_sharp.svg?component";
+	import LogoTest from "~/assets/svg/frameworks/wp-logo-white.svg?component";
 	import LogoCompare from "~/assets/svg/programming/CLang.svg?component";
 </script>
