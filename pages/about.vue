@@ -36,7 +36,9 @@
 			>
 				Skills
 			</h2>
-			<div class="flex flex-col-reverse lg:flex-row gap-8">
+		</div>
+		<div class="bg-[#202020]">
+			<div class="flex flex-col-reverse lg:flex-row gap-8 container max-w-screen-xl mx-auto select-none">
 				<div class="flex-1 md:p-0 p-2">
 					<h3 class="font-teko text-4xl text-center custom_text_glow">
 						Programming Languages
@@ -47,7 +49,9 @@
 								class="custom_logo_box before:animate-[spin_3s_linear_infinite] h-36 w-36 mx-2"
 							>
 								<div class="p-2 z-10">
-									<Logo_C class="h-20 w-20 p-2"></Logo_C>
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_C></Logo_C>
+									</div>
 									<div class="font-teko text-2xl uppercase text-center">C++</div>
 								</div>
 							</div>
@@ -55,7 +59,9 @@
 								class="custom_logo_box before:animate-[spin_3.4s_linear_infinite] h-36 w-36 mx-2"
 							>
 								<div class="p-2 z-10">
-									<Logo_CSharp class="h-20 w-20 p-2"></Logo_CSharp>
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_CSharp></Logo_CSharp>
+									</div>
 									<div class="font-teko text-2xl uppercase text-center">
 										CSharp
 									</div>
@@ -65,19 +71,23 @@
 								class="custom_logo_box before:animate-[spin_3.8s_linear_infinite] h-36 w-36 mx-2"
 							>
 								<div class="p-2 z-10">
-									<Logo_SQL class="h-20 w-20 p-1"></Logo_SQL>
+									<div class="h-20 w-20 p-1 flex justify-center">
+										<Logo_SQL></Logo_SQL>
+									</div>
 									<div class="font-teko text-2xl uppercase text-center">
 										SQL
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="flex flex-row justify-center my-4">
+						<div class="flex flex-row justify-center my-4 pl-40">
 							<div
 								class="custom_logo_box before:animate-[spin_3.2s_linear_infinite] h-36 w-36 mx-2"
 							>
 								<div class="p-2 z-10">
-									<Logo_TS class="h-20 w-20 p-2"></Logo_TS>
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_TS></Logo_TS>
+									</div>
 									<div class="font-teko text-2xl uppercase text-center">
 										Typescript
 									</div>
@@ -87,7 +97,9 @@
 								class="custom_logo_box before:animate-[spin_3.6s_linear_infinite] h-36 w-36 mx-2"
 							>
 								<div class="p-2 z-10">
-									<Logo_CSS class="h-20 w-20 p-2"></Logo_CSS>
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_CSS></Logo_CSS>
+									</div>
 									<div class="font-teko text-2xl uppercase text-center">
 										CSS
 									</div>
@@ -97,7 +109,9 @@
 								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
 							>
 								<div class="p-2 z-10">
-									<Logo_PHP class="h-20 w-20 fill-white"></Logo_PHP>
+									<div class="h-20 w-20 flex justify-center">
+										<Logo_PHP class="fill-white"></Logo_PHP>
+									</div>
 									<div class="font-teko text-2xl uppercase text-center">
 										PHP
 									</div>
@@ -106,8 +120,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex-1 md:p-0 p-2">
-					<div class="text-xl md:my-4 my-8">
+				<div class="flex flex-1 md:p-0 p-2">
+					<div class="flex text-xl md:my-4 my-8 items-center">
 						I embarked on my programming journey as a youngster, exploring a
 						myriad of languages before immersing myself in web development over
 						the past four years. My current objective is a perpetual quest for
@@ -116,7 +130,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex flex-col-reverse lg:flex-row-reverse gap-8 mt-8 md:mt-24">
+		</div>
+		<div class="bg-[#333]">
+			<div class="flex flex-col-reverse lg:flex-row gap-8 container max-w-screen-xl mx-auto select-none">
 				<div class="flex-1 md:p-0 p-2">
 					<h3 class="font-teko text-4xl text-center custom_text_glow">
 						Frameworks and Tools
@@ -127,7 +143,9 @@
 								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
 							>
 								<div class="p-2 z-10">
-									<Logo_Nuxt class="h-20 w-20"></Logo_Nuxt>
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_Nuxt></Logo_Nuxt>
+									</div>
 									<div class="font-teko text-2xl uppercase text-center">
 										Nuxt 3
 									</div>
@@ -137,7 +155,9 @@
 								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
 							>
 								<div class="p-2 z-10">
-									<Logo_WP class="h-20 w-20"></Logo_WP>
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_WP></Logo_WP>
+									</div>
 									<div class="font-teko text-2xl uppercase text-center">
 										Wordpress
 									</div>
@@ -147,17 +167,57 @@
 								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
 							>
 								<div class="p-2 z-10">
-									<Logo_JM class="h-20 w-20"></Logo_JM>
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_JM></Logo_JM>
+									</div>
 									<div class="font-teko text-2xl uppercase text-center">
 										Joomla
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="flex flex-row justify-center my-4 pr-40">
+							<div
+								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
+							>
+								<div class="p-2 z-10">
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_Godot></Logo_Godot>
+									</div>
+									<div class="font-teko text-2xl uppercase text-center">
+										Godot
+									</div>
+								</div>
+							</div>
+							<div
+								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
+							>
+								<div class="p-2 z-10">
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_PS></Logo_PS>
+									</div>
+									<div class="font-teko text-2xl uppercase text-center">
+										Photoshop
+									</div>
+								</div>
+							</div>
+							<div
+								class="custom_logo_box before:animate-[spin_4s_linear_infinite] h-36 w-36 mx-2"
+							>
+								<div class="p-2 z-10">
+									<div class="h-20 w-20 p-2 flex justify-center">
+										<Logo_AI></Logo_AI>
+									</div>
+									<div class="font-teko text-2xl uppercase text-center">
+										Illustrator
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="flex-1 md:p-0 p-2">
-					<div class="text-xl md:my-4 my-8">
+				<div class="flex-1 md:p-0 p-2 flex">
+					<div class="text-xl md:my-4 my-8 flex items-center">
 						Post high school, my curiosity led me to delve into Digital Marketing Management at JobsAcademy. 
 						This post-diploma school equipped me with practical techniques and insights derived from real-world projects, 
 						enhancing my ability to design captivating websites and boosting productivity in collaborative settings.
@@ -175,11 +235,11 @@
 	import Logo_PHP from "~/assets/svg/programming/php-logo.svg?component";
 	import Logo_CSS from "~/assets/svg/programming/css_logo.svg?component";
 	import Logo_SQL from "~/assets/svg/programming/sql_logo.svg?component";
-
+	
 	import Logo_Nuxt from "~/assets/svg/frameworks/icon-green.svg?component";
-	import Logo_PS from "~/assets/svg/frameworks/Adobe_Photoshop_CC_icon.svg?component";
-	import Logo_AI from "~/assets/svg/frameworks/Adobe_Illustrator_CC_icon.svg?component";
+	import Logo_PS from "~/assets/svg/frameworks/ps.svg?component";
+	import Logo_AI from "~/assets/svg/frameworks/ai.svg?component";
 	import Logo_WP from "~/assets/svg/frameworks/wp-logo-white.svg?component";
 	import Logo_JM from "~/assets/svg/frameworks/joomla.svg?component";
-	import Logo_Godot from "~/assets/svg/frameworks/godot_color.svg?component";
+	import Logo_Godot from "~/assets/svg/frameworks/godot.svg?component";
 </script>
