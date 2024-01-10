@@ -23,6 +23,10 @@
 			</div>
 		</div>
 	</div>
+	<div class="mx-auto text-center">
+		<UButton class="my-4">Call to Action</UButton>
+	</div>
+
 </template>
 
 <script lang="ts" setup>

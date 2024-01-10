@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="sticky top-0 z-50 w-full border-b border-neutral-800 bg-neutral-900/75 backdrop-blur select-none"
+		class="sticky top-0 z-50 w-full border-b border-neutral-800 bg-neutral-900/75 backdrop-blur "
 	>
 		<!-- Desktop Menu -->
 		<nav
@@ -10,7 +10,7 @@
 			<div class="flex lg:flex-1">
 				<SiteLink to="/" class="w-auto">
 					<span class="sr-only">Davide Cuni Logo</span>
-					<CLogo class="h-12 w-12" />
+					<Logo_Firm class="h-12 w-12" />
 				</SiteLink>
 			</div>
 			<div class="flex lg:hidden">
@@ -70,7 +70,7 @@
 					<div class="flex items-center justify-between">
 						<SiteLink to="/" class="w-auto">
 							<span class="sr-only">Davide Cuni Logo</span>
-							<CLogo class="w-12 h-12" />
+							<Logo_Firm class="w-12 h-12" />
 						</SiteLink>
 						<button
 							type="button"
@@ -124,7 +124,7 @@
 </template>
 
 <script setup lang="ts">
-	import CLogo from "~/assets/svg/logo_web_white.svg?component";
+	import Logo_Firm from "~/assets/svg/logo_web_white.svg?component";
 	import { ref } from "vue";
 	const mobileMenuOpen = ref(false);
 </script>
