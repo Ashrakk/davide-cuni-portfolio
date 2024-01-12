@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import { prefix } from "#tailwind-config";
-import { tokenToString } from "typescript";
 import svgLoader from "vite-svg-loader";
 
 export default defineNuxtConfig({
@@ -46,8 +44,7 @@ export default defineNuxtConfig({
 		"@nuxt/ui",
 		"@nuxt/image",
 		"@nuxt/content",
-		"@nuxtseo/module"
-		/*
+		"@nuxtseo/module",
 		[
 			"nuxt-mail",
 			{
@@ -55,16 +52,15 @@ export default defineNuxtConfig({
 					to: "davidevertigocuni@gmail.com"
 				},
 				smtp: {
-					host: "saracuni.typotek.space",
+					host: "davidecuni.typotek.space",
 					port: 465,
 					auth: {
-						user: 'info@saracuni.typotek.space',
+						user: 'info@davidecuni.typotek.space',
 						pass: process.env.SMTP_PASSWORD,
 					}
 				}
 			}
 		]
-		*/
 	],
 
 	components: [
@@ -90,7 +86,6 @@ export default defineNuxtConfig({
 				}
 			})
 		],
-		optimizeDeps: {}
 	},
 
 	nitro: {

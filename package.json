@@ -38,6 +38,7 @@
 		"@nuxt/content": "^2.8.5",
 		"@nuxt/image": "^1.0.0",
 		"@nuxt/ui": "^2.9.0",
+		"nuxt-mail": "^4.0.2",
 		"zod": "^3.22.4"
 	}
 }

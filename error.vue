@@ -18,12 +18,12 @@
 				</template>
 				<template v-else>
 					<div
-						class="font-narrow text-center align-middle leading-[2] text-white md:text-2xl text-2xl"
+						class="font-narrow text-center align-middle leading-[2] text-white md:text-4xl text-3xl"
 					>
 						Ooops.. it looks like something broke
 					</div>
 					<div
-						class="font-narrow text-center align-middle text-white md:text-8xl text-4xl"
+						class="font-narrow text-center align-middle text-white md:text-2xl text-2xl mt-6"
 					>
 						{{ error?.message }}
 					</div>

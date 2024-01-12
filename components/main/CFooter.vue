@@ -7,8 +7,9 @@
 				<div class="md:my-0 md:px-0 my-4 px-4 md:w-80 w-full">
 					<NuxtPicture
 						class="mx-auto justify-center"
-						sizes="300px 300px"
+						sizes="300px"
 						src="/profilepic.jpg"
+						format="webp"
 						:img-attrs="{
 							class: 'rounded-full object-cover h-[300px] w-[300px] mx-auto'
 						}"
@@ -27,34 +28,24 @@
 					<div class="flex flex-row md:justify-normal justify-center gap-6">
 						<UButton
 							aria-hidden="true"
-							to="https://vimeo.com/user26047791"
-							target="_blank"
-							size="sm"
-							color="white"
-							class="text-center bg-neutral-900 hover:bg-neutral-600 transition duration-300 h-14 w-14"
-							variant="outline"
-							><UIcon name="i-ri-vimeo-fill" class="h-10 w-10"
-						/></UButton>
-						<UButton
-							aria-hidden="true"
 							to="https://www.linkedin.com/in/davide-cuni"
 							target="_blank"
 							size="sm"
 							color="white"
 							class="text-center bg-neutral-900 hover:bg-neutral-600 transition duration-300 h-14 w-14"
 							variant="outline"
-							><UIcon name="i-ri-linkedin-fill" class="h-10 w-10"
-						/></UButton>
+							><UIcon name="i-ri-linkedin-fill" class="h-10 w-10"/>
+						</UButton>
 						<UButton
 							aria-hidden="true"
-							to="https://www.instagram.com/saravertigocuni"
+							to="https://t.me/Ashra_k"
 							target="_blank"
 							size="sm"
 							color="white"
 							class="text-center bg-neutral-900 hover:bg-neutral-600 transition duration-300 h-14 w-14"
 							variant="outline"
-							><UIcon name="i-ri-instagram-line" class="h-10 w-10"
-						/></UButton>
+							><UIcon name="i-mdi-telegram" class="h-12 w-10"/>
+						</UButton>
 					</div>
 				</div>
 				<div
