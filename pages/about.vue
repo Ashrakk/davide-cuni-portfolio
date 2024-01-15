@@ -1,8 +1,9 @@
 <template>
 	<div>
+		<CFloatingContact></CFloatingContact>
 		<div class="container max-w-screen-xl mx-auto mt-8 mb-24">
 			<h1 class="text-9xl font-teko text-center custom_text_glow">About</h1>
-			<div class="flex flex-col mt-4 p-2
+			<div class="flex flex-col mt-4 p-4
 						md:flex-row md:mt-20 md:p-0">
 				<div class="flex flex-col flex-1">
 					<NuxtPicture
@@ -12,7 +13,7 @@
 						:img-attrs="{ class: 'rounded-[30px]' }"
 					></NuxtPicture>
 				</div>
-				<div class="flex-1">
+				<div class="flex-1 mt-8 md:mt-0">
 					<div class="text-2xl my-4">
 						Hello! I’m <span class="text-amber-500">Davide</span>
 						<span class="text-xl">
@@ -27,21 +28,22 @@
 						I find joy in maintaining my fitness through hiking and cooking delicious dishes inspired by my Italian roots.
 						</p>
 					</div>
-					<div class="text-center my-8">
-						<UButton class="mx-auto">Skip at my skills</UButton>
+					<div class="text-center my-12 md:my-8">
+						<UButton to="#skills" class="mx-auto">Skip at my skills</UButton>
 					</div>
 				</div>
 			</div>
-			<div class="border border-neutral-800 mt-32"></div>
-			<h2 class="mt-24 mb-12 font-teko text-8xl text-center custom_text_glow">
+			<div class="border border-neutral-800 hidden md:block md:mt-32"></div>
+			<h2 id="skills" class="mt-8 mb-4 md:mt-24 md:mb-12 font-teko text-8xl text-center custom_text_glow scroll-mt-16">
 				Tech Skills
 			</h2>
-			<div class="flex flex-col lg:flex-row p-2 xl:p-0">
+			<div class="flex flex-col-reverse lg:flex-row p-4 lg:p-0">
 				<div class="flex-1">
-					<div class="flex flex-row justify-center my-4">
+					<div class="flex flex-row justify-center my-0 md:my-4">
 						<div
-							class="custom_bubble before:animate-[spin_3s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block 
+								before:animate-[spin_3s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -51,8 +53,8 @@
 							</div>
 						</div>
 						<div
-							class="custom_bubble before:animate-[spin_3.4s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_3.4s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -64,8 +66,8 @@
 							</div>
 						</div>
 						<div
-							class="custom_bubble before:animate-[spin_3.8s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_3.8s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-1 flex justify-center items-center">
@@ -79,8 +81,8 @@
 					</div>
 					<div class="flex flex-row justify-center my-4 xl:pr-44">
 						<div
-							class="custom_bubble before:animate-[spin_3.2s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_3.2s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -92,8 +94,8 @@
 							</div>
 						</div>
 						<div
-							class="custom_bubble before:animate-[spin_3.6s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_3.6s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -105,8 +107,8 @@
 							</div>
 						</div>
 						<div
-							class="custom_bubble before:animate-[spin_4s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 flex justify-center items-center">
@@ -120,9 +122,9 @@
 					</div>
 				</div>
 				<div class="flex flex-1 max-w-3xl mx-auto">
-					<div class="flex items-center md:my-4 my-8 mx-auto">
+					<div class="flex items-center my-4 mx-auto">
 						<div class="text-xl">
-							<h3 class="font-teko text-4xl text-center custom_text_glow my-8">
+							<h3 class="font-teko text-4xl text-center custom_text_glow mb-6 md:mb-8">
 								Programming Languages
 							</h3>
 							<p>
@@ -138,12 +140,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex flex-col lg:flex-row-reverse p-2 xl:p-0 my-8">
-				<div class="flex-1 mt-4">
-					<div class="flex flex-row justify-center my-4">
+			<div class="flex flex-col-reverse lg:flex-row-reverse p-4 lg:p-0 my-0 md:my-8">
+				<div class="flex-1">
+					<div class="flex flex-row justify-center my-0 md:my-4">
 						<div
-							class="custom_bubble before:animate-[spin_4s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -155,8 +157,8 @@
 							</div>
 						</div>
 						<div
-							class="custom_bubble before:animate-[spin_4s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -168,8 +170,8 @@
 							</div>
 						</div>
 						<div
-							class="custom_bubble before:animate-[spin_4s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -183,8 +185,8 @@
 					</div>
 					<div class="flex flex-row justify-center my-4 xl:pl-44">
 						<div
-							class="custom_bubble before:animate-[spin_4s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -196,8 +198,8 @@
 							</div>
 						</div>
 						<div
-							class="custom_bubble before:animate-[spin_4s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -209,8 +211,8 @@
 							</div>
 						</div>
 						<div
-							class="custom_bubble before:animate-[spin_4s_linear_infinite] 
-									h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
+									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
 						>
 							<div class="p-2 flex flex-col justify-center items-center">
 								<div class="h-20 w-20 p-2 flex justify-center items-center">
@@ -224,9 +226,9 @@
 					</div>
 				</div>
 				<div class="flex-1 flex max-w-3xl mx-auto">
-					<div class="flex items-center md:my-4 my-8 mx-auto">
+					<div class="flex items-center my-4 mx-auto">
 						<div class="text-xl">
-							<h3 class="font-teko text-4xl text-center custom_text_glow my-8">
+							<h3 class="font-teko text-4xl text-center custom_text_glow mb-6 md:mb-8">
 								Frameworks and Tools
 							</h3>
 							<p><b>I have broad experience with various tools and frameworks</b>, as each project I 
@@ -241,11 +243,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex lg:flex-row-reverse flex-col xl:p-0 p-2 my-8">
+			<div class="flex flex-col lg:flex-row-reverse p-4 lg:p-0 my-0 md:my-8">
 				<div class="flex-1 flex max-w-3xl mx-auto">
-					<div class="flex items-center md:my-4 my-8 mx-auto">
+					<div class="flex items-center my-4 mx-auto">
 						<div class="text-xl">
-							<h3 class="font-teko text-4xl text-center custom_text_glow my-8">
+							<h3 class="font-teko text-4xl text-center custom_text_glow mb-6 md:mb-8">
 								Digital Marketing
 							</h3>
 							<p>Throughout my projects, integrating coding expertise with digital marketing skills has been 
@@ -257,7 +259,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex-1 min-h-[550px] md:min-h-0 mt-0 md:mt-28 lg:mt-8">
+				<div class="flex-1 min-h-[550px] md:min-h-0 mt-4 md:mt-0">
 					<!-- Mobile Only -->
 					<div class="md:hidden flex flex-col items-center mx-auto min-h-[550px]">
 						<div class="custom_bubble absolute
@@ -358,11 +360,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="border border-neutral-800 mt-32"></div>
-			<h2 class="mt-24 mb-12 font-teko text-8xl text-center custom_text_glow">
+			<div class="border border-neutral-800 mt-12 md:mt-32"></div>
+			<h2 class="mt-16 mb-4 md:mt-24 md:mb-12 font-teko text-8xl text-center custom_text_glow">
 				Soft Skills
 			</h2>
-			<div class="flex justify-center flex-wrap gap-4 md:gap-16 ">
+			<div class="flex justify-center flex-wrap gap-4 md:gap-16 mt-12 md:mt-4">
 				<div class="flex flex-col justify-center">
 					<div class="custom_flip_card">
 						<div class="custom_flip_card_content md:custom_glow">
@@ -496,6 +498,26 @@
 					</div>
 				</div>
 			</div>
+			<div class="border border-neutral-800 hidden md:block md:mt-32"></div>
+			<h3 class="mt-24 font-teko text-6xl text-center custom_text_glow">
+				Shaping Digital Experiences with Passion
+			</h3>
+			<div class="flex flex-col items-center p-4 md:p-0 my-4">
+				<div class="text-xl my-4 max-w-xl mx-auto">
+					If you are reading this, you reached the end of this page. Looks like I captured your attention! 
+					So, <b class="text-amber-500">if you're looking for a dedicated and skilled individual</b> 
+					driven by passion to contribute to your projects, 
+					<b class="text-amber-500">or just want to have a conversation</b>, I welcome the opportunity to discuss how we can collaborate :)
+				</div>
+				<div class="text-center my-8">
+					<div class="h-24 w-24 fill-white rotate-45 mx-auto mb-8">
+						<CoolArrow></CoolArrow>
+					</div>
+					<UButton to="/contact" block icon="i-mdi-email-edit-outline">
+						Contact me now
+					</UButton>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -528,4 +550,5 @@
 	import Icon_Adapt from "~/assets/svg/marketing/adapt.svg?component";
 
 	import Logo_Firm from "~/assets/svg/logo_web_white.svg?component";
+	import CoolArrow from "~/assets/svg/arrow.svg?component";
 </script>

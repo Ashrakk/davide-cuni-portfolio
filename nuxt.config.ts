@@ -44,7 +44,7 @@ export default defineNuxtConfig({
 		"@nuxt/ui",
 		"@nuxt/image",
 		"@nuxt/content",
-		"@nuxtseo/module",
+		"@nuxtjs/seo",
 		[
 			"nuxt-mail",
 			{
@@ -101,6 +101,12 @@ export default defineNuxtConfig({
 		"/contact": { prerender: true },
 		"/about": { prerender: true },
 		"/projects": { prerender: true }
+	},
+
+	router: {
+		options: {
+			scrollBehaviorType: "smooth"
+		}
 	},
 
 	ignore: [".prettierignore", ".gitignore"]

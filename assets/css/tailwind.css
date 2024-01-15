@@ -21,7 +21,7 @@
 
 @layer components {
 	.custom_bubble {
-		@apply rounded-full flex flex-col items-center justify-center 
+		@apply md:rounded-full flex flex-col items-center justify-center 
 				text-center text-2xl font-teko uppercase tracking-wide;
 		position: relative;
 		overflow: hidden;
@@ -47,14 +47,6 @@
 		z-index: 10;
 	}
 	
-	.custom_text_glow {
-		text-shadow: #f59e0b 1px 0px 7px;
-	}
-	
-	.custom_glow {
-		box-shadow: 0px 0px 4px 0px rgba(245, 158, 11, 1);
-	}
-
 	.custom_flip_card {
 		@apply  rounded-xl text-white text-center text-2xl font-bold font-teko tracking-wide uppercase;
 	}
@@ -92,4 +84,33 @@
 		transform: rotateY(180deg);
 	}
 
+	.custom_floating_cta
+	{
+		@apply text-xl text-center fixed z-50 transition-all duration-200 text-black fill-black;
+		top: 75%;
+		right: calc(-1 * 130px)
+	}
+
+	.custom_floating_cta:hover {
+		right: 0
+	}
+
+	.custom_floating_cta > div
+	{
+		@apply flex items-center m-auto bg-amber-400 p-2;
+		text-shadow: 0px 3px 4px #171717;
+		border-radius: 10em 1em 1em 10em;
+	}
+
+}
+
+@layer utilities
+{
+	.custom_text_glow {
+		text-shadow: #f59e0b 1px 0px 7px;
+	}
+	
+	.custom_glow {
+		box-shadow: 0px 0px 4px 0px rgba(245, 158, 11, 1);
+	}
 }

@@ -58,11 +58,9 @@
 						If you want to reach out to me for anything, a project or even just
 						some questions, fill out the contact form and i'll reach you there!
 					</div>
-					<SiteLink to="/contact">
-						<UButton block icon="i-mdi-email-edit-outline">
-							Write me an email
-						</UButton>
-					</SiteLink>
+					<UButton to="/contact" block icon="i-mdi-email-edit-outline">
+						Write me an email
+					</UButton>
 				</div>
 			</div>
 		</div>
