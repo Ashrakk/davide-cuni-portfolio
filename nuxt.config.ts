@@ -41,6 +41,7 @@ export default defineNuxtConfig({
 	},
 
 	modules: [
+		"nuxt-icon",
 		"@nuxt/ui",
 		"@nuxt/image",
 		"@nuxt/content",
@@ -100,7 +101,8 @@ export default defineNuxtConfig({
 		"/": { prerender: true },
 		"/contact": { prerender: true },
 		"/about": { prerender: true },
-		"/projects": { prerender: true }
+		"/projects": { prerender: true },
+		"/blog": { prerender: true }
 	},
 
 	router: {

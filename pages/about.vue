@@ -2,7 +2,7 @@
 	<div>
 		<CFloatingContact></CFloatingContact>
 		<div class="container max-w-screen-xl mx-auto mt-8 mb-24">
-			<h1 class="text-9xl font-teko text-center custom_text_glow">About</h1>
+			<h1 class="heading_1 text-center">About</h1>
 			<div class="flex flex-col mt-4 p-4
 						md:flex-row md:mt-20 md:p-0">
 				<div class="flex flex-col flex-1">
@@ -34,7 +34,7 @@
 				</div>
 			</div>
 			<div class="border border-neutral-800 hidden md:block md:mt-32"></div>
-			<h2 id="skills" class="mt-8 mb-4 md:mt-24 md:mb-12 font-teko text-8xl text-center custom_text_glow scroll-mt-16">
+			<h2 id="skills" class="heading_2 text-center mt-8 mb-4 md:mt-24 md:mb-12 scroll-mt-16">
 				Tech Skills
 			</h2>
 			<div class="flex flex-col-reverse lg:flex-row p-4 lg:p-0">
@@ -124,9 +124,9 @@
 				<div class="flex flex-1 max-w-3xl mx-auto">
 					<div class="flex items-center my-4 mx-auto">
 						<div class="text-xl">
-							<h3 class="font-teko text-4xl text-center custom_text_glow mb-6 md:mb-8">
+							<h4 class="heading_4 text-center mb-6 md:mb-8">
 								Programming Languages
-							</h3>
+							</h4>
 							<p>
 							I embarked on my programming journey as a youngster, exploring a myriad of languages before 
 							immersing myself in web development over the <b>past four years</b>.
@@ -228,9 +228,9 @@
 				<div class="flex-1 flex max-w-3xl mx-auto">
 					<div class="flex items-center my-4 mx-auto">
 						<div class="text-xl">
-							<h3 class="font-teko text-4xl text-center custom_text_glow mb-6 md:mb-8">
+							<h4 class="heading_4 text-center mb-6 md:mb-8">
 								Frameworks and Tools
-							</h3>
+							</h4>
 							<p><b>I have broad experience with various tools and frameworks</b>, as each project I 
 							embarked on had its own challenges.</p>
 							<p class="my-4">
@@ -247,9 +247,9 @@
 				<div class="flex-1 flex max-w-3xl mx-auto">
 					<div class="flex items-center my-4 mx-auto">
 						<div class="text-xl">
-							<h3 class="font-teko text-4xl text-center custom_text_glow mb-6 md:mb-8">
+							<h4 class="heading_4 text-center mb-6 md:mb-8">
 								Digital Marketing
-							</h3>
+							</h4>
 							<p>Throughout my projects, integrating coding expertise with digital marketing skills has been 
 							a pivotal objective for me, especially while designing.</p>
 							<p class="my-4">This motivated my persuit of studying 
@@ -361,7 +361,7 @@
 				</div>
 			</div>
 			<div class="border border-neutral-800 mt-12 md:mt-32"></div>
-			<h2 class="mt-16 mb-4 md:mt-24 md:mb-12 font-teko text-8xl text-center custom_text_glow">
+			<h2 class="heading_2 mt-16 mb-4 md:mt-24 md:mb-12 text-center">
 				Soft Skills
 			</h2>
 			<div class="flex justify-center flex-wrap gap-4 md:gap-16 mt-12 md:mt-4">
@@ -499,7 +499,7 @@
 				</div>
 			</div>
 			<div class="border border-neutral-800 hidden md:block md:mt-32"></div>
-			<h3 class="mt-24 font-teko text-6xl text-center custom_text_glow">
+			<h3 class="heading_3 mt-24 text-center">
 				Shaping Digital Experiences with Passion
 			</h3>
 			<div class="flex flex-col items-center p-4 md:p-0 my-4">
