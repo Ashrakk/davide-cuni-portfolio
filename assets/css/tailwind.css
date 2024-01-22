@@ -123,7 +123,7 @@
 	.custom_article_feedback
 	{
 		@apply transition-all duration-300 hover:scale-95 hover:bg-neutral-800
-		border border-neutral-800 custom_glow;
+		border border-amber-400 lg:border-neutral-800 lg:custom_glow;
 	}
 
 }

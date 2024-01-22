@@ -42,7 +42,7 @@
 	const props = withDefaults(defineProps<Pagination>(), {
 		page: 1,
 		directory: "",
-		postsPerPage: 6
+		postsPerPage: 6,
 	});
 
 	var lastPage = 1;
@@ -61,7 +61,7 @@
 	// Fetch 6 posts
 	const { data } = await useAsyncData(`${props.directory}-${props.page}`, () =>
 		queryContent(`/${props.directory}`)
-			.skip((props.page - 1) * props.postsPerPage)
+			.skip((props.page - 1) * props.postsPerPage + 1)
 			.limit(props.postsPerPage)
 			.find()
 	);
@@ -75,7 +75,7 @@
 
 		let { data: newData } = await useAsyncData(`${props.directory}-${props.page}`, () =>
 			queryContent(`/${props.directory}`)
-				.skip((props.page - 1) * props.postsPerPage)
+				.skip((props.page - 1) * props.postsPerPage + 1)
 				.limit(props.postsPerPage)
 				.find()
 		);

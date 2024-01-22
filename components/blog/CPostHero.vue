@@ -23,7 +23,7 @@
 							sizes="640px"
 							:img-attrs="{
 								class:
-									'object-cover h-[300px] lg:max-h-[270px] w-full'
+									'object-cover object-top h-[300px] lg:max-h-[270px] w-full'
 							}"
 						/>
 					</div>

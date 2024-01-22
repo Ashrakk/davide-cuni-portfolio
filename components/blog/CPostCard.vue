@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<article class="custom_article_feedback">
+		<article class="custom_article_feedback my-8 lg:my-0">
 			<SiteLink :to="path">
 				<div class="flex flex-col">
 					<div class="grid w-full min-h-[275px] p-4 lg:border-b lg:border-neutral-800">
@@ -20,10 +20,10 @@
 						<NuxtPicture
 							class="h-[300px]"
 							:src="image"
-							sizes="300px"
+							sizes="600px"
 							:img-attrs="{
 								class:
-									'object-cover h-[300px] w-full'
+									'object-cover object-top h-[300px] w-full'
 							}"
 						/>
 					</div>

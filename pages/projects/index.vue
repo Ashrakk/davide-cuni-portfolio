@@ -2,14 +2,17 @@
 	<div>
 		<div class="container max-w-screen-lg mx-auto mt-8 mb-24">
 			<h1 class="text-9xl font-teko text-center custom_text_glow">Projects</h1>
-			<div class="mt-12 p-2 lg:p-0">
-				<CPostHero :post="'joomla'"/>
+			<h2 class="text-6xl font-teko text-center lg:text-left custom_text_glow mt-6 lg:hidden">
+				Featured
+			</h2>
+			<div class="mt-4 lg:mt-12 p-2 lg:p-0">
+				<CPostHero :post="heroPost"/>
 			</div>
 		
 			<span ref="postsSection"></span>
 			
 			<h2 class="text-6xl font-teko text-center lg:text-left custom_text_glow mt-12">
-				Latest Projects
+				Latest
 			</h2>
 			<div class="border border-neutral-800"></div>
 			<div class="mt-4 lg:mt-12 p-2 lg:p-0">
@@ -29,7 +32,7 @@
 								'!bg-cyan-600 ring-0':
 									currentPage <= totalPages && currentPage >= 2
 							},
-							'rounded-full bg-zinc-900 p-1 text-center'
+							'rounded-full bg-zinc-900 p-3 text-center'
 						]"
 					>
 					</UButton>
@@ -42,7 +45,7 @@
 						icon="i-material-symbols-arrow-forward-ios-rounded"
 						:class="[
 							{ '!bg-cyan-600 ring-0': currentPage < totalPages },
-							'rounded-full bg-zinc-900 p-1 text-center'
+							'rounded-full bg-zinc-900 p-3 text-center'
 						]"
 					>
 					</UButton>
@@ -53,10 +56,11 @@
 </template>
 
 <script setup lang="ts">
-	const totalPages = ref(0);
+	const totalPages = ref(1);
 	const currentPage = ref(1);
 	const postsPerPage = 6;
 	const directory = "projects";
+	const heroPost = "joomla";
 	const postsSection = ref<HTMLElement | null>(null);
 
 	const { data } = await useAsyncData("total", () =>
@@ -64,8 +68,8 @@
 	);
 
 	// Calculate number of totalPages
-	if (typeof data.value === "number" && data.value != 0)
-		totalPages.value = Math.ceil(data.value / postsPerPage);
+	if (typeof data.value === "number" && data.value >= 1)
+		totalPages.value = Math.ceil((data.value - 1) / postsPerPage);
 
 	function onNextPage() {
 		if (currentPage.value < totalPages.value) {
