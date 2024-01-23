@@ -84,35 +84,35 @@
 				</template>
 				<div class="mt-6 flow-root">
 					<div
-						class="py-6 text-2xl font-semibold font-teko text-white text-center"
+						class="py-6 text-4xl font-semibold font-teko text-white text-center"
 					>
 						<SiteLink
 							to="/"
-							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
+							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
 							>Home</SiteLink
 						>
 						<SiteLink
 							to="/projects"
-							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
+							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
 							>Projects</SiteLink
 						>
 						<SiteLink
 							to="/blog"
-							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
+							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
 							>Blog</SiteLink
 						>
 						<SiteLink
 							to="/about"
-							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
+							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
 							>About</SiteLink
 						>
 						<SiteLink
 							to="/contact"
-							class="mx-3 my-2 block rounded-lg px-3 py-2 leading-8 hover:bg-neutral-800"
+							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
 							>Contact</SiteLink
 						>

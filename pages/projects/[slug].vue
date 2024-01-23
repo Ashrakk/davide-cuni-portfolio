@@ -1,14 +1,44 @@
 <template>
-	<div class="container max-w-3xl mx-auto md:pt-8 pt-4 mb-24">
-		<article v-if="data != undefined">
-			<h1
-				class="md:text-5xl text-4xl text-center md:mt-2 md:mb-12 mb-6 font-narrow text-white"
-			>
-				{{ data.title }}
-			</h1>
+	<div>
+		<div class="container max-w-screen-md mx-auto mt-8 mb-24">
+			<article v-if="data != undefined">
+				<h1
+					class="heading_3 text-center"
+				>
+					{{ data.title }}
+				</h1>
 
-			<ContentRenderer :value="data" />
-		</article>
+				<div class="w-full mt-4 mb-4">
+						<NuxtPicture
+							class="h-[300px]"
+							:src="data.image"
+							sizes="1280px"
+							:img-attrs="{
+								class:
+									'object-cover object-top h-[350px] md:h-[300px] w-full'
+							}"
+						/>
+				</div>
+				<div class="text-center text-sm p-4 md:p-0">{{ data.description }}</div>
+				<div class="flex flex-col md:flex-row mt-8 space-x-4 justify-center items-baseline md:items-center">
+					<div class="flex flex-row items-center">
+						<UIcon class="bg-amber-400" name="i-material-symbols-bookmark-outline"></UIcon>
+						<div class="ml-1 text-sm">{{ data.topic }}</div>
+					</div>
+					<div class="flex flex-row items-center">
+						<UIcon class="bg-amber-400" name="i-material-symbols-calendar-today"></UIcon>
+						<div class="ml-1 text-sm">{{ data.date }}</div>
+					</div>
+					<div class="flex flex-row items-center">
+						<UIcon class="bg-amber-400" name="i-material-symbols-alarm-outline"></UIcon>
+						<div class="ml-1 text-sm">{{ data.readTime }}</div>
+					</div>	
+				</div>
+				<div class="mt-8 p-4 md:p-0">
+					<ContentRenderer :value="data" />
+				</div>
+			</article>
+		</div>
 	</div>
 </template>
 

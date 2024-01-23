@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<div class="container max-w-screen-lg mx-auto mt-8 mb-24">
-			<h1 class="text-9xl font-teko text-center custom_text_glow">Projects</h1>
-			<h2 class="text-6xl font-teko text-center lg:text-left custom_text_glow mt-6 lg:hidden">
+			<h1 class="heading_1 text-center">Projects</h1>
+			<h2 class="heading_3 text-center lg:text-left mt-6 lg:hidden">
 				Featured
 			</h2>
 			<div class="mt-4 lg:mt-12 p-2 lg:p-0">
@@ -11,7 +11,7 @@
 		
 			<span ref="postsSection"></span>
 			
-			<h2 class="text-6xl font-teko text-center lg:text-left custom_text_glow mt-12">
+			<h2 class="heading_3 text-center lg:text-left mt-12">
 				Latest
 			</h2>
 			<div class="border border-neutral-800"></div>

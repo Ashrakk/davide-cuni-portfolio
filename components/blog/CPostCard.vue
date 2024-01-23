@@ -8,8 +8,14 @@
 						<p class="mt-4">{{ description }}</p>
 						<div class="flex justify-between items-center w-full mt-4">
 							<div>
-								<div>{{ date }}</div>
-								<div v-if="readTime != ''">{{ readTime }}</div>
+								<div class="flex flex-row items-center">
+									<UIcon name="i-material-symbols-calendar-today"></UIcon>
+									<div class="ml-1">{{ date }}</div>
+								</div>
+								<div class="flex flex-row items-center">
+									<UIcon name="i-material-symbols-alarm-outline"></UIcon>
+									<div class="ml-1">{{ readTime }}</div>
+								</div>
 							</div>
 							<div>
 								<div class="p-2 bg-amber-400 text-black">{{ topic }}</div>

@@ -126,6 +126,10 @@
 		border border-amber-400 lg:border-neutral-800 lg:custom_glow;
 	}
 
+	.mobile_navbar_button {
+		@apply mx-3 my-4 px-3 py-2 block rounded-xl border-b border-l border-amber-400;
+	}
+
 }
 
 @layer utilities
