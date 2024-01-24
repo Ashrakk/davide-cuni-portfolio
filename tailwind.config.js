@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 	content: [
 		"./components/**/*.{js,vue,ts,html}",
 		"./layouts/**/*.{js,vue,ts,html}",

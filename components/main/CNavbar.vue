@@ -8,10 +8,10 @@
 			aria-label="Global"
 		>
 			<div class="flex lg:flex-1">
-				<SiteLink to="/" class="w-auto">
+				<ULink to="/" class="w-auto">
 					<span class="sr-only">Davide Cuni Logo</span>
 					<Logo_Firm class="h-12 w-12" />
-				</SiteLink>
+				</ULink>
 			</div>
 			<div class="flex lg:hidden">
 				<button
@@ -31,36 +31,36 @@
 			<div
 				class="text-white tracking-wider text-2xl font-semibold font-teko leading-6 hidden lg:flex lg:gap-x-12"
 			>
-				<SiteLink to="/" class="group transition duration-200">
+				<ULink to="/" class="group transition duration-200">
 					Home
 					<span
 						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
 					></span>
-				</SiteLink>
-				<SiteLink to="/projects" class="group transition duration-200">
+				</ULink>
+				<ULink to="/projects" class="group transition duration-200">
 					Projects
 					<span
 						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
 					></span>
-				</SiteLink>
-				<SiteLink to="/blog" class="group transition duration-200">
+				</ULink>
+				<ULink to="/blog" class="group transition duration-200">
 					Blog
 					<span
 						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
 					></span>
-				</SiteLink>
-				<SiteLink to="/about" class="group transition duration-200">
+				</ULink>
+				<ULink to="/about" class="group transition duration-200">
 					About
 					<span
 						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
 					></span>
-				</SiteLink>
-				<SiteLink to="/contact" class="group transition duration-200">
+				</ULink>
+				<ULink to="/contact" class="group transition duration-200">
 					Contact
 					<span
 						class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500"
 					></span>
-				</SiteLink>
+				</ULink>
 			</div>
 		</nav>
 		<!-- Mobile Menu -->
@@ -68,10 +68,10 @@
 			<UCard class="flex flex-col flex-1">
 				<template #header>
 					<div class="flex items-center justify-between">
-						<SiteLink to="/" class="w-auto">
+						<ULink to="/" class="w-auto">
 							<span class="sr-only">Davide Cuni Logo</span>
 							<Logo_Firm class="w-12 h-12" />
-						</SiteLink>
+						</ULink>
 						<button
 							type="button"
 							class="rounded-md p-2 text-gray-600 inline-flex items-center justify-center bg-white"
@@ -86,35 +86,35 @@
 					<div
 						class="py-6 text-4xl font-semibold font-teko text-white text-center"
 					>
-						<SiteLink
+						<ULink
 							to="/"
 							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
-							>Home</SiteLink
+							>Home</ULink
 						>
-						<SiteLink
+						<ULink
 							to="/projects"
 							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
-							>Projects</SiteLink
+							>Projects</ULink
 						>
-						<SiteLink
+						<ULink
 							to="/blog"
 							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
-							>Blog</SiteLink
+							>Blog</ULink
 						>
-						<SiteLink
+						<ULink
 							to="/about"
 							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
-							>About</SiteLink
+							>About</ULink
 						>
-						<SiteLink
+						<ULink
 							to="/contact"
 							class="mobile_navbar_button"
 							@click="mobileMenuOpen = false"
-							>Contact</SiteLink
+							>Contact</ULink
 						>
 					</div>
 				</div>

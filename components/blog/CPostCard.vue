@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<article class="custom_article_feedback my-8 lg:my-0">
-			<SiteLink :to="path">
+			<ULink :to="path">
 				<div class="flex flex-col">
 					<div class="grid w-full min-h-[275px] p-4 lg:border-b lg:border-neutral-800">
 						<h1 class="text-4xl font-teko">{{ title }}</h1>
@@ -34,7 +34,7 @@
 						/>
 					</div>
 				</div>
-			</SiteLink>
+			</ULink>
 		</article>
 	</div>
 </template>

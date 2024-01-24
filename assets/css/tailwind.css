@@ -20,6 +20,11 @@
 }
 
 @layer base {
+
+	h1 {
+		@apply text-9xl
+	}
+
 	.heading_1 {
 		@apply text-9xl font-teko custom_text_glow
 	}
@@ -29,11 +34,15 @@
 	}
 
 	.heading_3 {
-		@apply text-6xl font-teko custom_text_glow
+		@apply text-6xl font-teko custom_text_glow_small
 	}
 
 	.heading_4 {
-		@apply text-4xl font-teko custom_text_glow
+		@apply text-4xl font-teko
+	}
+
+	.heading_5 {
+		@apply text-3xl font-teko
 	}
 }
 
@@ -136,6 +145,10 @@
 {
 	.custom_text_glow {
 		text-shadow: #f59e0b 1px 0px 7px;
+	}
+
+	.custom_text_glow_small {
+		text-shadow: #f59e0b 1px 0px 5px;
 	}
 	
 	.custom_glow {

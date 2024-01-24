@@ -33,7 +33,13 @@ export default defineNuxtConfig({
 	},
 
 	ui: {
-		icons: "all"
+		icons: ['material-symbols', 'mdi', 'ri', 'ph']
+	},
+
+	content: {
+		markdown: {
+			anchorLinks: false
+		}
 	},
 
 	linkChecker: {
@@ -41,7 +47,6 @@ export default defineNuxtConfig({
 	},
 
 	modules: [
-		"nuxt-icon",
 		"@nuxt/ui",
 		"@nuxt/image",
 		"@nuxt/content",

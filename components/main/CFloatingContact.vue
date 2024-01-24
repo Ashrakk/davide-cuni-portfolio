@@ -1,12 +1,12 @@
 <template>
   <div>
-    <SiteLink to="/contact" class="custom_floating_cta">
+    <ULink to="/contact" class="custom_floating_cta">
         <div>
           <div class="mr-2">
-            <Icon size="36px" name="mdi:email-edit-outline"></Icon>
+            <UIcon class="w-9" name="i-mdi-email-edit-outline"></UIcon>
           </div>
           <div>Contact Now</div>
         </div>
-    </SiteLink>
+    </ULink>
   </div>
 </template>

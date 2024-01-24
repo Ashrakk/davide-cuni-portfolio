@@ -19,22 +19,24 @@
 							}"
 						/>
 				</div>
-				<div class="text-center text-sm p-4 md:p-0">{{ data.description }}</div>
-				<div class="flex flex-col md:flex-row mt-8 space-x-4 justify-center items-baseline md:items-center">
-					<div class="flex flex-row items-center">
-						<UIcon class="bg-amber-400" name="i-material-symbols-bookmark-outline"></UIcon>
-						<div class="ml-1 text-sm">{{ data.topic }}</div>
-					</div>
-					<div class="flex flex-row items-center">
+				<div class="text-center text-sm p-4 md:p-0 text-[#d4d4d4]">{{ data.description }}</div>
+				<div class="grid grid-cols-2 gap-2 md:gap-4 md:flex md:flex-row md:justify-center md:items-center mt-8 px-4">
+					<div class="flex flex-row items-center md:justify-center pl-2 md:pl-0">
 						<UIcon class="bg-amber-400" name="i-material-symbols-calendar-today"></UIcon>
 						<div class="ml-1 text-sm">{{ data.date }}</div>
 					</div>
-					<div class="flex flex-row items-center">
+					<div class="flex flex-row items-center md:justify-center pl-2 md:pl-0 row-start-2">
 						<UIcon class="bg-amber-400" name="i-material-symbols-alarm-outline"></UIcon>
 						<div class="ml-1 text-sm">{{ data.readTime }}</div>
-					</div>	
+					</div>
+					<div class="flex flex-row items-center justify-center ">
+						<UIcon class="bg-amber-400" name="i-material-symbols-bookmark-outline"></UIcon>
+						<div class="ml-1 text-sm">{{ data.topic }}</div>
+					</div>
 				</div>
-				<div class="mt-8 p-4 md:p-0">
+				<div class="mt-8 p-4 md:p-0 prose prose-neutral prose-invert max-w-full 
+							prose-h2:font-teko prose-h2:text-4xl prose-h2:my-4
+							prose-h3:font-teko prose-h3:text-3xl prose-h3:my-4">
 					<ContentRenderer :value="data" />
 				</div>
 			</article>

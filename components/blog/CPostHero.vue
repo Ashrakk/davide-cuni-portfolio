@@ -1,7 +1,7 @@
 <template>
 	<div v-if="data != undefined">
 		<article class="custom_article_feedback">
-			<SiteLink v-if="typeof data._path == 'string'" :to="data._path">
+			<ULink v-if="typeof data._path == 'string'" :to="data._path">
 				<div class="flex flex-col lg:flex-row">
 					<div class="grid w-full p-4 lg:max-w-sm lg:border-r lg:border-neutral-800">
 						<h1 class="text-4xl font-teko">{{ data.title }}</h1>
@@ -34,7 +34,7 @@
 						/>
 					</div>
 				</div>
-			</SiteLink>
+			</ULink>
 		</article>
 	</div>
 </template>

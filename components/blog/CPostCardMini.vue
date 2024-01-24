@@ -3,7 +3,7 @@
 		class="w-full rounded-[30px] break-inside-avoid-column border-zinc-900 border-b shadow-md
 		 shadow-zinc-950 my-8 lg:my-2 transition-all duration-300 hover:bg-zinc-700 hover:scale-95"
 	>
-		<SiteLink :to="path">
+		<ULink :to="path">
 			<NuxtPicture
 				class="rounded-t-[30px] object-cover h-[200px] w-full"
 				:src="image"
@@ -21,7 +21,7 @@
 			<h6 class="text-center font-narrow text-2xl py-3">
 				{{ title }}
 			</h6>
-		</SiteLink>
+		</ULink>
 	</article>
 </template>
 
