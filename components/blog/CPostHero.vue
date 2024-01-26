@@ -24,12 +24,11 @@
 					</div>
 					<div class="lg:max-w-[640px] w-full">
 						<NuxtPicture
-							class="h-[300px] lg:max-h-[270px]"
 							:src="data.image"
 							sizes="640px"
 							:img-attrs="{
 								class:
-									'object-cover object-top h-[300px] lg:max-h-[270px] w-full'
+									'object-cover object-top w-full'
 							}"
 						/>
 					</div>
