@@ -13,6 +13,7 @@
 					</div>
 					<div class="hidden md:flex flex-row justify-center gap-6 mt-6">
 						<UButton
+							aria-label="Reach me via Linkedin"
 							to="https://www.linkedin.com/in/davide-cuni"
 							target="_blank"
 							variant="outline"
@@ -21,6 +22,7 @@
 							>Linkedin
 						</UButton>
 						<UButton
+							aria-label="Reach me via Telegram"
 							to="https://t.me/Ashra_k"
 							target="_blank"
 							variant="outline"
@@ -42,6 +44,7 @@
 				If you prefer other means of communication, such as Telegram, click below :)</p>
 				<div class="flex flex-col justify-center gap-4 mt-8">
 					<UButton
+						aria-label="Reach me via Linkedin"
 						to="https://www.linkedin.com/in/davide-cuni"
 						target="_blank"
 						variant="outline"
@@ -50,6 +53,7 @@
 						>Linkedin
 					</UButton>
 					<UButton
+						aria-label="Reach me via Telegram"
 						to="https://t.me/Ashra_k"
 						target="_blank"
 						variant="outline"

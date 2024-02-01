@@ -25,6 +25,7 @@
 					<div class="lg:max-w-[640px] w-full">
 						<NuxtPicture
 							:src="data.image"
+							:alt="data.alt"
 							sizes="640px"
 							:img-attrs="{
 								class:

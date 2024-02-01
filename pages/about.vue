@@ -7,7 +7,9 @@
 						md:flex-row md:mt-20 md:p-0">
 				<div class="flex flex-col flex-1">
 					<NuxtPicture
-						class="mx-auto justify-center" 
+						class="mx-auto justify-center"
+						width="400"
+						alt="Davide Cuni bio picture"
 						sizes="400px" 
 						src="/images/profilepic.jpg" 
 						:img-attrs="{ class: 'rounded-[30px] md:max-w-[400px]' }"

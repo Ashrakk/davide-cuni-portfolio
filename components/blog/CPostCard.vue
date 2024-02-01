@@ -26,6 +26,7 @@
 						<NuxtPicture
 							class="h-[300px]"
 							:src="image"
+							:alt="alt"
 							sizes="600px"
 							:img-attrs="{
 								class:

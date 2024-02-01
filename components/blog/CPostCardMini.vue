@@ -7,6 +7,7 @@
 			<NuxtPicture
 				class="rounded-t-[30px] object-cover h-[200px] w-full"
 				:src="image"
+				:alt="alt"
 				sizes="400px"
 				:img-attrs="{ class: 'rounded-t-[30px] object-cover h-[200px] w-full' }"
 			/>
