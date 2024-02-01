@@ -1,5 +1,5 @@
 <template>
-	<UForm ref="form" :schema="schema" :state="state" @submit="submit" class="[&>*]:my-4">
+	<UForm ref="form" :schema="schema" :state="state" @submit="submit" class="[&>*]:my-4 md:px-4">
 		<UFormGroup label="Name" name="user" required>
 			<template #default="{ error }">
 				<UInput
@@ -121,7 +121,7 @@
 <script setup lang="ts">
 	import { ref } from "vue";
 	import { z } from "zod";
-	import type { Button, Form, FormSubmitEvent } from "@nuxt/ui/dist/runtime/types";
+	import type { Form, FormSubmitEvent } from "@nuxt/ui/dist/runtime/types";
 
 	const notify = useToast();
 	const mail = useMail();

@@ -125,7 +125,7 @@
 	.custom_floating_cta > div
 	{
 		@apply flex items-center m-auto bg-amber-400 p-2;
-		text-shadow: 0px 3px 4px #171717;
+		text-shadow: 0px 3px 5px #171717;
 		border-radius: 10em 1em 1em 10em;
 	}
 

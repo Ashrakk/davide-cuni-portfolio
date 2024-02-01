@@ -17,9 +17,12 @@
 					<div class="text-2xl my-4">
 						Hello! I’m <span class="text-amber-500">Davide</span>
 						<span class="text-xl">
-							a passionate end-to-end developer who views programming and designing as a 
-							<b><i>form of art</i></b>.
+							a passionate end-to-end developer, meaning that i take care of projects from start to finish including designing, 
+							development, deployment and marketing.
 						</span>
+					</div>
+					<div class="text-xl my-4">
+						I view programming and designing as a <b><i>form of art</i></b>
 					</div>
 					<div class="text-xl my-4">
 						<p>
@@ -504,8 +507,7 @@
 			</h3>
 			<div class="flex flex-col items-center p-4 md:p-0 my-4">
 				<div class="text-xl my-4 max-w-xl mx-auto">
-					If you are reading this, you reached the end of this page. Looks like I captured your attention! 
-					So, <b class="text-amber-500">if you're looking for a dedicated and skilled individual</b> 
+					<b class="text-amber-500">if you're looking for a dedicated and skilled individual</b> 
 					driven by passion to contribute to your projects, 
 					<b class="text-amber-500">or just want to have a conversation</b>, I welcome the opportunity to discuss how we can collaborate :)
 				</div>
@@ -551,4 +553,9 @@
 
 	import Logo_Firm from "~/assets/svg/logo_web_white.svg?component";
 	import CoolArrow from "~/assets/svg/arrow.svg?component";
+
+	useSeoMeta({
+		title: "About",
+		ogImage: "/ogScreenshots/About.jpg"
+	})
 </script>

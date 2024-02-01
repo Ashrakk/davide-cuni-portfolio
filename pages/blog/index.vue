@@ -1,19 +1,26 @@
 <template>
 	<div>
 		<div class="container max-w-screen-lg mx-auto mt-8 mb-24">
-			<h1 class="text-9xl font-teko text-center custom_text_glow">Blog</h1>
-			<div class="mt-12 p-2 lg:p-0">
-				<CPostHero :post="'start_coding'"/>
+			<h1 class="heading_1 text-center">Blog</h1>
+			<h2 class="heading_3 text-center lg:text-left mt-6 lg:hidden">
+				Featured
+			</h2>
+			<div class="mt-4 lg:mt-12 p-2 lg:p-0">
+				<CPostHero :post="heroPost"/>
 			</div>
 		
 			<span ref="postsSection"></span>
 			
-			<h2 class="text-6xl font-teko text-center lg:text-left custom_text_glow mt-12">
-				Latest Articles
+			<h2 class="heading_3 text-center lg:text-left mt-12">
+				Latest
 			</h2>
 			<div class="border border-neutral-800"></div>
 			<div class="mt-4 lg:mt-12 p-2 lg:p-0">
 				<CPagination :page="currentPage" :directory="directory" :posts-per-page="postsPerPage"/>
+			</div>
+
+			<div class="heading_4 text-center">
+				More posts to come..
 			</div>
 
 			<div class="my-8">
@@ -29,7 +36,7 @@
 								'!bg-cyan-600 ring-0':
 									currentPage <= totalPages && currentPage >= 2
 							},
-							'rounded-full bg-zinc-900 p-1 text-center'
+							'rounded-full bg-zinc-900 p-3 text-center'
 						]"
 					>
 					</UButton>
@@ -42,7 +49,7 @@
 						icon="i-material-symbols-arrow-forward-ios-rounded"
 						:class="[
 							{ '!bg-cyan-600 ring-0': currentPage < totalPages },
-							'rounded-full bg-zinc-900 p-1 text-center'
+							'rounded-full bg-zinc-900 p-3 text-center'
 						]"
 					>
 					</UButton>
@@ -53,19 +60,25 @@
 </template>
 
 <script setup lang="ts">
-	const totalPages = ref(0);
+	const totalPages = ref(1);
 	const currentPage = ref(1);
 	const postsPerPage = 6;
 	const directory = "blog";
+	const heroPost = "start_coding";
 	const postsSection = ref<HTMLElement | null>(null);
+
+	useSeoMeta({
+		title: "Blog",
+		ogImage: "/ogScreenshots/Blog.jpg"
+	})
 
 	const { data } = await useAsyncData("total", () =>
 		queryContent(`/${directory}`).count()
 	);
 
 	// Calculate number of totalPages
-	if (typeof data.value === "number" && data.value != 0)
-		totalPages.value = Math.ceil(data.value / postsPerPage);
+	if (typeof data.value === "number" && data.value > 1)
+		totalPages.value = Math.ceil((data.value - 1) / postsPerPage);
 
 	function onNextPage() {
 		if (currentPage.value < totalPages.value) {
@@ -88,9 +101,5 @@
 			currentPage.value--;
 		}
 	}
-
-	useHead({
-		title: "Blog"
-	})
 
 </script>

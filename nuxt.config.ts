@@ -15,11 +15,12 @@ export default defineNuxtConfig({
 	site: {
 		url: "http://localhost:3000/",
 		name: "Davide Cuni Portfolio",
-		description: "Portfolio website of Davide Cuni - Full Stack Developer",
+		description: "Portfolio website of Davide Cuni - End-to-End Developer",
 		defaultLocale: "en",
-		identity: { type: "Person" }
+		identity: { type: "Person" },
+		indexable: true,
 	},
-
+	
 	// SEO Sitemap
 	sitemap: {
 		strictNuxtContentPaths: true
@@ -55,13 +56,13 @@ export default defineNuxtConfig({
 			"nuxt-mail",
 			{
 				message: {
-					to: "davidevertigocuni@gmail.com"
+					to: process.env.SMTP_RECEIVER_ADDRESS
 				},
 				smtp: {
-					host: "davidecuni.typotek.space",
-					port: 465,
+					host: process.env.SMTP_HOST,
+					port: process.env.SMTP_PORT,
 					auth: {
-						user: 'info@davidecuni.typotek.space',
+						user: process.env.SMTP_USER,
 						pass: process.env.SMTP_PASSWORD,
 					}
 				}

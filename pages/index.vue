@@ -29,4 +29,10 @@
 	import "~/assets/css/custom.scss";
 
 	const n = ref(0);
+
+	useSeoMeta({
+		title: "Home",
+		ogImage: "/ogScreenshots/Home.jpg"
+	})
+
 </script>

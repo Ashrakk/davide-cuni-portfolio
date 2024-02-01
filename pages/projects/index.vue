@@ -60,15 +60,20 @@
 	const currentPage = ref(1);
 	const postsPerPage = 6;
 	const directory = "projects";
-	const heroPost = "joomla";
+	const heroPost = "this-website";
 	const postsSection = ref<HTMLElement | null>(null);
+
+	useSeoMeta({
+		title: "Projects",
+		ogImage: "/ogScreenshots/Projects.jpg"
+	})
 
 	const { data } = await useAsyncData("total", () =>
 		queryContent(`/${directory}`).count()
 	);
 
 	// Calculate number of totalPages
-	if (typeof data.value === "number" && data.value >= 1)
+	if (typeof data.value === "number" && data.value > 1)
 		totalPages.value = Math.ceil((data.value - 1) / postsPerPage);
 
 	function onNextPage() {
@@ -93,8 +98,6 @@
 		}
 	}
 
-	useHead({
-		title: "Projects"
-	})
+
 
 </script>

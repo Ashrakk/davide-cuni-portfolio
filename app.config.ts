@@ -19,7 +19,7 @@ export default defineAppConfig({
 			variant: {
 				solid: "text-neutral-800 dark:text-neutral-800 hover:bg-white dark:hover:bg-white ease-in-out duration-300"
 			}
-		}
+		},
 	},
 	colorMode: {
 		preference: "dark"

@@ -74,7 +74,8 @@
 	})
 
 	useSeoMeta({
-		description: data.value?.description
+		description: data.value?.description,
+		ogImage: data.value?.ogImage
 	})
 	
 </script>
