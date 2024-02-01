@@ -32,7 +32,7 @@
 
 	useSeoMeta({
 		title: "Home",
-		ogImage: "/ogScreenshots/Home.jpg"
+		ogImage: "/images/ogScreenshots/Home.jpg"
 	})
 
 </script>

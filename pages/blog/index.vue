@@ -69,7 +69,7 @@
 
 	useSeoMeta({
 		title: "Blog",
-		ogImage: "/ogScreenshots/Blog.jpg"
+		ogImage: "/images/ogScreenshots/Blog.jpg"
 	})
 
 	const { data } = await useAsyncData("total", () =>

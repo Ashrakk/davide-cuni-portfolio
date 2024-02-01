@@ -28,7 +28,6 @@ export default defineNuxtConfig({
 
 	// Nuxt Image Setup
 	image: {
-		dir: "assets/images",
 		quality: 90,
 		format: ["webp"]
 	},

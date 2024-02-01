@@ -9,7 +9,7 @@
 					<NuxtPicture
 						class="mx-auto justify-center"
 						sizes="400px"
-						src="/profilepic.jpg"
+						src="/images/profilepic.jpg"
 						:img-attrs="{ class: 'rounded-[30px]' }"
 					></NuxtPicture>
 				</div>
@@ -556,6 +556,6 @@
 
 	useSeoMeta({
 		title: "About",
-		ogImage: "/ogScreenshots/About.jpg"
+		ogImage: "/images/ogScreenshots/About.jpg"
 	})
 </script>

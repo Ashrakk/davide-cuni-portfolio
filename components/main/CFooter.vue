@@ -8,7 +8,7 @@
 					<NuxtPicture
 						class="mx-auto justify-center"
 						sizes="300px"
-						src="/profilepic.jpg"
+						src="/images/profilepic.jpg"
 						format="webp"
 						:img-attrs="{
 							class: 'rounded-full object-cover h-[300px] w-[300px] mx-auto'

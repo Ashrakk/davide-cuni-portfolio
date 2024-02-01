@@ -67,7 +67,7 @@
 
 useSeoMeta({
 		title: "Contact",
-		ogImage: "/ogScreenshots/Contact.jpg"
+		ogImage: "/images/ogScreenshots/Contact.jpg"
 	})
 
 </script>
