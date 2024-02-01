@@ -34,7 +34,7 @@
 							color="white"
 							class="text-center bg-neutral-900 hover:bg-neutral-600 transition duration-300 h-14 w-14"
 							variant="outline"
-							><UIcon name="i-ri-linkedin-fill" class="h-10 w-10"/>
+							><UIcon name="i-ri-linkedin-fill" class="h-8 w-8"/>
 						</UButton>
 						<UButton
 							aria-hidden="true"
@@ -44,7 +44,7 @@
 							color="white"
 							class="text-center bg-neutral-900 hover:bg-neutral-600 transition duration-300 h-14 w-14"
 							variant="outline"
-							><UIcon name="i-mdi-telegram" class="h-12 w-10"/>
+							><UIcon name="i-mdi-telegram" class="h-8 w-8"/>
 						</UButton>
 					</div>
 				</div>

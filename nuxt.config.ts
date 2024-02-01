@@ -13,9 +13,9 @@ export default defineNuxtConfig({
 
 	// SEO Schema
 	site: {
-		url: "http://localhost:3000/",
+		url: process.env.NUXT_PUBLIC_SITE_URL,
 		name: "Davide Cuni Portfolio",
-		description: "Portfolio website of Davide Cuni - End-to-End Developer",
+		description: "Portfolio website of Davide Cuni - End-to-End Developer, from design to release",
 		defaultLocale: "en",
 		identity: { type: "Person" },
 		indexable: true,
