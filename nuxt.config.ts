@@ -55,7 +55,8 @@ export default defineNuxtConfig({
 			"nuxt-mail",
 			{
 				message: {
-					to: process.env.SMTP_RECEIVER_ADDRESS
+					to: process.env.SMTP_RECEIVER_ADDRESS,
+					from: process.env.SMTP_USER
 				},
 				smtp: {
 					host: process.env.SMTP_HOST,

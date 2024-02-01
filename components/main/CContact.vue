@@ -156,9 +156,9 @@
 	async function submit(event: FormSubmitEvent<Schema>) {
 
 		mail.send({
-			from: event.data.email,
-			subject: "New message from " + event.data.user,
-			text: event.data.user
+			subject: "New message from " + event.data.email,
+			text: event.data.msg + "\n\n\nFrom " + event.data.user + "\n" + event.data.email,
+			replyTo: event.data.email
 		});
 		
 		form.value?.clear();
