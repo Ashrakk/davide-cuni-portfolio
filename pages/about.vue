@@ -8,7 +8,7 @@
 				<div class="flex flex-col flex-1">
 					<NuxtPicture
 						class="mx-auto justify-center"
-						sizes="400px"
+						sizes="400px md:400px"
 						src="/images/profilepic.jpg"
 						:img-attrs="{ class: 'rounded-[30px]' }"
 					></NuxtPicture>
