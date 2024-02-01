@@ -120,7 +120,6 @@ export default defineNuxtConfig({
 	colorMode: {
 		preference: "dark",
 		fallback: "dark",
-		classSuffix: ''
 	},
 
 	ignore: [".prettierignore", ".gitignore"]

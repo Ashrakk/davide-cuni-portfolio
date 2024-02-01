@@ -2,7 +2,6 @@
 
 module.exports = {
 	plugins: [require('@tailwindcss/typography')],
-	darkMode: "class",
 	content: [
 		"./components/**/*.{js,vue,ts,html}",
 		"./layouts/**/*.{js,vue,ts,html}",
