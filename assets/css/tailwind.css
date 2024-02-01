@@ -12,6 +12,15 @@
 }
 
 @font-face {
+	font-family:"Teko";
+	src: local("Teko"), url(/fonts/Teko-Regular.woff2) format("woff2");
+	font-display:auto;
+	font-style:normal;
+	font-weight:600;
+	font-stretch:normal;
+}
+
+@font-face {
 	font-family:"Inter";
 	src: local("Teko"), url(/fonts/InterVariable.woff2) format("woff2");
 	font-display:auto;
