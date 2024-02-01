@@ -9,7 +9,7 @@
 	font-style:normal;
 	font-weight:300;
 	font-stretch:normal;
-	font-display: swap
+	font-display: swap;
 }
 
 @font-face {
@@ -19,7 +19,7 @@
 	font-style:normal;
 	font-weight:600;
 	font-stretch:normal;
-	font-display: swap
+	font-display: swap;
 }
 
 @font-face {
@@ -28,7 +28,7 @@
 	font-display:auto;
 	font-style:normal;
 	font-stretch:normal;
-	font-display: swap
+	font-display: swap;
 }
 
 /*Enforce dark mode*/
