@@ -154,12 +154,12 @@
 	})
 
 	async function submit(event: FormSubmitEvent<Schema>) {
-		/*		
+
 		mail.send({
 			from: event.data.email,
 			subject: "New message from " + event.data.user,
 			text: event.data.user
-		});*/
+		});
 		
 		form.value?.clear();
 		submit_disable.value = true;
