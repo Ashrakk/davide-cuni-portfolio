@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-neutral-900">
+	<div class="dark bg-neutral-900">
 		<CNavbar />
 		<slot />
 		<UNotifications />

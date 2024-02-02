@@ -17,7 +17,7 @@
 					<h3 class="text-2xl font-teko z-10">
 						// and this is my portfolio website
 					</h3>
-					<UButton to="/about" class="my-4 z-10 mx-2 md:mx-0">Discover more..</UButton>
+					<UButton to="/about" class="my-4 z-10 mx-4 md:mx-0">Discover more..</UButton>
 				</div>
 			</div>
 		</div>

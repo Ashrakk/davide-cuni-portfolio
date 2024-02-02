@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="sticky top-0 z-50 w-full border-b border-neutral-800 bg-neutral-900/75 backdrop-blur "
+		class="sticky top-0 z-50 w-full border-b border-neutral-800 bg-neutral-900/75 backdrop-blur"
 	>
 		<!-- Desktop Menu -->
 		<nav

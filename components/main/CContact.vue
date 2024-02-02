@@ -9,7 +9,7 @@
 					:class="
 						!error &&
 						schema.shape.user.safeParse(state.user).success &&
-						'[&>*]:ring-1 [&>*]:ring-inset [&>*]:ring-cyan-500 [&>*]:dark:ring-cyan-500'
+						'[&>*]:ring-1 [&>*]:ring-inset [&>*]:ring-cyan-500'
 					"
 					size="xl"
 				/>
@@ -44,7 +44,7 @@
 					:class="
 						!error &&
 						schema.shape.email.safeParse(state.email).success &&
-						'[&>*]:ring-1 [&>*]:ring-inset [&>*]:ring-cyan-500 [&>*]:dark:ring-cyan-500'
+						'[&>*]:ring-1 [&>*]:ring-inset [&>*]:ring-cyan-500'
 					"
 					size="xl"
 				/>
@@ -78,7 +78,7 @@
 					:class="
 						!error &&
 						schema.shape.msg.safeParse(state.msg).success &&
-						'[&>*]:ring-1 [&>*]:ring-inset [&>*]:ring-cyan-500 [&>*]:dark:ring-cyan-500'
+						'[&>*]:ring-1 [&>*]:ring-inset [&>*]:ring-cyan-500'
 					"
 					size="xl"
 					resize

@@ -17,7 +17,7 @@ export default defineAppConfig({
 				size: "xl"
 			},
 			variant: {
-				solid: "text-neutral-800 dark:text-neutral-800 hover:bg-white dark:hover:bg-white ease-in-out duration-300"
+				solid: "text-neutral-800 hover:bg-white ease-in-out duration-300"
 			}
 		},
 	},
