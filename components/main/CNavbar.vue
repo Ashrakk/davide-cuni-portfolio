@@ -29,7 +29,7 @@
 				</button>
 			</div>
 			<div
-				class="text-white tracking-wider text-2xl font-semibold font-teko leading-6 hidden lg:flex lg:gap-x-12"
+				class="text-white tracking-wider text-2xl font-medium font-teko leading-6 hidden lg:flex lg:gap-x-12"
 			>
 				<ULink to="/" class="group transition duration-200">
 					Home
@@ -84,7 +84,7 @@
 				</template>
 				<div class="mt-6 flow-root">
 					<div
-						class="py-6 text-4xl font-semibold font-teko text-white text-center"
+						class="py-6 text-4xl font-medium font-teko text-white text-center"
 					>
 						<ULink
 							to="/"

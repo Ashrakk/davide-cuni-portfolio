@@ -19,7 +19,7 @@
 				<div
 					class="md:my-0 md:px-0 my-4 px-4 md:w-80 w-full md:text-left text-center"
 				>
-					<div class="md:text-3xl text-4xl font-teko font-bold my-2">
+					<div class="md:text-3xl text-4xl font-teko font-medium my-2">
 						Find me on Social Media
 					</div>
 					<div class="mb-4">
@@ -52,7 +52,7 @@
 				<div
 					class="md:my-0 md:px-0 my-4 px-4 md:w-80 w-full md:text-left text-center"
 				>
-					<div class="md:text-3xl text-4xl font-teko font-bold my-2">
+					<div class="md:text-3xl text-4xl font-teko font-medium my-2">
 						Connect with me
 					</div>
 					<div class="mb-4">

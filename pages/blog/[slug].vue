@@ -36,8 +36,8 @@
 					</div>
 				</div>
 				<div class="mt-8 p-4 md:p-0 prose prose-neutral prose-invert max-w-full 
-							prose-h2:font-teko prose-h2:text-5xl prose-h2:my-4
-							prose-h3:font-teko prose-h3:text-3xl prose-h3:my-4">
+							prose-h2:font-teko prose-h2:text-5xl prose-h2:my-4 prose-h2:font-medium
+							prose-h3:font-teko prose-h3:text-3xl prose-h3:my-4 prose-h3:font-medium">
 					<ContentRenderer :value="data" />
 				</div>
 			</article>

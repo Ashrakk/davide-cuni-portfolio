@@ -7,7 +7,7 @@
 	src: local("Teko"), url(/fonts/Teko-Light.woff2) format("woff2");
 	font-display:auto;
 	font-style:normal;
-	font-weight:300;
+	font-weight:400;
 	font-stretch:normal;
 	font-display: swap;
 }
@@ -17,7 +17,7 @@
 	src: local("Teko"), url(/fonts/Teko-Regular.woff2) format("woff2");
 	font-display:auto;
 	font-style:normal;
-	font-weight:600;
+	font-weight:500;
 	font-stretch:normal;
 	font-display: swap;
 }
@@ -100,7 +100,7 @@
 	}
 	
 	.custom_flip_card {
-		@apply  rounded-xl text-white text-center text-2xl font-bold font-teko tracking-wide uppercase;
+		@apply  rounded-xl text-white text-center text-2xl font-medium font-teko tracking-wide uppercase;
 	}
 
 	.custom_flip_card {
@@ -138,19 +138,18 @@
 
 	.custom_floating_cta
 	{
-		@apply text-xl text-center fixed z-50 transition-all duration-200 text-black fill-black;
+		@apply text-lg text-center fixed z-50 transition-all duration-200 text-neutral-900 fill-neutral-900;
 		top: 75%;
 		right: calc(-1 * 130px)
 	}
 
 	.custom_floating_cta:hover {
-		right: 0
+		right: 0;
 	}
 
 	.custom_floating_cta > div
 	{
 		@apply flex items-center m-auto bg-amber-400 p-2;
-		text-shadow: 0px 3px 5px #171717;
 		border-radius: 10em 1em 1em 10em;
 	}
 
@@ -161,7 +160,8 @@
 	}
 
 	.mobile_navbar_button {
-		@apply mx-3 my-4 px-3 py-2 block rounded-xl border-b border-l border-amber-400;
+		@apply mx-3 my-4 px-3 py-2 block rounded-xl border-b border-l rounded-br-none border-amber-400;
+		background-color: rgba(251,191,36,0.05);
 	}
 
 }
