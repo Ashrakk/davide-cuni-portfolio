@@ -140,7 +140,7 @@
 	{
 		@apply text-lg text-center fixed z-50 transition-all duration-200 text-neutral-900 fill-neutral-900;
 		top: 75%;
-		right: calc(-1 * 130px)
+		right: calc(-1 * 120px)
 	}
 
 	.custom_floating_cta:hover {
