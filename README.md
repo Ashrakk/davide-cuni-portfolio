@@ -1,4 +1,15 @@
-# Nuxt 3 Davide Cuni Portfolio and Blog Website
+# Davide Cuni Portfolio and Blog Website
+
+## (Live Website)[https://davidecuni.typotek.space/]
+
+## Tech
+
+- Nuxt 3
+- Nuxt Content V2
+- Nuxt UI
+- Nuxt SEO
+- Nuxt Image
+- Nuxt Mail
 
 ## Add Environment Variables
 
