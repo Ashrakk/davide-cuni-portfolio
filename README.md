@@ -1,6 +1,6 @@
 # Davide Cuni Portfolio and Blog Website
 
-## (Live Website)[https://davidecuni.typotek.space/]
+## [Live Website](https://davidecuni.typotek.space/)
 
 ## Tech
 
