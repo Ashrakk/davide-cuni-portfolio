@@ -2,7 +2,7 @@
 	<footer class="backdrop-blur">
 		<div class="mx-auto bg-neutral-900 border-t border-neutral-800">
 			<div
-				class="md:flex justify-center content-center md:gap-24 gap-0 py-7 px-2"
+				class="md:flex justify-center content-center md:gap-24 gap-0 py-8 md:py-12 px-2"
 			>
 				<div class="md:my-0 md:px-0 my-4 px-4 md:w-80 w-full">
 					<NuxtPicture
@@ -17,7 +17,7 @@
 					></NuxtPicture>
 				</div>
 				<div
-					class="md:my-0 md:px-0 my-4 px-4 md:w-80 w-full md:text-left text-center"
+					class="md:my-0 md:px-0 my-8 px-4 md:w-80 w-full md:text-left text-center"
 				>
 					<div class="md:text-3xl text-4xl font-teko font-medium my-2">
 						Find me on Social Media
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 				<div
-					class="md:my-0 md:px-0 my-4 px-4 md:w-80 w-full md:text-left text-center"
+					class="md:my-0 md:px-0 my-8 px-4 md:w-80 w-full md:text-left text-center"
 				>
 					<div class="md:text-3xl text-4xl font-teko font-medium my-2">
 						Connect with me
