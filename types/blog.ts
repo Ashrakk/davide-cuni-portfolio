@@ -5,6 +5,7 @@ export interface BlogPost {
 	date: string;
 	description: string;
 	image: string;
+	imageAlign: string;
 	ogImage: string;
 	alt: string;
 	author: string;

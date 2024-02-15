@@ -15,8 +15,7 @@
 							:alt="data.alt"
 							sizes="768px"
 							:img-attrs="{
-								class:
-									'object-cover object-top h-[350px] md:h-[300px] w-full'
+								class: imageAlignment
 							}"
 						/>
 				</div>
@@ -55,6 +54,11 @@
 	);
 
 	if (error.value) navigateTo("/404");
+
+	const imageAlignment = computed(() => {
+		const alignClass = `object-${data.value?.imageAlign ?? ''}`;
+		return `object-cover ${alignClass} h-[350px] md:h-[300px] w-full`;
+	});
 
 	useHead({
 		templateParams: {

@@ -24,6 +24,7 @@
 						:description="article.description"
 						:image="article.image"
 						:og-image="article.ogImage"
+						:image-align="article.imageAlign"
 						:alt="article.alt"
 						:author="article.author"
 						:topic="article.topic"
@@ -36,7 +37,8 @@
 </template>
 
 <script setup lang="ts">
-	import { ref } from "vue";
+	import { sortAndDeduplicateDiagnostics } from "typescript";
+import { ref } from "vue";
 	import { type Pagination } from "~/types/pagination";
 
 	const props = withDefaults(defineProps<Pagination>(), {
@@ -66,6 +68,12 @@
 			.find()
 	);
 
+	//helper function 
+	function parseDate(dateStr: string) {
+		const cleanedDateStr = dateStr.replace(/(\d)(st|nd|rd|th)/, '$1');
+		return new Date(cleanedDateStr);
+	}
+
 	// Check if currentPage changes, swap the data with newData
 	// Also check the direction of the page (next or prev) for the transition
 	watchEffect(async () => {
@@ -79,6 +87,12 @@
 				.limit(props.postsPerPage)
 				.find()
 		);
+
+		//sort by date
+		if (newData && newData.value) {
+			newData.value.sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());
+		}
+
 		if (data !== undefined) {
 			data.value = newData.value;
 		} 

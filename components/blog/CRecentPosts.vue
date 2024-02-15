@@ -8,6 +8,7 @@
 				:description="article.description"
 				:image="article.image"
 				:og-image="article.ogImage"
+				:image-align="article.imageAlign"
 				:alt="article.alt"
 				:author="article.author"
 				:topic="article.topic"

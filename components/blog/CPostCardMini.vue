@@ -36,6 +36,7 @@
 		description: "no-desc",
 		image: "/profilepic.jpg",
 		ogImage: "/profilepic.jpg",
+		imageAlign: "center",
 		alt: "no-alt",
 		author: "Sara Cuni",
 		topic: "",

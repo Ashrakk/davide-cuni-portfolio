@@ -39,6 +39,12 @@ export default defineNuxtConfig({
 	content: {
 		markdown: {
 			anchorLinks: false
+		},
+		highlight: {
+			theme: 'github-dark',
+			lang: [
+				'php'
+			]
 		}
 	},
 

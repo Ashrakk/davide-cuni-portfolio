@@ -50,6 +50,7 @@
 		description: "no-desc",
 		image: "/images/profilepic.jpg",
 		ogImage: "/images/profilepic.jpg",
+		imageAlign: "center",
 		alt: "no-alt",
 		author: "Sara Cuni",
 		topic: "",
