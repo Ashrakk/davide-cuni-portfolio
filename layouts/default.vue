@@ -1,7 +1,9 @@
 <template>
 	<div class="dark bg-neutral-900">
 		<CNavbar />
-		<slot />
+		<main>
+			<slot />
+		</main>
 		<UNotifications />
 		<CFooter />
 	</div>

@@ -23,7 +23,9 @@ export default defineNuxtConfig({
 	
 	// SEO Sitemap
 	sitemap: {
-		strictNuxtContentPaths: true
+		sources: [
+		'/api/__sitemap__/urls',
+		],
 	},
 
 	// Nuxt Image Setup
@@ -104,9 +106,8 @@ export default defineNuxtConfig({
 	nitro: {
 		prerender: {
 			crawlLinks: true,
-			routes: ["/"]
+			routes: ["/", "/about", "/contact"]
 		}
-		//preset: "azure"
 	},
 
 	routeRules: {

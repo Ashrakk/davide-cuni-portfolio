@@ -121,7 +121,7 @@
 <script setup lang="ts">
 	import { ref } from "vue";
 	import { z } from "zod";
-	import type { Form, FormSubmitEvent } from "@nuxt/ui/dist/runtime/types";
+	import type { Form, FormSubmitEvent } from "#ui/types";
 
 	const notify = useToast();
 	const mail = useMail();
