@@ -35,7 +35,7 @@ export default defineNuxtConfig({
 	},
 
 	ui: {
-		icons: ['material-symbols', 'mdi', 'ri', 'ph']
+		//icons: ['material-symbols', 'mdi', 'ri', 'ph']
 	},
 
 	content: {
@@ -43,8 +43,8 @@ export default defineNuxtConfig({
 			anchorLinks: false
 		},
 		highlight: {
-			theme: 'github-dark',
-			lang: [
+			theme: 'github-dark', 
+			langs: [
 				'php'
 			]
 		}
@@ -129,5 +129,6 @@ export default defineNuxtConfig({
 		fallback: "dark",
 	},
 
-	ignore: [".prettierignore", ".gitignore"]
+	ignore: [".prettierignore", ".gitignore"],
+	compatibilityDate: "2025-01-14"
 });
