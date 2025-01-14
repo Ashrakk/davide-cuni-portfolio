@@ -64,7 +64,7 @@
 	const currentPage = ref(1);
 	const postsPerPage = 6;
 	const directory = "blog";
-	const heroPost = "start_coding";
+	const heroPost = "start-coding";
 	const postsSection = ref<HTMLElement | null>(null);
 
 	useSeoMeta({

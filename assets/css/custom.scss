@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .particle_container {
 	height: 100%;
 	width: 100%;
@@ -61,22 +63,22 @@
 
 	@for $i from 1 through $particleCount {
 		&:nth-child(#{$i}) {
-			$circleSize: random($particleWidth);
+			$circleSize: math.random($particleWidth);
 			width: $circleSize + px;
 			height: $circleSize + px;
 
-			$startPositionY: random(10) + 100;
+			$startPositionY: math.random(10) + 100;
 			$framesName: "move-frames-" + $i;
-			$moveDuration: 7000 + random(4000) + ms;
+			$moveDuration: 7000 + math.random(4000) + ms;
 
 			animation-name: #{$framesName};
 			animation-duration: $moveDuration;
-			animation-delay: random(11000) + ms;
+			animation-delay: math.random(11000) + ms;
 
 			@keyframes #{$framesName} {
 				from {
 					transform: translate3d(
-						#{random(100) + vw},
+						#{math.random(100) + vw},
 						#{$startPositionY + vh},
 						0
 					);
@@ -84,15 +86,15 @@
 
 				to {
 					transform: translate3d(
-						#{random(100) + vw},
-						#{- $startPositionY - random(30) + vh},
+						#{math.random(100) + vw},
+						#{- $startPositionY - math.random(30) + vh},
 						0
 					);
 				}
 			}
 
 			.particle_inner {
-				animation-delay: random(4000) + ms;
+				animation-delay: math.random(4000) + ms;
 			}
 		}
 	}
