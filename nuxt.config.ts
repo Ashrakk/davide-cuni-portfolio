@@ -23,10 +23,9 @@ export default defineNuxtConfig({
 	
 	// SEO Sitemap
 	sitemap: {
-		sources: [
-		'/api/__sitemap__/urls',
-		],
+		strictNuxtContentPaths: true,
 	},
+	
 
 	// Nuxt Image Setup
 	image: {
@@ -56,10 +55,10 @@ export default defineNuxtConfig({
 	},
 
 	modules: [
-		"@nuxt/content",
+		"@nuxtjs/seo",
 		"@nuxt/ui",
 		"@nuxt/image",
-		"@nuxtjs/seo",
+		"@nuxt/content",
 		[
 			"nuxt-mail",
 			{

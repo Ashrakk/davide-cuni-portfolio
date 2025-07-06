@@ -9,6 +9,7 @@ alt: Sara Cuni Portfolio Website Home
 author: Davide Cuni
 topic: Portfolio
 readTime: 5 min read
+updatedAt: 2025-07-06
 ---
 
 ## Introduction

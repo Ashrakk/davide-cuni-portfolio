@@ -9,6 +9,7 @@ alt: Berghem Bike Home
 author: Davide Cuni
 topic: Prototype
 readTime: 7 min read
+updatedAt: 2025-07-06
 ---
 
 ## Introduction

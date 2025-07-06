@@ -9,6 +9,7 @@ alt: Coding Without Boundaries, The Playground Approach blog banner image
 author: Davide Cuni
 topic: Inspirational
 readTime: 5 min read
+updatedAt: 2025-07-06
 ---
 ## Introduction
 

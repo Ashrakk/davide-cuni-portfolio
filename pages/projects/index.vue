@@ -97,7 +97,4 @@
 			currentPage.value--;
 		}
 	}
-
-
-
 </script>

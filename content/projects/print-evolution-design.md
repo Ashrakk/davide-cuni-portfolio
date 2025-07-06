@@ -9,6 +9,7 @@ alt: Print Evolution Homepage Design
 author: Davide Cuni
 topic: Design
 readTime: 2 min read
+updatedAt: 2025-07-06
 ---
 
 ## Introduction

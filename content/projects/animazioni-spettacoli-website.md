@@ -9,6 +9,7 @@ alt: Animazioni e Spettacoli Home
 author: Davide Cuni
 topic: Company
 readTime: 5 min read
+updatedAt: 2025-07-06
 ---
 
 ## Introduction
