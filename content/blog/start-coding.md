@@ -2,8 +2,9 @@
 title: Coding Without Boundaries, The Playground Approach
 date: 31st January 2024
 description: Have you ever wondered, how to make a computer program, or just how it works.. but you just haven’t started coding already? Discover the secret to start.
-image: /images/CodingWithoutBoundaries.jpg
-ogImage: /images/CodingWithoutBoundaries.jpg
+image: /images/coding-full.png
+compactImage: /images/coding-compact.png
+ogImage: /images/coding-og.png
 imageAlign: center
 alt: Coding Without Boundaries, The Playground Approach blog banner image 
 author: Davide Cuni

@@ -1,5 +1,129 @@
 @use "sass:math";
 
+.custom-gear
+{
+	animation: spin 4s linear infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+
+.custom-gear-reverse {
+	animation: spin 4s linear infinite reverse;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+
+@keyframes pulse {
+	0% { transform: scale(1); opacity: 0.8; }
+	50% { transform: scale(1.15); opacity: 1; filter: brightness(1.5); }
+	100% { transform: scale(1); opacity: 0.8; }
+}
+    
+@keyframes sway {
+	0% { transform: rotate(1deg); }
+	50% { transform: rotate(-1deg); }
+	100% { transform: rotate(1deg); }
+}
+
+.custom-seo-lamp > g > :nth-child(1),
+.custom-seo-lamp > g > :nth-child(2)
+{
+	animation: sway 6s ease-in-out infinite;
+	transform-origin: top center;
+	transform-box: fill-box;
+}
+
+.custom-seo-lamp > g > circle,
+.custom-seo-lamp > g > path 
+{
+	animation: pulse 2.5s ease-in-out infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+
+/* Apply different delays to each orb */
+.custom-seo-lamp > g:nth-child(3) { animation-delay: 0.8s; }
+.custom-seo-lamp > g:nth-child(4) { animation-delay: 1.2s; }
+.custom-seo-lamp > g:nth-child(5) { animation-delay: 1.6s; }
+.custom-seo-lamp > g:nth-child(6) { animation-delay: 2.0s; }
+.custom-seo-lamp > g:nth-child(7) { animation-delay: 2.4s; }
+.custom-seo-lamp > g:nth-child(8) { animation-delay: 2.7s; }
+.custom-seo-lamp > g:nth-child(9) { animation-delay: 3.0s; }
+.custom-seo-lamp > g:nth-child(10) { animation-delay: 3.2s; }
+
+.custom-keyword,
+.custom-keyword-alt {
+	transform-origin: center;
+	transform-box: fill-box;
+	display: inline-block;
+  	animation: flipX 6s linear infinite, shadowDepth 3s linear infinite;
+  	transform-style: preserve-3d;
+}
+
+.custom-keyword-alt {
+	animation: flipY 6s linear infinite, shadowDepth 3s linear infinite;
+	animation-delay: 1s;
+}
+
+.custom-ux-pointer > path:nth-child(9)
+{
+	transform-style: preserve-3d;
+	transform-origin: center;
+	transform-box: fill-box;
+  	animation: moveCursor 6s ease-in-out infinite;
+}
+
+.custom-ux-pointer > path:nth-child(10)
+{
+	transform-style: preserve-3d;
+	transform-origin: center;
+	transform-box: fill-box;
+	transform: translate(-22px, -7px);
+  	animation: moveCursorClick 6s ease-in-out infinite;
+}
+
+@keyframes shadowDepth {
+  0%, 100% {
+    filter: drop-shadow(0px 0px 1px #000000);
+  }
+  25%, 75% {
+    filter: drop-shadow(0px 0px 1px #636363);
+  }
+  49%, 51% {
+    filter: drop-shadow(3px 3px 3px #636363);
+  }
+}
+
+@keyframes flipX {
+  0%   { transform: rotateX(0deg); }
+  100% { transform: rotateX(360deg); }
+}
+
+@keyframes flipY {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+@keyframes moveCursor {
+  0%   	{ transform: translate(0px, 0px) }
+  25%   { transform: translate(-22px, -7px) scale(0.75); }
+  50% 	{ transform: translate(-22px, -7px) scale(0.75); animation-timing-function: ease-in; }
+  70%   { transform: translate(-7px, 4px) scale(0.80); animation-timing-function: ease-out;}
+  80%  { transform: translate(0px, 0px) scale(1);}
+  100%  { transform: translate(0px, 0px)}
+}
+
+@keyframes moveCursorClick {
+  0%   	{ opacity: 0 }
+  25%   { opacity: 0 }
+  30%   { opacity: 1 }
+  35%   { opacity: 1 }
+  40%   { opacity: 0 }
+  50% 	{ opacity: 0 }
+  75%   { opacity: 0 }
+  100%  { opacity: 0 }
+}
+
 .particle_container {
 	height: 100%;
 	width: 100%;

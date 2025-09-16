@@ -2,19 +2,16 @@
 	<div>
 		<div class="container max-w-screen-lg mx-auto mt-8 mb-24">
 			<h1 class="heading_1 text-center">Projects</h1>
-			<h2 class="heading_3 text-center lg:text-left mt-6 lg:hidden">
-				Featured
-			</h2>
 			<div class="mt-4 lg:mt-12 p-2 lg:p-0">
 				<CPostHero :post="heroPost"/>
 			</div>
 		
 			<span ref="postsSection"></span>
 			
-			<h2 class="heading_3 text-center lg:text-left mt-12">
+			<h2 class="hidden lg:block heading_3 text-left mt-12">
 				Latest
 			</h2>
-			<div class="border border-neutral-800"></div>
+			<div class="hidden lg:block border border-neutral-800"></div>
 			<div class="mt-4 lg:mt-12 p-2 lg:p-0">
 				<CPagination :page="currentPage" :directory="directory" :posts-per-page="postsPerPage"/>
 			</div>

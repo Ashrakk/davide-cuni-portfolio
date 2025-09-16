@@ -17,10 +17,9 @@
 				</div>
 				<div class="flex-1 mt-8 md:mt-0">
 					<div class="text-2xl my-4">
-						Hello! I’m <span class="text-amber-500">Davide</span>
+						Hello! I’m <span class="text-amber-500">Davide Cuni</span>
 						<span class="text-xl">
-							a passionate end-to-end developer, meaning that i take care of projects from start to finish including designing, 
-							development, deployment and marketing.
+							a passionate full-stack engineer, with experience managing the complete lifecycle of software projects, from design to implementation.							
 						</span>
 					</div>
 					<div class="text-xl my-4">
@@ -45,85 +44,61 @@
 			<div class="flex flex-col-reverse lg:flex-row p-4 lg:p-0">
 				<div class="flex-1">
 					<div class="flex flex-row justify-center my-0 md:my-4">
-						<div
-							class="custom_bubble before:hidden md:before:block 
-								before:animate-[spin_3s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+						<CircleIcon
+							custom-class="before:animate-[spin_3s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="C++"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_C></Logo_C>
-								</div>
-								<div>C++</div>
-							</div>
-						</div>
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_3.4s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							<template #default>
+								<Logo_C></Logo_C>
+							</template>
+						</CircleIcon>
+						<CircleIcon
+							custom-class="before:animate-[spin_3.4s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="CSharp"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_CSharp></Logo_CSharp>
-								</div>
-								<div>
-									CSharp
-								</div>
-							</div>
-						</div>
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_3.8s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							<template #default>
+								<Logo_CSharp></Logo_CSharp>
+							</template>
+						</CircleIcon>
+						<CircleIcon
+							custom-class="before:animate-[spin_3.8s_linear_infinite]"
+							icon-wrapper-class="p-1"
+							label="SQL"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-1 flex justify-center items-center">
-									<Logo_SQL></Logo_SQL>
-								</div>
-								<div>
-									SQL
-								</div>
-							</div>
-						</div>
+							<template #default>
+								<Logo_SQL></Logo_SQL>
+							</template>
+						</CircleIcon>
 					</div>
 					<div class="flex flex-row justify-center my-4 xl:pr-44">
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_3.2s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+						<CircleIcon
+							custom-class="before:animate-[spin_3.2s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="Typescript"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_TS></Logo_TS>
-								</div>
-								<div>
-									Typescript
-								</div>
-							</div>
-						</div>
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_3.6s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							<template #default>
+								<Logo_TS></Logo_TS>
+							</template>
+						</CircleIcon>
+						<CircleIcon
+							custom-class="before:animate-[spin_3.6s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="CSS"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_CSS></Logo_CSS>
-								</div>
-								<div>
-									CSS
-								</div>
-							</div>
-						</div>
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							<template #default>
+								<Logo_CSS></Logo_CSS>
+							</template>
+						</CircleIcon>
+						<CircleIcon
+							custom-class="before:animate-[spin_4s_linear_infinite]"
+							label="PHP"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 flex justify-center items-center">
-									<Logo_PHP class="fill-white"></Logo_PHP>
-								</div>
-								<div>
-									PHP
-								</div>
-							</div>
-						</div>
+							<template #default>
+								<Logo_PHP class="fill-white"></Logo_PHP>
+							</template>
+						</CircleIcon>
 					</div>
 				</div>
 				<div class="flex flex-1 max-w-3xl mx-auto">
@@ -134,7 +109,7 @@
 							</h4>
 							<p>
 							I embarked on my programming journey as a youngster, exploring a myriad of languages before 
-							immersing myself in web development over the <b>past four years</b>.
+							immersing myself in web development over the <b>past seven years</b>.
 							</p>
 							<p class="my-4">
 							<b class="text-amber-500">My current objective is</b> a perpetual 
@@ -148,86 +123,62 @@
 			<div class="flex flex-col-reverse lg:flex-row-reverse p-4 lg:p-0 my-0 md:my-8">
 				<div class="flex-1">
 					<div class="flex flex-row justify-center my-0 md:my-4">
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+						<CircleIcon
+							custom-class="before:animate-[spin_4s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="Nuxt 3"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_Nuxt></Logo_Nuxt>
-								</div>
-								<div>
-									Nuxt 3
-								</div>
-							</div>
-						</div>
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							<template #default>
+								<Logo_Nuxt></Logo_Nuxt>
+							</template>
+						</CircleIcon>
+						<CircleIcon
+							custom-class="before:animate-[spin_3.6s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="ASP.NET Core"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_WP></Logo_WP>
-								</div>
-								<div>
-									Wordpress
-								</div>
-							</div>
-						</div>
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							<template #default>
+								<Logo_DotNet></Logo_DotNet>
+							</template>
+						</CircleIcon>
+						<CircleIcon
+							custom-class="before:animate-[spin_3.2s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="Laravel"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_JM></Logo_JM>
-								</div>
-								<div>
-									Joomla
-								</div>
-							</div>
-						</div>
+							<template #default>
+								<Logo_Laravel></Logo_Laravel>
+							</template>
+						</CircleIcon>
 					</div>
 					<div class="flex flex-row justify-center my-4 xl:pl-44">
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+						<CircleIcon
+							custom-class="before:animate-[spin_3.8s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="Wordpress"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_Godot></Logo_Godot>
-								</div>
-								<div>
-									Godot
-								</div>
-							</div>
-						</div>
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							<template #default>
+								<Logo_WP></Logo_WP>
+							</template>
+						</CircleIcon>
+						<CircleIcon
+							custom-class="before:animate-[spin_3.4s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="Photoshop"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_PS></Logo_PS>
-								</div>
-								<div>
-									Photoshop
-								</div>
-							</div>
-						</div>
-						<div
-							class="custom_bubble before:hidden md:before:block  before:animate-[spin_4s_linear_infinite] 
-									md:h-[10.5rem] w-[10.5rem] before:h-40 before:w-40 mx-2"
+							<template #default>
+								<Logo_PS></Logo_PS>
+							</template>
+						</CircleIcon>
+						<CircleIcon
+							custom-class="before:animate-[spin_3s_linear_infinite]"
+							icon-wrapper-class="p-2"
+							label="Illustrator"
 						>
-							<div class="p-2 flex flex-col justify-center items-center">
-								<div class="h-20 w-20 p-2 flex justify-center items-center">
-									<Logo_AI></Logo_AI>
-								</div>
-								<div>
-									Illustrator
-								</div>
-							</div>
-						</div>
+							<template #default>
+								<Logo_AI></Logo_AI>
+							</template>
+						</CircleIcon>
 					</div>
 				</div>
 				<div class="flex-1 flex max-w-3xl mx-auto">
@@ -354,7 +305,7 @@
 									h-48 w-48 before:h-[11.5rem] before:w-[11.5rem] mx-2"
 						>
 							<div class="p-2 flex flex-col items-center">
-								<div class="h-24 w-24 p-2 flex justify-center items-center fill-white">
+								<div class="h-24 w-24 p-2 flex justify-center items-center fill-white enhance">
 									<Icon_Keyword></Icon_Keyword>
 								</div>
 								<div class="w-32">
@@ -370,138 +321,54 @@
 				Soft Skills
 			</h2>
 			<div class="flex justify-center flex-wrap gap-4 md:gap-16 mt-12 md:mt-4">
-				<div class="flex flex-col justify-center">
-					<div class="custom_flip_card">
-						<div class="custom_flip_card_content md:custom_glow">
-							<div class="custom_flip_card_front">
-								<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
-									<Icon_Team></Icon_Team>
-								</div>
-								<div>Team working</div>
-							</div>
-							<div class="custom_flip_card_back p-2">
-								<div class="border-dashed border border-white rounded-md h-full w-full">
-									<div class="h-32 flex flex-col justify-center items-center">
-										<div class="h-16 w-16 flex justify-center items-center fill-white">
-											<Logo_Firm></Logo_Firm>
-										</div>
-									</div>
-									<div>Skill Card</div>
-								</div>
-							</div>
+				<SkillCard>
+					<template #content>
+						<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
+							<Icon_Team></Icon_Team>
 						</div>
-					</div>
-				</div>
-				<div class="flex flex-col justify-center">
-					<div class="custom_flip_card">
-						<div class="custom_flip_card_content md:custom_glow">
-							<div class="custom_flip_card_front">
-								<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
-									<Icon_Comm></Icon_Comm>
-								</div>
-								<div>Communication</div>
-							</div>
-							<div class="custom_flip_card_back p-2">
-								<div class="border-dashed border border-white rounded-md h-full w-full">
-									<div class="h-32 flex flex-col justify-center items-center">
-										<div class="h-16 w-16 flex justify-center items-center fill-white">
-											<Logo_Firm></Logo_Firm>
-										</div>
-									</div>
-									<div>Skill Card</div>
-								</div>
-							</div>
+						<div>Team working</div>
+					</template>
+				</SkillCard>
+				<SkillCard>
+					<template #content>
+						<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
+							<Icon_Comm></Icon_Comm>
 						</div>
-					</div>
-				</div>
-				<div class="flex flex-col justify-center">
-					<div class="custom_flip_card">
-						<div class="custom_flip_card_content md:custom_glow">
-							<div class="custom_flip_card_front">
-								<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
-									<Icon_Project></Icon_Project>
-								</div>
-								<div>Project<br>Management</div>
-							</div>
-							<div class="custom_flip_card_back p-2">
-								<div class="border-dashed border border-white rounded-md h-full w-full">
-									<div class="h-32 flex flex-col justify-center items-center">
-										<div class="h-16 w-16 flex justify-center items-center fill-white">
-											<Logo_Firm></Logo_Firm>
-										</div>
-									</div>
-									<div>Skill Card</div>
-								</div>
-							</div>
+						<div>Communication</div>
+					</template>
+				</SkillCard>
+				<SkillCard>
+					<template #content>
+						<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
+							<Icon_Project></Icon_Project>
 						</div>
-					</div>
-				</div>
-				<div class="flex flex-col justify-center">
-					<div class="custom_flip_card">
-						<div class="custom_flip_card_content md:custom_glow">
-							<div class="custom_flip_card_front">
-								<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
-									<Icon_Decision></Icon_Decision>
-								</div>
-								<div>Decision<br>Making</div>
-							</div>
-							<div class="custom_flip_card_back p-2">
-								<div class="border-dashed border border-white rounded-md h-full w-full">
-									<div class="h-32 flex flex-col justify-center items-center">
-										<div class="h-16 w-16 flex justify-center items-center fill-white">
-											<Logo_Firm></Logo_Firm>
-										</div>
-									</div>
-									<div>Skill Card</div>
-								</div>
-							</div>
+						<div>Project<br>Management</div>
+					</template>
+				</SkillCard>
+				<SkillCard>
+					<template #content>
+						<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
+							<Icon_Decision></Icon_Decision>
 						</div>
-					</div>
-				</div>
-				<div class="flex flex-col justify-center ">
-					<div class="custom_flip_card">
-						<div class="custom_flip_card_content md:custom_glow">
-							<div class="custom_flip_card_front">
-								<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
-									<Icon_Problem></Icon_Problem>
-								</div>
-								<div>Problem<br>Solving</div>
-							</div>
-							<div class="custom_flip_card_back p-2">
-								<div class="border-dashed border border-white rounded-md h-full w-full">
-									<div class="h-32 flex flex-col justify-center items-center">
-										<div class="h-16 w-16 flex justify-center items-center fill-white">
-											<Logo_Firm></Logo_Firm>
-										</div>
-									</div>
-									<div>Skill Card</div>
-								</div>
-							</div>
+						<div>Decision<br>Making</div>
+					</template>
+				</SkillCard>
+				<SkillCard>
+					<template #content>
+						<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
+							<Icon_Problem></Icon_Problem>
 						</div>
-					</div>
-				</div>
-				<div class="flex flex-col justify-center ">
-					<div class="custom_flip_card">
-						<div class="custom_flip_card_content md:custom_glow">
-							<div class="custom_flip_card_front">
-								<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
-									<Icon_Adapt></Icon_Adapt>
-								</div>
-								<div>Adaptability</div>
-							</div>
-							<div class="custom_flip_card_back p-2">
-								<div class="border-dashed border border-white rounded-md h-full w-full">
-									<div class="h-32 flex flex-col justify-center items-center">
-										<div class="h-16 w-16 flex justify-center items-center fill-white">
-											<Logo_Firm></Logo_Firm>
-										</div>
-									</div>
-									<div>Skill Card</div>
-								</div>
-							</div>
+						<div>Problem<br>Solving</div>
+					</template>
+				</SkillCard>
+				<SkillCard>
+					<template #content>
+						<div class="h-32 w-32 p-2 flex justify-center items-center fill-white">
+							<Icon_Adapt></Icon_Adapt>
 						</div>
-					</div>
-				</div>
+						<div>Adaptability</div>
+					</template>
+				</SkillCard>
 			</div>
 			<div class="border border-neutral-800 hidden md:block md:mt-32"></div>
 			<h3 class="heading_3 mt-24 text-center">
@@ -538,11 +405,11 @@
 	import Logo_PS from "~/assets/svg/frameworks/ps.svg?component";
 	import Logo_AI from "~/assets/svg/frameworks/ai.svg?component";
 	import Logo_WP from "~/assets/svg/frameworks/wp-logo-white.svg?component";
-	import Logo_JM from "~/assets/svg/frameworks/joomla.svg?component";
-	import Logo_Godot from "~/assets/svg/frameworks/godot.svg?component";
+	import Logo_Laravel from "~/assets/svg/frameworks/laravel.svg?component";
+	import Logo_DotNet from "~/assets/svg/frameworks/dotNETcore.svg?component";
 
 	import Icon_SEO from "~/assets/svg/marketing/seo.svg?component";
-	import Icon_ECommerce from "~/assets/svg/marketing/commerce.svg?component";
+	import Icon_ECommerce from "~/assets/svg/marketing/commerceFix.svg?component";
 	import Icon_Keyword from "~/assets/svg/marketing/keyword.svg?component";
 	import Icon_UX from "~/assets/svg/marketing/uxui.svg?component";
 
@@ -553,8 +420,10 @@
 	import Icon_Problem from "~/assets/svg/marketing/problem.svg?component";
 	import Icon_Adapt from "~/assets/svg/marketing/adapt.svg?component";
 
-	import Logo_Firm from "~/assets/svg/logo_web_white.svg?component";
 	import CoolArrow from "~/assets/svg/arrow.svg?component";
+	
+	import CircleIcon from "~/components/about/circle-icon.vue";
+	import SkillCard from "~/components/about/skill-card.vue";
 
 	useSeoMeta({
 		title: "About",

@@ -3,6 +3,7 @@ title: Animazioni e Spettacoli
 date: 14th January 2023
 description: Dive into the transformation of an artist association’s website, navigating challenges and redefining the user experience from the ground up.
 image: /images/animaz_home.png
+compactImage: /images/animaz_home.png
 ogImage: /images/animaz_home.png
 imageAlign: top
 alt: Animazioni e Spettacoli Home

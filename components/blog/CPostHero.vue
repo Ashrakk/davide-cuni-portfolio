@@ -22,11 +22,24 @@
 							</div>
 						</div>
 					</div>
-					<div class="lg:max-w-[640px] w-full">
+					<div class="w-full sm:hidden">
+						<NuxtPicture
+							:src="data.compactImage"
+							:alt="data.alt"
+							sizes="600px"
+							loading="lazy"
+							:img-attrs="{
+								class:
+									'object-cover object-top w-full'
+							}"
+						/>
+					</div>
+					<div class="w-full hidden sm:block">
 						<NuxtPicture
 							:src="data.image"
 							:alt="data.alt"
 							sizes="640px"
+							loading="lazy"
 							:img-attrs="{
 								class:
 									'object-cover object-top w-full'

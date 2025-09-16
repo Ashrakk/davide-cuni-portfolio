@@ -4,6 +4,7 @@ date: 21st June 2020
 description: A Bike Sharing prototype project that marked my entry into full stack web development, powered by core web languages. Discover my journey of learning through practice!
 image: /images/berghembike_home.png
 ogImage: /images/berghembike_home.png
+compactImage: /images/berghembike_home.png
 imageAlign: top
 alt: Berghem Bike Home
 author: Davide Cuni

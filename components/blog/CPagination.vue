@@ -18,11 +18,12 @@
 					:key="`article-${props.page}-${article._path}`"
 				>
 					<CPostCard
-						:path="article._path"
-						:title="article.title"
+						:path="article._path!"
+						:title="article.title!"
 						:date="article.date"
 						:description="article.description"
 						:image="article.image"
+						:compact-image="article.compactImage"
 						:og-image="article.ogImage"
 						:image-align="article.imageAlign"
 						:alt="article.alt"
@@ -37,8 +38,8 @@
 </template>
 
 <script setup lang="ts">
-	import { sortAndDeduplicateDiagnostics } from "typescript";
-import { ref } from "vue";
+
+	import { ref } from "vue";
 	import { type Pagination } from "~/types/pagination";
 
 	const props = withDefaults(defineProps<Pagination>(), {
@@ -97,4 +98,5 @@ import { ref } from "vue";
 			data.value = newData.value;
 		} 
 	});
+	
 </script>

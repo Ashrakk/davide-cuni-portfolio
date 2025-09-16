@@ -3,6 +3,7 @@ title: Sara Cuni Portfolio Website
 date: 25th October 2023
 description: Explore my journey of learning Nuxt 3, crafting a sleek portfolio for 2D Artist and Animator, Sara Cuni. Discover the tech stack and features!
 image: /images/sara_home.png
+compactImage: /images/sara_home.png
 ogImage: /images/sara_home.png
 imageAlign: top
 alt: Sara Cuni Portfolio Website Home

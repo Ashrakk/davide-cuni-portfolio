@@ -45,7 +45,6 @@
   
 
 @layer base {
-
 	h1 {
 		@apply text-9xl
 	}
@@ -72,6 +71,7 @@
 }
 
 @layer components {
+
 	.custom_bubble {
 		@apply md:rounded-full flex flex-col items-center justify-center 
 				text-center text-2xl font-teko uppercase tracking-wide;

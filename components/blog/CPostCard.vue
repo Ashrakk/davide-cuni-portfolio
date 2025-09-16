@@ -22,15 +22,28 @@
 							</div>
 						</div>
 					</div>
-					<div class="w-full">
+					<div class="w-full sm:hidden lg:block">
 						<NuxtPicture
-							class="h-[300px]"
-							:src="image"
+							class="lg:h-[300px]"
+							:src="compactImage"
 							:alt="alt"
 							sizes="600px"
+							loading="lazy"
 							:img-attrs="{
 								class:
-									'object-cover object-top h-[300px] w-full'
+									'object-cover object-top lg:h-[300px] w-full'
+							}"
+						/>
+					</div>
+					<div class="w-full hidden sm:block lg:hidden">
+						<NuxtPicture
+							:src="image"
+							:alt="alt"
+							sizes="640px"
+							loading="lazy"
+							:img-attrs="{
+								class:
+									'object-cover object-top w-full'
 							}"
 						/>
 					</div>
@@ -49,6 +62,7 @@
 		date: "no-date",
 		description: "no-desc",
 		image: "/images/profilepic.jpg",
+		compactImage: "/images/profilepic.jpg",
 		ogImage: "/images/profilepic.jpg",
 		imageAlign: "center",
 		alt: "no-alt",

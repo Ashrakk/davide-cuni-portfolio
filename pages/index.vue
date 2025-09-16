@@ -13,7 +13,7 @@
 					<h1 class="text-8xl font-teko z-10">
 						Hello, I'm <span class="text-amber-500">Davide</span>
 					</h1>
-					<h2 class="text-7xl font-teko z-10">I'm an <span class="custom_text_glow">End-to-End Developer</span></h2>
+					<h2 class="text-7xl font-teko z-10">I'm a <span class="custom_text_glow">Full Stack Engineer</span></h2>
 					<h3 class="text-2xl font-teko z-10">
 						// and this is my portfolio website
 					</h3>

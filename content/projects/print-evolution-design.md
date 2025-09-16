@@ -3,6 +3,7 @@ title: Print Evolution Design
 date: 7th April 2022
 description: A unique high-fidelity web design highlighting premium printing services for customers and local businesses, made with Figma and Photoshop
 image: /images/printevolution_logo.png
+compactImage: /images/printevolution_logo.png
 ogImage: /images/printevolution_logo.png
 imageAlign: center
 alt: Print Evolution Homepage Design

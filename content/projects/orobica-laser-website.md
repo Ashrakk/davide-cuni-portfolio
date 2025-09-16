@@ -3,6 +3,7 @@ title: Orobica Laser
 date: 5th August 2023
 description: A simple, user-friendly website made with WordPress to showcase laser engraving services offered by Orobica Laser, a company located in northern Italy.
 image: /images/orobica_home.png
+compactImage: /images/orobica_home.png
 ogImage: /images/orobica_home.png
 imageAlign: top
 alt: Orobica Laser Home

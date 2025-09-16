@@ -10,7 +10,7 @@
 
     import type { PropType } from 'vue';
     import type { ButtonVariant } from '@nuxt/ui/dist/runtime/types';
-import { variants } from '#tailwind-config';
+    import { variants } from '#tailwind-config';
 
     const props = defineProps({
         url: {
