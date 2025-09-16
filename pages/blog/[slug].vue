@@ -7,29 +7,10 @@
 				>
 					{{ data.title }}
 				</h1>
-
-				<div class="w-full mt-4 mb-4 sm:hidden">
-						<NuxtPicture
-							:src="data.compactImage"
-							:alt="data.alt"
-							sizes="600px"
-							loading="lazy"
-							:img-attrs="{
-								class: imageAlignment + ' object-cover object-top w-full h-auto'
-							}"
-						/>
-				</div>
-				<div class="w-full mt-4 mb-4 hidden sm:block">
-						<NuxtPicture
-							:src="data.image"
-							:alt="data.alt"
-							sizes="768px"
-							loading="lazy"
-							:img-attrs="{
-								class: imageAlignment + ' object-cover object-top w-full !h-auto'
-							}"
-						/>
-				</div>
+				<!--PICTURES-->
+				<CHeroImage
+					:data="data"
+				/>
 				<div class="text-center text-sm p-4 md:p-0 text-[#d4d4d4]">{{ data.description }}</div>
 				<div class="grid grid-cols-2 gap-2 md:gap-4 md:flex md:flex-row md:justify-center md:items-center mt-8 px-4">
 					<div class="flex flex-row items-center md:justify-center pl-2 md:pl-0">
