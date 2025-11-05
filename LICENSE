@@ -1,20 +1,19 @@
 # Licenses
 
-Different licenses apply to parts of this portfolio and blog.
+Different licenses apply to this project.
 
-## Blog posts and articles
+## Proprietary Content
 
 Unless otherwise noted, the following applies to all:
 
-- Blog posts and their content and text
-- Photos
-- Graphics,
-- Presentations
-- Other media and assets
+- All files under content/
+- All files under public/ (except fonts)
+- All copywriting (including under the `pages/` directory)
+- assets/logo-white.svg
+- assets/logo.svg
 
-Proprietary, Copyright (c) 2024 Davide Cuni (Ashrakk). All rights reserved.
+Proprietary, Copyright (c) 2024-2026 Davide Cuni (Ashrakk). All rights reserved.
 
-## Code
+## Code and rest of the files
 
-davide-cuni-portfolio © 2024 by Davide Cuni (Ashrakk) is licensed under CC BY-NC-SA 4.0 
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+davide-cuni-portfolio © 2024-2026 by Davide Cuni (Ashrakk) is licensed under [https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en](CC BY-NC-SA 4.0)

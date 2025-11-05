@@ -1,7 +1,9 @@
 ---
 title: Orobica Laser
+description: "A simple, user-friendly website made with WordPress to showcase laser engraving services offered by Orobica Laser, a company located in northern Italy."
 date: 5th August 2023
-description: A simple, user-friendly website made with WordPress to showcase laser engraving services offered by Orobica Laser, a company located in northern Italy.
+publishedAt: 2023-08-05
+updatedAt: 2026-04-25
 image: /images/orobica_home.png
 compactImage: /images/orobica_home.png
 ogImage: /images/orobica_home.png
@@ -10,49 +12,59 @@ alt: Orobica Laser Home
 author: Davide Cuni
 topic: Company
 readTime: 3 min read
-updatedAt: 2025-07-06
 ---
 
-## Introduction
+## Overview
 
-**Orobica Laser** is a local company in my area in northern Italy. I offered my assistance to make their website mobile responsive and up to date
+**Orobica Laser** is a local company based in northern Italy that offers laser engraving and custom production services for other businesses.
 
-The target audience of their services is mainly other local businesses (**B2B**), the purpose of the website is to show all their available services and funnel the business requests through a contact form or a phone call.
+This project focused on refreshing their website in WordPress, improving mobile responsiveness, and presenting their services in a clearer and more accessible way. The goal was not to build an aggressive marketing machine, but to give the company a solid digital presence that explained what they do and made it easier for the right people to get in touch.
 
-### What do they offer?
+## Context
 
-The company primarily offers various services of laser engraving, they stand out as artists of laser technology as they **pioneered their own techniques** for making unique products.
+The company primarily works in a **B2B** context and had a clear preference: remain intentionally small and manageable rather than expand aggressively through online marketing.
 
-::CImg{src="/images/blog/orobicalaser_servizi.png" alt="Orobica Laser services page introduction"}
+That decision shaped the whole website. In practice, it ruled out a lot of the usual small-business web patterns: no testimonial wall, no exaggerated claims, no forced conversion tactics. The site had to feel simple, credible, and useful, not loud.
+
+### Services
+
+Orobica Laser offers a range of laser engraving services and stands out for techniques they developed internally around their production process, creating custom work that is difficult to replicate.
+
+::DcpImg{src="/images/blog/orobicalaser_servizi.png" alt="Orobica Laser services page introduction"}
 ::
 
-## Design
+## Approach
 
-> The design part went a bit like this
+The design direction was intentionally minimal. I kept the layout straightforward, reduced visual noise, and focused on the parts that actually mattered, like:
 
-Orobica Laser was not interested in getting too much recognition online as they fear to grow too much, rather preferring to stay small so that they don’t have to deal with “*too much work*” or “*growing too much*” so, respecting their preferences I kept the website very basic, deciding to not bloat it with marketing strategies like showing off numbers and showing satisfied customers reviews.
+- making the website mobile responsive
+- keeping the structure simple and easy to navigate
+- creating a clear path for business inquiries through the contact form or phone call
 
-## Conclusion
+This was one of those projects that reminded me a website does not always need to perform like a salesperson. Sometimes it just needs to showcase the core business services and lower the barrier for first contact with a potential customer.
 
-The final result came out as a clean and user-friendly website that embraced the company vision of staying simple, it’s not only a digital presence but a pathway for potential clients to connect easier with Orobica Laser.
+## Result
 
-> Looking ahead, my hope is that one day they will choose to expand their online presence, until then my journey on web development will continue with other projects. Thank you for reading!
+The final website gave Orobica Laser a clean and user-friendly online presence that embraced the company vision. It communicates services clearly, works on all devices, and simplifies communication with potential customers.
 
-### Pages and Features
+It is a simple project, and I mean that in a good way. It solves the right problem without pretending to be something else, which is often harder than adding more features for the sake of it.
+
+### Key Features
+
+Website with a four-page layout
 
 - Home
 - About
 - Services
-- Contact – Form
+- Contact
 
 ### Tech Stack
 
-- Wordpress
+- WordPress
 - Visual Composer
 
 ## Live Site
 
-Check out the live site, it's free!
-::CButton{url="https://www.orobicalaser.com/" icon="i-mdi-web"}
-Check out the Live Site
+::DcpButton{url="https://www.orobicalaser.com/" icon="i-mdi-web"}
+Visit the Live Site
 ::

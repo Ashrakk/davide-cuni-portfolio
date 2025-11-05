@@ -1,7 +1,9 @@
 ---
 title: Berghem Bike
+description: "A bike sharing prototype project that marked my entry into full stack web development, powered by core web languages."
 date: 21st June 2020
-description: A Bike Sharing prototype project that marked my entry into full stack web development, powered by core web languages. Discover my journey of learning through practice!
+publishedAt: 2020-06-21
+updatedAt: 2026-04-23
 image: /images/berghembike_home.png
 ogImage: /images/berghembike_home.png
 compactImage: /images/berghembike_home.png
@@ -10,53 +12,77 @@ alt: Berghem Bike Home
 author: Davide Cuni
 topic: Prototype
 readTime: 7 min read
-updatedAt: 2025-07-06
 ---
 
-## Introduction
+## Overview
 
-Berghem Bike was a project that encouraged my creativity by discovering the
-world of web development during my high school studies.
+**Berghem Bike** was a bike sharing prototype developed during my high school studies in response to a local initiative on urban mobility in Bergamo.
 
-The project centered around Bike Sharing in the city of Bergamo, at the time the city council was asking students to provide prototypes of a website to support a bike sharing initiative in the city.
+Although the assignment was entirely optional, I chose to take it on as an opportunity to learn core web technologies.
 
-Personally, I've worked on this project to learn more about traditional web development relying exclusively on core web languages without resorting to supporting frameworks. Without any underlying infrastructure I had to build everything by myself, learning while doing.
+This project became my first serious step into full stack web development. Without relying on modern frameworks, I built everything from scratch, learning as I went. My goal was to understand what was actually happening under the hood before delegating complexity to abstractions.
 
-### Objectives
+## Objectives
 
-Before delving into the research and design, I established key objectives that I wanted to achieve with this project.
+At the start of the project, I set three goals for myself:
 
-- Working with multiple programming languages and making them talk to each other
-- Creating a reusable frontend framework to manage the UI and interact with the backend using Typescript and CSS
-- Developing a reusable user management system and REST API on PHP using PDO to handle the database
+- Build a working frontend and backend that could communicate reliably
+- Create a reusable UI system using TypeScript and CSS
+- Design a user management system and API layer in PHP with database access through PDO
 
-## Research and Design
+That scope made the project more ambitious than the original assignment, but also much more interesting. It stopped being just a prototype and became a sandbox for figuring out how web applications actually fit together.
 
-At the start of this project I laid out a plan and an architectural framework to guide the development process. minimizing the need for codebase revisions. I gained valuable insights by reading articles and studying the code of similar open source projects, particularly regarding the user management system part, which was uncharted territory for me at the time.
+## Research and Architecture
 
-::CImg{src="/images/blog/berghembike_uml.png" alt="UML Design (Simplified)"}
+Before writing a single line of code, I mapped out the application architecture and backend flow. I spent time reading articles, studying similar open source projects, and sketching a system that could handle requests centrally and delegate them to the appropriate classes.
+
+::DcpImg{src="/images/blog/berghembike_uml.png" alt="UML Design (Simplified)"}
 ::
 
-As depicted in the UML, all requests are routed to actions.php, which then delegates tasks to other backend components as necessary.
+The resulting structure routed all client requests through a central `action.php` layer, which then coordinated user state, validation, and database operations. Looking back, it was an early sign that I was less interested in decorating pages and more interested in building systems, even when those systems were probably more elaborate than strictly necessary.
 
 ## Development
 
 ### User Management System
 
-The User Management System includes all classes, methods and variables related to user interactions with the backend.
+The most substantial part of the project was the user management system. I built a small backend architecture focused on request handling, session validation, and database operations. The flow was coordinated through `action.php`, with the `User` and `DbManager` classes handling user state and database access.
 
-At its core, this system comprises three key classes
+All client requests were funneled through a single entry point, `action.php`. When a user attempted to log in, the action layer would instantiate a `User` object and hand off the credentials:
 
-- Action
-  Manages requests from the frontend by assigning tasks to other backend components, handling user session instantiation and caching.
-- User
-  Manages user session data and methods, performs security checks on incoming data, and interacts with the DbManager for database operations.
-- DbManager
-  Handles all the database operations using PDO
+```php
+# action.php
+$user = new User();
+$result = $user->login($emailusername, $password);
+```
 
-One of the most crucial features of a user management system is **security**. To achieve this, i've implemented various techniques to prevent different kinds of attacks and to protect the users from getting their data stolen.
+From there, the User class would run its own validation before touching the database at all. I didn't want raw user input going anywhere near a query.
 
-In more detail, one such feature i've implemented in the *session timeout*, which closes the session when a signed-in user does not interact with the website for a fixed amount of time, ensuring session security.
+### Security: Finding My Own Solutions
+
+Security was a concern I took seriously even at that stage, probably more than most students would for an optional project. I hadn't taken any formal course on web security, so I relied on documentation, Stack Overflow, and the OWASP authentication guidelines to piece together something reasonable.
+
+#### Backend Validation with Regex
+
+To guard against malicious input, I used regular expressions to screen what users could send to the server. If a string contained unexpected characters, the request was rejected before reaching the database:
+
+```php
+# constants.php
+const REGEX_PASS = '/^[a-zA-Z0-9!@#$%^&*_.~-]+$/';
+
+# user.php
+$result = preg_match(REGEX_PASS, $tmp_passwd);
+
+if(!$result)
+    return INVALID_PASSWORD;
+```
+
+Today I would lean more heavily on a validation library like `symfony/validator` instead of crafting my own validation system, but at the time it made more sense to learn the underlying mechanisms behind validation.
+
+#### Manual Session Timeout
+
+PHP can expire sessions through server-side configuration and garbage collection, but I wanted the application itself to enforce a shorter inactivity window.
+
+I added a manual 10-minute timeout check, so the next request after that period would log the user out, clear session state, and start a fresh session. It was a simple layer, but it reduced the inactivity window and made the logout behavior explicit inside the application code.
 
 ```php
 /*------- SESSION TIMEOUT CHECK -------*/
@@ -79,20 +105,11 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 $_SESSION['LAST_ACTIVITY'] = $session_time;
 ```
 
-Additional security measures come into play when users send payloads of information to the server. The backend must ensure that users access only authorized information by sanitizing client requests to prevent malicious activity, including SQL injection.
+#### Defensive Rate Limiting
 
-To sanitize the requests, I used **regex** (*Regular Expressions*) to detect any forbidden symbols that could be exploited by hackers.
+I also added a small defensive limit around the authentication endpoint. The goal was to reduce repeated login attempts and avoid letting the same session hammer validation and password checks over and over.
 
-```php
-/*------- REGEX CHECK -------*/
-const REGEX_PASS = '/^[a-zA-Z0-9!@#$%^&*_.~-]+$/';
-
-$result = preg_match(REGEX_PASS, $tmp_passwd);
-if(!$result)
-    return INVALID_PASSWORD;
-```
-
-Another security layer I later integrated limits the number of requests made to the server during the login process. This helps prevent both brute-force attempts and ReDoS Attacks, as excessive login requests can overload the server due to the CPU-intensive nature of regex operations.
+The limiter was simple: after too many failed attempts, the login flow returned a temporary error instead of continuing immediately. It was not a complete anti-abuse system, but it was a meaningful first step toward hardening the login flow.
 
 ```php
 /*------- ReDoS PROTECTION -------*/
@@ -115,37 +132,89 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 $_SESSION['LAST_ACTIVITY'] = $_SERVER['REQUEST_TIME'];
 ```
 
-### Frontend
+It was not sophisticated. There was no IP-level blocking, CAPTCHA, or permanent lockout. But it taught me why authentication endpoints need defensive limits, even in small projects.
 
-In crafting the page layout, I established some "standard classes" in CSS, such as columns, spacers, and more, unknowingly creating a super basic framework similar to Tailwind CSS before I discovered it.
+### Frontend: The "Accidental Framework"
 
-The TypeScript code managed responsiveness, modals, and Ajax requests. Given my limited knowledge of CSS media queries at the time, I dynamically swapped row and column classes in TypeScript based on user agents and page width. While this approach may not seem optimal, it served as a valuable exercise in mastering TypeScript!
+In crafting the layout, I established a system of "utility classes" for columns, spacers, and rows. Unknowingly, I was building a rudimentary version of what we now know as **Utility-First CSS** (like Tailwind), before I even knew such frameworks existed.
 
-### Connecting the two together
+#### Programmatic Responsiveness
 
-To facilitate seamless communication, I established standards for both the frontend and backend. Using constants, they shared common error codes understood by both systems.
+The core of the layout was managed by a TypeScript class I called `ResponsiveManager`. At the time, rather than relying solely on CSS media queries, which could feel inconsistent across the fragmented mobile browsers of 2019, I looked to WPBakery for inspiration. I loved how it modularly stacked columns into rows on mobile.
+
+I implemented this system in TypeScript: I determined the type of device via User-Agent and viewport width, then, if a mobile device was detected (or the screen dropped below 800px), the code would physically swap the DOM classes.
+
+```ts
+// responsive.ts
+for (let index = 0; index < this.allColumnsElements?.length; index++) {
+
+    this.allColumnsElements
+        .item(index)
+        .classList.remove(
+        'div_internal_column',
+        'column_width_1e6',
+        'column_width_1e5',
+        'column_width_1e4',
+        'column_width_1e3'
+    );
+
+    this.allColumnsElements.item(index).classList.add('paddingBottom20');
+}
+//ADD flexColumns TO Rows
+for (let index = 0; index < this.allRowElements?.length; index++) {
+    this.allRowElements.item(index).classList.add('flexColumn');
+}
+//REMOVE boxshadow FROM shadowElements
+for (let index = 0; index < this.shadowElements?.length; index++) {
+    this.shadowElements.item(index).classList.remove('boxshadow');
+}
+//ADD modal_content_mobile TO modals
+for (let index = 0; index < this.modals?.length; index++) {
+    this.modals.item(index).classList.add('modal_content_mobile');
+}
+```
+
+While today I would handle this entirely within CSS, this programmatic approach served as a massive deep dive into DOM manipulation and state management. It wasn't just about making the site look good; it was about forcing the browser to follow my specific logic, ensuring a consistent experience regardless of how the CSS was being interpreted.
+
+### Connecting Frontend and Backend
+
+To keep communication clean between the two sides, I defined a shared set of constants: error codes that both PHP and TypeScript understood, and route identifiers the frontend used to make requests.
 
 ```ts
 public static readonly SUCCESS             =  '1';
 public static readonly GENERAL_ERROR       = ' 0';
 public static readonly INVALID_USERNAME    = '-1';
-...
-```
 
-On the frontend, these constants also defined the routes for various queries, which were then used to make requests.
-
-```ts
 /*USER*/
 public static readonly REQUEST_MAP_MARKERS      = 'get_map_data=';
 public static readonly REQUEST_LOGIN_STATUS     = 'check_user=true';
 public static readonly CHECK_PRIVILEGE_STATUS   = 'check_user_privilege=true';
+
 /*DASHBOARD */
 public static readonly REQUEST_OVERVIEW         = 'dashboard=true&overview=true';
-...
-...
+
+// etc..
 ```
 
-Being more familiar with callbacks, I chose to handle the ajax requests using this method, here's a snippet of code from *userhandler.ts* that utilizes the AjaxManager class to request the logout, using a callback function to handle the response.
+All requests went through the `AjaxManager` class, which centralised the XMLHttpRequest logic and accepted a callback to handle the response.
+
+```ts
+/**
+* For all other requests
+* @param callback function to be called after server response
+*/
+public ajax_custom_request(param: string, callback: Function)
+{
+    let xmlRequest = new XMLHttpRequest();
+    let url = 'user_management/action.php';
+    xmlRequest.addEventListener('load', () => { callback(xmlRequest); } );
+    xmlRequest.open('POST', url, true);
+    xmlRequest.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xmlRequest.send(param);
+}
+```
+
+The dashboard's activity page used a two step pattern: one request for the HTML page structure, a second for the actual data returned as XML, which the frontend then parsed to build the table. It was a manual version of what modern data-fetching libraries handle automatically; understanding it at that level made those abstractions a lot less mysterious later.
 
 ```ts
 public submit_logout()
@@ -164,31 +233,30 @@ public submit_logout()
 
 ## Conclusion
 
-This experience marked my entrance into full stack web development. Examining the code now, i can't avoid but noticing how my techniques have changed over time. While I recognize the choices I would make differently with my current knowledge. I also acknowledge the solutions i found at the time, which proved to work.
+Berghem Bike was my first real attempt at building a complete web application rather than a static website. It pushed me to think across the entire stack at once: architecture, validation, session management, API conventions, and the messy contract between frontend and backend.
 
-> I see Berghem Bike as a positive accomplishment, representing my first full-stack website prototype and reflecting my journey of growth and learning.
+None of the solutions here are state of the art. Some of them I would do entirely differently today. But what I'm still glad about is that I reasoned my way to them: reading documentation, studying how attacks work, understanding why a timeout matters or why regex is expensive. I didn't just follow a tutorial and move on. I hit a problem, looked into it properly, and built something that addressed it even if imperfectly.
 
-### Features
+That habit of not skipping the "why" even when the "what" would have been enough is probably the most durable thing this project gave me.
 
-- Session Handling
-- Login and Sign Up System
-- Encrypted Passwords
-- User and Admin dashboard
-- Bike Stations Map & Bike Slots Availability
+Ultimately, the code reflects the stage I was at. Still, I have a lot of affection for this project because many of the aspects of web development I still care about today, such as maintainability, reusable systems, and pragmatic security, started to take shape here.
+
+### Key Features
+
+- Session handling and timeout
+- Login and sign-up flow
+- Password hashing
+- User and admin dashboard
+- Bike stations map and bike slots availability
 
 ### Tech Stack
 
 - PHP
-- Typescript
+- TypeScript
 - CSS
 
-## Live Site
+## Links
 
-Check out the live site, it's open source!
-
-::CButton{url="https://berghem-bike.typotek.space/" icon="i-mdi-web"}
-Check out the Live Site
-::
-::CButton{url="https://github.com/Ashrakk/Berghem_Bike" icon="i-mdi-github" variant="outline"}
-Check out the Source Code
+::DcpButton{url="https://github.com/Ashrakk/Berghem_Bike" icon="i-mdi-github" variant="outline"}
+View the Source Code
 ::

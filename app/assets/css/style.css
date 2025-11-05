@@ -1,0 +1,171 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "@nuxt/ui";
+@source "../../../modules/site-consent/runtime/components";
+@source "../../../modules/site-contact/runtime/components";
+
+:root {
+  --ui-text-muted: var(--ui-color-neutral-300);
+}
+
+@theme static {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  
+  --font-teko: "Teko", "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+}
+
+@utility dcp-text-glow {
+	text-shadow: #f59e0b 1px 0px 7px;
+}
+
+@utility dcp-text-glow-small {
+	text-shadow: #f59e0b 1px 0px 5px;
+}
+
+@utility dcp-glow {
+	box-shadow: 0px 0px 4px 0px rgba(245, 158, 11, 1);
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@layer base {
+
+	body {
+		scroll-behavior: smooth;
+	}
+
+	.font-teko {
+		font-kerning: normal;
+		font-synthesis: none;
+	}
+
+	h1 {
+		@apply text-9xl
+	}
+
+	.text-h1 {
+		@apply text-9xl font-teko dcp-text-glow
+	}
+
+	.text-h2 {
+		@apply text-8xl font-teko dcp-text-glow
+	}
+
+	.text-h3 {
+		@apply text-6xl font-teko dcp-text-glow-small
+	}
+
+	.text-h4 {
+		@apply text-4xl font-teko
+	}
+
+	.text-h5 {
+		@apply text-3xl font-teko
+	}
+}
+
+@layer components {
+
+	.dcp-bubble {
+		@apply md:rounded-full flex flex-col items-center justify-center 
+				text-center text-2xl font-teko uppercase tracking-wide;
+		position: relative;
+		overflow: hidden;
+		z-index: 2;
+	}
+
+	.dcp-bubble::before {
+		content: "";
+		display: block;
+		position: absolute;
+		border: solid 3px transparent;
+		border-radius: 300px;
+		box-shadow: #f59e0b 0px 0px 4px;
+		background-image: linear-gradient(#121212, #121212),
+		radial-gradient(circle at center, #fbbf24, #ea580c);
+		background-origin: border-box;
+		background-clip: content-box, border-box;
+		background-size: 60% 10%;
+		z-index: 1;
+	}
+	
+	.dcp-bubble > div {
+		z-index: 10;
+	}
+	
+	.dcp-flip-card {
+		@apply rounded-xl text-white text-center text-2xl font-medium font-teko tracking-wide uppercase;
+	}
+
+	.dcp-flip-card {
+		height: 210px;
+		width: 152px;
+		position: relative;
+	}
+
+	.dcp-flip-card:hover {
+		@apply relative overflow-visible;
+		perspective: 300px;
+		transform-style: preserve-3d;
+	}
+
+	.dcp-flip-card-content {
+		@apply border-4 border-amber-500 w-full h-full p-2 rounded-xl;
+		transform-style: preserve-3d;
+		transition: transform 0.35s;
+	}
+
+	.dcp-flip-card:hover .dcp-flip-card-content {
+		transform: rotateY(180deg);
+	}
+
+	.dcp-flip-card-front,
+	.dcp-flip-card-back {
+		@apply absolute w-full h-full top-0 left-0 rounded-xl flex flex-col items-center;
+		backface-visibility: hidden;
+		background: #121212;
+	}
+
+	.dcp-flip-card-back {
+		transform: rotateY(180deg);
+	}
+
+	.dcp-floating-cta {
+		@apply fixed z-50 select-none appearance-none;
+		transition: right 0.2s ease;
+		top: 75%;
+		right: calc(-1 * 12ch);
+	}
+
+	.dcp-floating-cta:hover {
+		right: 0px;
+	}
+
+	/* mobile open state driven by Vue */
+	.dcp-floating-cta.mobile-open {
+		right: 0px;
+	}
+
+	.dcp-article-feedback
+	{
+		@apply transition-all duration-300 hover:scale-95 hover:bg-neutral-800
+		border border-amber-400 lg:border-neutral-800 lg:dcp-glow;
+	}
+
+	.dcp-menu-underline {
+		@apply block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-amber-500
+	}
+
+	.dcp-menu-mobile {
+		@apply mx-3 my-4 px-3 py-2 block rounded-xl border-b border-l rounded-br-none border-amber-400;
+		background-color: rgba(251,191,36,0.05);
+	}
+
+}

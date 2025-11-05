@@ -1,7 +1,9 @@
 ---
 title: Sara Cuni Portfolio Website
+description: "Case study for a portfolio website built for a 2D artist and animator, and for my own transition from traditional CMS work to Nuxt 3."
 date: 25th October 2023
-description: Explore my journey of learning Nuxt 3, crafting a sleek portfolio for 2D Artist and Animator, Sara Cuni. Discover the tech stack and features!
+publishedAt: 2023-10-25
+updatedAt: 2026-04-23
 image: /images/sara_home.png
 compactImage: /images/sara_home.png
 ogImage: /images/sara_home.png
@@ -10,56 +12,49 @@ alt: Sara Cuni Portfolio Website Home
 author: Davide Cuni
 topic: Portfolio
 readTime: 5 min read
-updatedAt: 2025-07-06
 ---
 
 ## Introduction
 
-I crafted this website for my sister, Sara, a seasoned 2D Artist and Animator with many years of experience, I offered my assistance in creating a portfolio website to showcase all of her impressive work.
+I crafted this website for my sister, Sara, a seasoned 2D artist and animator with many years of experience. I offered my assistance in creating a portfolio website to showcase all of her impressive work.
 
-This marked my entry into website development using Nuxt 3. Previously, I had experience with more conventional platforms like WordPress, Joomla, and Shopify. Initially, the transition posed a challenge, especially since I was relatively unfamiliar with Vue and Server-Side Rendering (SSR).
+The goal was straightforward: create a professional space to showcase her projects. For me, the project also marked an important technical transition, as it was my first website built with **Nuxt 3** after years of working primarily with platforms such as WordPress, Joomla, and Shopify. Initially, the transition posed a challenge, especially since I was relatively unfamiliar with Vue and Server-Side Rendering (SSR).
 
 ## Why Nuxt?
 
 My motivation for learning Nuxt 3 started from a desire to delve into more contemporary frameworks and tech stacks, steering away from PHP. After thorough research, I boiled down my options to two main contenders: Nuxt 3 and Next.js.
 
-While both frameworks offered similar features, I had to pick one. Next.js is more established and uses React, while Nuxt, based on Vue, is still relatively new, meaning it's not used in as many projects.
+While both frameworks offered similar features, I had to pick one. Next.js was more established and used React, while Nuxt 3 felt a bit more experimental and niche.
 
-I found the simplicity and easier syntax of the Vue ecosystem much better suited for the task, considering the simplicity of the project at hand. I didn't need all the fancy features offered by the Next.js framework. Nuxt still provided very similar features (like SSR) but with an easier learning curve. So, I opted for using Nuxt.
+I chose Nuxt because the project did not require a heavy application layer, and the Vue ecosystem felt like the better fit for a content-driven portfolio website. It offered the features I needed, including server-side rendering, while keeping the development experience approachable enough for a first serious step into that ecosystem.
 
-## The Development Process
+In simpler terms, it felt like the right level of power without picking a fight with the framework on day one.
 
-Learning a framework from scratch is always an adventure and a challenge. To tackle it, I began by writing a Word document, gathering information on all the technologies compatible with Nuxt and exploring similar projects on GitHub to take inspiration from and analyze their code, paving the way for crafting my own code.
+## Approach
 
-### Nuxt Content V2, a Simple and Effective CMS
+A key part of the build was finding a content management approach that remained simple without introducing unnecessary complexity. That led me to **Nuxt Content**, which was a very good match for a portfolio structure made up of reusable content pages and project entries.
 
-My search for effective solutions led me to explore some open source blogs that used a system called Nuxt Content, a File-based CMS system used to create pages using markdown files. It was a perfect fit for my use case as I needed a way of creating various pages to showcase all the projects.
+The development process also involved a fair amount of troubleshooting. Since I was learning the framework while building the project, I spent a lot of time reading documentation, reviewing open source examples, testing integrations, and working through framework-specific issues that were new to me at the time.
 
-> by the way, it's the same system used here!
+There were a few moments where I got properly stuck, the kind where the internet suddenly becomes much less helpful than advertised, but working through those issues taught me far more than a smoother project would have.
 
-### Problems and Troubleshooting
-
-Without a doubt the development wasn't all sunshine and roses, I had to troubleshoot various errors that were completely unknown to the internet and had to dive a bit more into the code to understand what was actually happening. There were three or four occasions where I got stuck for days, facing seemingly impossible problems that no one had encountered before.
-
-That’s the downside of using a framework that’s not as mature as Next.js, However, I managed to always find solutions by dissecting the code bit by bit, performing stunts with NPM, making my own custom fixes and reporting bugs to the community on GitHub. It was quite an experience that led me develop this website using the same technologies.
+That combination of practical needs and technical exploration made the project especially valuable: it had a clear real-world purpose, but it also pushed me into a more modern stack that I would continue using afterward.
 
 ## Conclusion
 
-In the span of about two months, I developed the website and learned more about Vue, Nuxt and TailwindCSS; it was quite a journey into the unknown at first, but i proved to myself that i could move on from older frameworks and languages.
+The final website gave my sister Sara a dedicated online portfolio with a cleaner presentation of her work and a structure tailored to her needs. Just as importantly, it gave me the confidence to move beyond older CMS-based workflows and start building with Nuxt more seriously.
 
-> I hope that this article sparked your interest in exploring new frameworks or even developing your own portfolio website. It’s not easy at first, but once you start, half the work is already done!
+### Key Features
 
-### Pages and Features
-
-- Homepage (Responsive Video Background)
-- Projects page (Pagination System)
-- Contact page (Form & Captcha)
-- About page  
+- Homepage with responsive video background
+- Projects page with pagination
+- Contact page with form and captcha
+- About page
 
 ### Tech Stack
 
 - Nuxt 3
-- Nuxt Content V2
+- Nuxt Content v2
 - Nuxt Mailer
 - Nuxt UI
 - Nuxt SEO
@@ -67,4 +62,6 @@ In the span of about two months, I developed the website and learned more about 
 
 ## Live Site
 
-Online soon!
+::DcpButton{url="https://saracuni.typotek.space/" icon="i-mdi-web"}
+Visit the Live Site
+::
