@@ -72,14 +72,14 @@
 							<span class="sr-only">Davide Cuni Logo</span>
 							<Logo_Firm class="w-12 h-12" />
 						</ULink>
-						<button
-							type="button"
-							class="rounded-md p-2 text-gray-600 inline-flex items-center justify-center bg-white"
+						<UButton
+							variant="ghost"
+							color="white"
 							@click="mobileMenuOpen = false"
 						>
 							<span class="sr-only">Close menu</span>
 							<UIcon name="i-ph-x-bold" class="h-6 w-6" aria-hidden="true" />
-						</button>
+						</UButton>
 					</div>
 				</template>
 				<div class="mt-6 flow-root">
