@@ -7,18 +7,9 @@
 				>
 					{{ data.title }}
 				</h1>
-
-				<div class="w-full mt-4 mb-4">
-						<NuxtPicture
-							class="h-[300px]"
-							:src="data.image"
-							:alt="data.alt"
-							sizes="768px"
-							:img-attrs="{
-								class: imageAlignment
-							}"
-						/>
-				</div>
+				<BlogHeroImage
+					:data="data"
+				/>
 				<div class="text-center text-sm p-4 md:p-0 text-[#d4d4d4]">{{ data.description }}</div>
 				<div class="grid grid-cols-2 gap-2 md:gap-4 md:flex md:flex-row md:justify-center md:items-center mt-8 px-4">
 					<div class="flex flex-row items-center md:justify-center pl-2 md:pl-0">
@@ -67,16 +58,12 @@
 		return value instanceof Date ? value.toISOString() : new Date(value).toISOString();
 	};
 
-	const imageAlignment = computed(() => {
-		const alignClass = `object-${data.value?.imageAlign ?? ''}`;
-		return `object-cover ${alignClass} h-[350px] md:h-[300px] w-full`;
-	});
-
 	const seoData = data.value;
 
 	useArticleSeo({
 		title: seoData?.title ?? '',
 		description: seoData?.description ?? '',
+		documentTitle: seoData?.title ? `${seoData.title} | Project by Davide Cuni` : '',
 		author: seoData?.author,
 		section: 'Projects',
 		image: seoData?.ogImage,
@@ -84,12 +71,11 @@
 		modifiedTime: toIsoDateTime(seoData?.updatedAt),
 	})
 
-	defineOgImageScreenshot({
-		width: 1200,
-		height: 630,
-		delay: 300,
-		colorScheme: 'dark',
-		alt: data.value?.title ? `Screenshot of ${data.value.title}` : 'Screenshot of a Davide Cuni project page'
-	});
-	
+	defineOgImage('Portfolio', {
+		title: seoData?.title ?? 'Project by Davide Cuni',
+		description: seoData?.description ?? 'A web development project by Davide Cuni.',
+		section: 'Project',
+		label: seoData?.topic ?? 'Case study',
+	})
+
 </script>

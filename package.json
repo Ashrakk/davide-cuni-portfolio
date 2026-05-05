@@ -26,10 +26,12 @@
 		"zod": "^4.0.0"
 	},
 	"devDependencies": {
+		"@resvg/resvg-js": "^2.6.2",
 		"@tailwindcss/typography": "^0.5.19",
 		"@types/nodemailer": "^8.0.0",
-		"playwright-core": "^1.59.1",
 		"sass": "^1.70.0",
+		"satori": "^0.26.0",
+		"sharp": "^0.34.5",
 		"typescript": "^5.3.3",
 		"vite-svg-loader": "^5.1.1"
 	}

@@ -2,6 +2,7 @@ export interface ArticleSeoOptions {
 	title: string
 	description: string
 	section: string
+	documentTitle?: string
 	author?: string
 	path?: string
 	image?: string
@@ -30,9 +31,9 @@ export function useArticleSeo(options: ArticleSeoOptions) {
 		: image.startsWith('http')
 			? image
 			: `${siteUrl}${image}`
+	const documentTitle = options.documentTitle || options.title
 
 	useSeoMeta({
-		title: options.title,
 		description: options.description,
 		author: options.author,
 		robots: options.noindex ? 'noindex, nofollow' : 'index, follow',
@@ -53,9 +54,8 @@ export function useArticleSeo(options: ArticleSeoOptions) {
 	})
 
 	useHead({
-		title: options.title,
-		titleTemplate: '%s %separator %section %separator %siteName',
-		templateParams: { section: options.section },
+		title: documentTitle,
+		titleTemplate: '%s',
 		link: [
 			{ rel: 'canonical', href: canonicalUrl },
 		],

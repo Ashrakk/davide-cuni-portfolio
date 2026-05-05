@@ -7,8 +7,7 @@
 				>
 					{{ data.title }}
 				</h1>
-				<!--PICTURES-->
-				<CHeroImage
+				<BlogHeroImage
 					:data="data"
 				/>
 				<div class="text-center text-sm p-4 md:p-0 text-[#d4d4d4]">{{ data.description }}</div>
@@ -59,16 +58,12 @@
 		return value instanceof Date ? value.toISOString() : new Date(value).toISOString();
 	};
 
-	const imageAlignment = computed(() => {
-		const alignClass = `object-${data.value?.imageAlign ?? ''}`;
-		return `object-cover ${alignClass} h-[350px] md:h-[300px] w-full`;
-	});
-
 	const seoData = data.value;
 
 	useArticleSeo({
 		title: seoData?.title ?? '',
 		description: seoData?.description ?? '',
+		documentTitle: seoData?.title ? `${seoData.title} | Davide Cuni Blog` : '',
 		author: seoData?.author,
 		section: 'Blog',
 		image: seoData?.ogImage,
@@ -76,12 +71,11 @@
 		modifiedTime: toIsoDateTime(seoData?.updatedAt),
 	})
 
-	defineOgImageScreenshot({
-		width: 1200,
-		height: 630,
-		delay: 300,
-		colorScheme: 'dark',
-		alt: data.value?.title ? `Screenshot of ${data.value.title}` : 'Screenshot of a Davide Cuni blog article'
-	});
-	
+	defineOgImage('Portfolio', {
+		title: seoData?.title ?? 'Article by Davide Cuni',
+		description: seoData?.description ?? 'A web development article by Davide Cuni.',
+		section: 'Blog',
+		label: seoData?.topic ?? 'Article',
+	})
+
 </script>

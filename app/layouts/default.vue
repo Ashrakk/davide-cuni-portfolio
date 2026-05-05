@@ -1,7 +1,7 @@
 <template>
 	<div class="min-h-screen flex flex-col bg-neutral-900">
 		<LayoutNavbar/>
-		<LayoutFloatingCta
+		<LazyLayoutFloatingCta
 			:excluded-paths="['/contact']"
 			hydrate-on-interaction
 		/>

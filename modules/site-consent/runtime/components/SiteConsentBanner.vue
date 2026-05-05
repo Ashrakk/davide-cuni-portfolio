@@ -2,7 +2,7 @@
 	<div>
 		<div
 			v-if="showBanner"
-			class="fixed bottom-4 left-1/2 z-90 w-[calc(100%-2rem)] max-w-screen-xl -translate-x-1/2 rounded-2xl border border-default bg-default p-5 shadow-2xl"
+			class="fixed bottom-4 left-1/2 z-90 w-[calc(100%-2rem)] max-w-5xl -translate-x-1/2 rounded-2xl border border-default bg-default p-5 shadow-2xl"
 		>
 			<div class="mb-4 flex items-start justify-between gap-4">
 				<div class="flex gap-4 align-middle">

@@ -10,7 +10,7 @@ ogImage: /images/printevolution_logo.png
 imageAlign: center
 alt: Print Evolution Homepage Design
 author: Davide Cuni
-topic: Design
+topic: Case Study
 readTime: 2 min read
 ---
 

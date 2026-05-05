@@ -10,7 +10,7 @@ ogImage: /images/orobica_home.png
 imageAlign: top
 alt: Orobica Laser Home
 author: Davide Cuni
-topic: Company
+topic: Case Study
 readTime: 3 min read
 ---
 

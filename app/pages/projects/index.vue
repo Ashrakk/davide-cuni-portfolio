@@ -62,18 +62,18 @@
 	const postsSection = ref<HTMLElement | null>(null);
 
 	usePageSeo({
-		title: 'Projects',
+		title: 'Project Case Studies',
+		documentTitle: 'Projects | Web Development Case Studies by Davide Cuni',
 		description:
-			'Selected web development and software projects, case studies and full-stack prototypes.',
+			'Explore case studies, web development projects, and scalable application work by a full-stack engineer based in Italy.',
 		image: '/images/this_home.png',
 	})
 
-	defineOgImageScreenshot({
-		width: 1200,
-		height: 630,
-		delay: 300,
-		colorScheme: 'dark',
-		alt: 'Screenshot of the Davide Cuni projects index'
+	defineOgImage('Portfolio', {
+		title: 'Project Case Studies',
+		description: 'Web development projects, case studies, and scalable application work from real builds.',
+		section: 'Projects',
+		label: 'Selected work',
 	})
 
 	const fetchProjectPosts = async () => {

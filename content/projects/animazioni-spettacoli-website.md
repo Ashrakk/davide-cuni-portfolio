@@ -10,7 +10,7 @@ ogImage: /images/animaz_home.png
 imageAlign: top
 alt: Animazioni e Spettacoli Home
 author: Davide Cuni
-topic: Company
+topic: Case Study
 readTime: 5 min read
 ---
 

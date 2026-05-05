@@ -16,6 +16,7 @@
 				To load the Cloudflare Turnstile verification we need your consent to load third-party resources.
 			</p>
 			<UButton
+				type="button"
 				class="mt-4"
 				variant="soft"
 				icon="i-mdi-tune-variant"

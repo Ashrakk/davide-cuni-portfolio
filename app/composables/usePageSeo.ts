@@ -1,6 +1,7 @@
 export interface PageSeoOptions {
 	title: string
 	description: string
+	documentTitle?: string
 	path?: string
 	image?: string
 	noindex?: boolean
@@ -27,9 +28,9 @@ export function usePageSeo(options: PageSeoOptions) {
 			? image
 			: `${siteUrl}${image}`
 	const robots = options.noindex ? 'noindex, nofollow' : 'index, follow'
+	const documentTitle = options.documentTitle || options.title
 
 	useSeoMeta({
-		title: options.title,
 		description: options.description,
 		robots,
 		ogTitle: options.title,
@@ -46,6 +47,8 @@ export function usePageSeo(options: PageSeoOptions) {
 	})
 
 	useHead({
+		title: documentTitle,
+		titleTemplate: '%s',
 		link: [
 			{ rel: 'canonical', href: canonicalUrl },
 		],

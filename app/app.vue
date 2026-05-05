@@ -12,7 +12,6 @@ import "~/assets/css/custom.scss";
 import SiteConsentBanner from '~~/modules/site-consent/runtime/components/SiteConsentBanner.vue'
 
 useHead({
-	titleTemplate: '%s %separator %siteName',
 	htmlAttrs: {
 		lang: 'en'
 	}

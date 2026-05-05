@@ -25,18 +25,18 @@
 
 <script lang="ts" setup>
 	usePageSeo({
-		title: 'Full Stack Engineer',
+		title: 'Davide Cuni',
+		documentTitle: 'Davide Cuni | Full-Stack Engineer Portfolio',
 		description:
-			"Selected web projects, case studies, technical writing, and full-stack development work.",
+			'Full-stack engineer building modern websites and scalable web applications based in Italy.',
 		image: '/images/profilepic.jpg',
 	})
 
-	defineOgImageScreenshot({
-		width: 1200,
-		height: 630,
-		delay: 300,
-		colorScheme: 'dark',
-		alt: 'Screenshot of Davide Cuni portfolio homepage'
+	defineOgImage('Portfolio', {
+		title: 'Davide Cuni',
+		description: 'Full-stack engineer building modern websites and scalable web applications based in Italy.',
+		section: 'Portfolio',
+		label: 'Full-Stack Engineer',
 	})
 
 </script>

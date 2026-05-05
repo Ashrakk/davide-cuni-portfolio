@@ -72,6 +72,7 @@ function isSameConsentState(left: SiteConsentState, right: SiteConsentState) {
 export function useSiteConsent() {
 	const config = getSiteConsentConfig()
 	const cookie = useCookie<SiteConsentState | null>(SITE_CONSENT_COOKIE_NAME, {
+		path: '/',
 		sameSite: 'lax',
 		maxAge: SITE_CONSENT_COOKIE_MAX_AGE,
 		secure: !import.meta.dev,

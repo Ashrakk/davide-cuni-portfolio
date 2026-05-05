@@ -62,18 +62,18 @@
 	const postsSection = ref<HTMLElement | null>(null);
 
 	usePageSeo({
-		title: 'Blog',
+		title: 'Web Development Blog',
+		documentTitle: 'Blog | Web Development Articles by Davide Cuni',
 		description:
-			'Articles about software development, learning to code, career growth, and lessons from real projects.',
+			'Read articles about software development, modern websites, scalable web applications, and lessons from real projects.',
 		image: '/images/jobhunting-og.png',
 	})
 
-	defineOgImageScreenshot({
-		width: 1200,
-		height: 630,
-		delay: 300,
-		colorScheme: 'dark',
-		alt: 'Screenshot of the Davide Cuni blog index'
+	defineOgImage('Portfolio', {
+		title: 'Web Development Blog',
+		description: 'Articles about software development, modern websites, applications, and lessons from real projects.',
+		section: 'Blog',
+		label: 'Technical writing',
 	})
 
 	const fetchBlogPosts = async () => {

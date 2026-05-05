@@ -23,7 +23,7 @@
 						Connect with me
 					</div>
 					<div class="mb-4">
-						If you want to reach out to me for anything, a project or even just
+						If you want to reach out for anything, a project or even just
 						some questions, fill out the contact form and i'll reach you there!
 					</div>
 					<UButton class="my-4" to="/contact" block icon="i-mdi-email-edit-outline" variant="outline">

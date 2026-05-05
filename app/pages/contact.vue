@@ -5,10 +5,10 @@
 			<div class="flex flex-col mt-0 p-4
 						md:flex-row md:mt-20 md:p-0">
 				<div class="flex-1">
-					<h4 class="text-h4 text-center mb-4 md:mt-8">Reach out to me from here!</h4>
+					<h4 class="text-h4 text-center mb-4 md:mt-8">Reach out from here!</h4>
 					<div class="hidden md:block max-w-md mx-auto">
 						<p>Whether you have any questions about my projects, wish to collaborate, propose a business offer, 
-						or simply engage in a conversation, you can reach out to me using this contact form. 
+						or simply engage in a conversation, you can reach out using this contact form. 
 						If you prefer other means of communication, such as Telegram, click below :)</p>
 					</div>
 					<div class="hidden md:flex flex-row justify-center gap-6 mt-6">
@@ -38,7 +38,7 @@
 			</div>
 			<div class="md:hidden p-4">
 				<p>Whether you have any questions about my projects, wish to collaborate, propose a business offer, 
-				or simply engage in a conversation, you can reach out to me using this contact form. 
+				or simply engage in a conversation, you can reach out using this contact form. 
 				If you prefer other means of communication, such as Telegram, click below :)</p>
 				<div class="flex flex-col justify-center gap-4 mt-8">
 					<UButton
@@ -68,18 +68,18 @@
 <script lang="ts" setup>
 
 	usePageSeo({
-		title: 'Contact',
+		title: 'Contact Davide Cuni',
+		documentTitle: 'Contact Davide Cuni | Collaborations and Project Inquiries',
 		description:
-			'Reach out for collaborations, project opportunities, technical questions, or professional conversations.',
+			'Get in touch for collaborations, freelance web projects, and technical inquiries about modern websites and scalable web applications.',
 		image: '/images/profilepic.jpg',
 	})
 
-	defineOgImageScreenshot({
-		width: 1200,
-		height: 630,
-		delay: 300,
-		colorScheme: 'dark',
-		alt: 'Screenshot of the contact page for Davide Cuni'
+	defineOgImage('Portfolio', {
+		title: 'Contact Davide Cuni',
+		description: 'Collaborations, freelance web projects, and technical inquiries for modern web work.',
+		section: 'Contact',
+		label: 'Let\'s build',
 	})
 
 </script>

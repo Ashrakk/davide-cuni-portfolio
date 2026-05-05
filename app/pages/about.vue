@@ -32,7 +32,7 @@
 						</p>
 					</div>
 					<div class="text-center my-12 md:my-8">
-						<UButton to="#skills" class="mx-auto">Skip at my skills</UButton>
+						<UButton to="#skills" class="mx-auto">Explore my skills</UButton>
 					</div>
 				</div>
 			</div>
@@ -421,17 +421,17 @@
 	} from '~/assets/icons/svg.components';
 
 	usePageSeo({
-		title: 'About',
+		title: 'About Davide Cuni',
+		documentTitle: 'About Davide Cuni | Full-Stack Engineer and Web Developer',
 		description:
-			'Learn about a full-stack engineer with a design-minded approach to modern web projects and digital experiences.',
+			'Learn more about a full-stack engineer based in Italy, building modern websites and scalable web applications with a design-minded approach.',
 		image: '/images/profilepic.jpg',
 	})
 
-	defineOgImageScreenshot({
-		width: 1200,
-		height: 630,
-		delay: 300,
-		colorScheme: 'dark',
-		alt: 'Screenshot of the about page for Davide Cuni portfolio'
+	defineOgImage('Portfolio', {
+		title: 'About Davide Cuni',
+		description: 'A full-stack engineer based in Italy, building modern websites with a design-minded approach.',
+		section: 'About',
+		label: 'Engineer profile',
 	})
 </script>

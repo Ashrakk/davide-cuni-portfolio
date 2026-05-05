@@ -152,22 +152,26 @@ export default defineNuxtConfig({
 	ogImage: {
 		enabled: true,
 		zeroRuntime: true,
-		browser: {
-			provider: 'playwright'
-		},
 		compatibility: {
 			prerender: {
-				browser: process.env.NUXT_PREGEN_OG_IMAGE_ENABLE == "true" ? 'playwright' : false
+				satori: 'node',
+				resvg: 'node',
+				browser: false,
+				takumi: false,
 			},
 			runtime: {
-				browser: false
+				satori: false,
+				browser: false,
+				takumi: false,
 			},
 		},
 		defaults: {
 			width: 1200,
 			height: 630,
-			extension: 'png'
-		}
+			extension: 'png',
+			emojis: false,
+		},
+		cacheMaxAgeSeconds: 0,
 	},
 
 	// Nuxt Image Setup
@@ -231,8 +235,6 @@ export default defineNuxtConfig({
 		"/blog": { prerender: true },
 		"/blog/**": { prerender: true },
 		"/_og/s/**": { prerender: true },
-		"/_og/d/**": { prerender: false },
-		"/_og/r/**": { prerender: false },
 		"/api/contact": { prerender: false },
 		"/cookie-policy": { prerender: true },
 		"/privacy-policy": { prerender: true },
