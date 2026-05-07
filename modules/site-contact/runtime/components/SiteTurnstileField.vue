@@ -1,5 +1,5 @@
 <template>
-	<div class="space-y-3">
+	<div v-if="isHydrated" class="space-y-3">
 		<div
 			v-if="shouldShowTurnstile"
 			ref="container"
@@ -26,7 +26,7 @@
 			</UButton>
 		</UCard>
 		<UAlert
-			v-else
+			v-else-if="shouldShowMissingConfig"
 			color="warning"
 			variant="soft"
 			icon="lucide:triangle-alert"
@@ -74,8 +74,9 @@
 	const siteKey = (config.public.siteContact as { turnstileSiteKey?: string } | undefined)?.turnstileSiteKey || ''
 	const canRenderTurnstile = computed(() => consent.value.captcha === true)
 	const isHydrated = ref(false)
-	const shouldShowTurnstile = computed(() => isHydrated.value && canRenderTurnstile.value && Boolean(siteKey))
-	const shouldShowConsentPrompt = computed(() => isHydrated.value && !canRenderTurnstile.value && Boolean(siteKey))
+	const shouldShowTurnstile = computed(() => canRenderTurnstile.value && Boolean(siteKey))
+	const shouldShowConsentPrompt = computed(() => !canRenderTurnstile.value && Boolean(siteKey))
+	const shouldShowMissingConfig = computed(() => !siteKey)
 	const container = ref<HTMLElement | null>(null)
 	const errorMessage = ref('')
 	const widgetId = ref<string | null>(null)
