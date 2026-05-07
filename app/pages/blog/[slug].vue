@@ -42,8 +42,6 @@
 	const route = useRoute();
 
 	const fetchBlogArticle = async () => {
-		if (!import.meta.server) return null;
-
 		return queryCollection("blog")
 			.path(route.path)
 			.first();

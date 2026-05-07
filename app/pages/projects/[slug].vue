@@ -42,8 +42,6 @@
 	const route = useRoute();
 
 	const fetchProjectArticle = async () => {
-		if (!import.meta.server) return null;
-
 		return queryCollection("projects")
 			.path(route.path)
 			.first();

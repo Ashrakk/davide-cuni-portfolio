@@ -1,12 +1,12 @@
 <template>
 	<div class="space-y-3">
 		<div
-			v-if="canRenderTurnstile && siteKey"
+			v-if="shouldShowTurnstile"
 			ref="container"
 			class="min-h-16 rounded-lg border border-default bg-elevated p-2"
 		/>
 		<UCard
-			v-else-if="siteKey"
+			v-else-if="shouldShowConsentPrompt"
 			variant="subtle"
 		>
 			<p class="font-medium text-highlighted">
@@ -73,6 +73,9 @@
 	const { consent, openConsentPreferences } = useSiteConsent()
 	const siteKey = (config.public.siteContact as { turnstileSiteKey?: string } | undefined)?.turnstileSiteKey || ''
 	const canRenderTurnstile = computed(() => consent.value.captcha === true)
+	const isHydrated = ref(false)
+	const shouldShowTurnstile = computed(() => isHydrated.value && canRenderTurnstile.value && Boolean(siteKey))
+	const shouldShowConsentPrompt = computed(() => isHydrated.value && !canRenderTurnstile.value && Boolean(siteKey))
 	const container = ref<HTMLElement | null>(null)
 	const errorMessage = ref('')
 	const widgetId = ref<string | null>(null)
@@ -179,6 +182,7 @@
 	defineExpose({ reset })
 
 	onMounted(() => {
+		isHydrated.value = true
 		void syncWidgetState()
 	})
 

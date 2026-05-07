@@ -193,6 +193,31 @@ export default defineNuxtConfig({
 		fallback: 'dark',
 	},
 
+
+	content: {
+		build: {
+		markdown: {
+			highlight: {
+			langs: [
+					'php',
+					'js',
+					'jsx',
+					'json',
+					'ts',
+					'tsx',
+					'vue',
+					'css',
+					'html',
+					'bash',
+					'md',
+					'mdc',
+					'yaml',
+					]
+				}
+			}
+		}
+	},
+
 	// @nuxt/fonts setup
 	fonts: {
 		defaults: {

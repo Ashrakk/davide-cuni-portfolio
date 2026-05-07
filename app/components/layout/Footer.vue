@@ -83,7 +83,7 @@
 		<div
 			class="mx-auto bg-neutral-900 border-t border-neutral-800 text-center py-4 md:px-0 px-12"
 		>
-			<div>© 2023 Davide Cuni - <NuxtLink to="https://github.com/Ashrakk/davide-cuni-portfolio">Open Source on Github</NuxtLink></div>
+			<div>© 2023-2026 Davide Cuni - <NuxtLink to="https://github.com/Ashrakk/davide-cuni-portfolio">Open Source on Github</NuxtLink></div>
 		</div>
 	</footer>
 </template>
