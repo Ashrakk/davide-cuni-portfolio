@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import svgLoader from 'vite-svg-loader'
 import { createStaticPageSitemapUrls } from './shared/sitemap'
+import { normalizeSiteUrl } from './shared/site'
 
 export default defineNuxtConfig({
 	compatibilityDate: '2026-04-30',
@@ -123,7 +124,7 @@ export default defineNuxtConfig({
 
 	// SEO Schema
 	site: {
-		url: process.env.NUXT_SITE_URL || 'https://davidecuni.typotek.space/',
+		url: normalizeSiteUrl(process.env.NUXT_PUBLIC_SITE_URL),
 		name: "Davide Cuni Portfolio",
 		description: "Portfolio, case studies, and technical writing by Davide Cuni, a full-stack engineer focused on modern web development.",
 		defaultLocale: "en",
@@ -260,7 +261,7 @@ export default defineNuxtConfig({
 	sitemap: {
 		discoverImages: false,
 		urls: () => {
-			const siteUrl = (process.env.NUXT_SITE_URL || 'https://davidecuni.typotek.space').replace(/\/$/, '')
+			const siteUrl = normalizeSiteUrl(process.env.NUXT_PUBLIC_SITE_URL)
 			return createStaticPageSitemapUrls(siteUrl)
 		},
 	},

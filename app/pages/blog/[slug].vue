@@ -80,12 +80,4 @@
 		publishedTime: seoData?.publishedAt,
 		modifiedTime: toIsoDateTime(seoData?.updatedAt),
 	})
-
-	defineOgImage('Portfolio', {
-		title: seoData?.title ?? 'Article by Davide Cuni',
-		description: seoData?.description ?? 'A web development article by Davide Cuni.',
-		section: 'Blog',
-		label: seoData?.topic ?? 'Article',
-	})
-
 </script>

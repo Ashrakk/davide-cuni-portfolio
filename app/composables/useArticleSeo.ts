@@ -28,9 +28,10 @@ export function useArticleSeo(options: ArticleSeoOptions) {
 		path: options.path,
 		image: options.image,
 	})
-	const documentTitle = options.documentTitle || options.title
+	const documentTitle = options.documentTitle ?? options.title
 	const authorName = options.author?.trim() || DEFAULT_AUTHOR_NAME
 	const keywords = options.keywords?.filter(Boolean)
+	const section = options.section.trim()
 
 	useSeoMeta({
 		description: options.description,
@@ -49,7 +50,7 @@ export function useArticleSeo(options: ArticleSeoOptions) {
 		articleAuthor: [authorName],
 		articlePublishedTime: options.publishedTime,
 		articleModifiedTime: options.modifiedTime,
-		articleSection: options.section,
+		articleSection: section,
 		articleTag: keywords,
 	})
 
@@ -60,19 +61,19 @@ export function useArticleSeo(options: ArticleSeoOptions) {
 
 	const schemaNodes: Array<Record<string, any>> = [
 		defineArticle({
-			'@type': options.schemaType || 'Article',
+			'@type': options.schemaType ?? 'Article',
 			headline: options.title,
 			name: options.title,
 			description: options.description,
 			author: buildAuthorSchema(siteUrl, authorName),
 			datePublished: options.publishedTime,
-			dateModified: options.modifiedTime || options.publishedTime,
+			dateModified: options.modifiedTime ?? options.publishedTime,
 			image: imageUrl,
 			inLanguage: 'en',
 			isAccessibleForFree: true,
 			keywords,
 			url: canonicalUrl,
-			articleSection: options.section,
+			articleSection: [section],
 		}),
 	]
 

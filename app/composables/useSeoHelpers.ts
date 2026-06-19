@@ -1,3 +1,5 @@
+import { DEFAULT_SITE_URL, normalizeSiteUrl, toAbsoluteSiteUrl } from '~~/shared/site'
+
 export interface SeoBreadcrumbItem {
 	name: string
 	item?: string
@@ -8,7 +10,6 @@ interface SeoContextOptions {
 	image?: string
 }
 
-export const DEFAULT_SITE_URL = 'https://davidecuni.typotek.space'
 export const DEFAULT_SITE_NAME = 'Davide Cuni Portfolio'
 export const DEFAULT_OG_IMAGE = '/web-app-manifest-512x512.png'
 export const DEFAULT_AUTHOR_NAME = 'Davide Cuni'
@@ -20,16 +21,10 @@ export function useSeoContext(options: SeoContextOptions = {}) {
 	const route = useRoute()
 	const site = useSiteConfig()
 
-	const siteUrl = (site.url || DEFAULT_SITE_URL).replace(/\/$/, '')
+	const siteUrl = normalizeSiteUrl(site.url || DEFAULT_SITE_URL)
 	const canonicalPath = options.path || route.path
 
-	const toAbsoluteUrl = (value?: string) => {
-		if (!value) return undefined
-		if (value.startsWith('http')) return value
-		if (value.startsWith('/')) return `${siteUrl}${value}`
-
-		return `${siteUrl}/${value}`
-	}
+	const toAbsoluteUrl = (value?: string) => toAbsoluteSiteUrl(siteUrl, value)
 
 	const canonicalUrl = toAbsoluteUrl(canonicalPath) || siteUrl
 	const imageUrl = toAbsoluteUrl(options.image?.trim() || DEFAULT_OG_IMAGE) || `${siteUrl}${DEFAULT_OG_IMAGE}`

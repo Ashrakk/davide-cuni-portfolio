@@ -2,6 +2,13 @@ import { defineContentConfig, defineCollection } from '@nuxt/content'
 import { defineSitemapSchema } from '@nuxtjs/sitemap/content'
 import { z } from 'zod'
 
+interface SitemapEntry {
+  sitemapImages?: string[]
+  ogImage: string
+  updatedAt?: Date
+  publishedAt: string
+}
+
 const createPostSchema = (name: 'blog' | 'projects') => z.object({
   title: z.string(),
   date: z.string(),
@@ -21,25 +28,30 @@ const createPostSchema = (name: 'blog' | 'projects') => z.object({
     z,
     name,
     onUrl: (url, entry) => {
-      const siteUrl = (process.env.NUXT_SITE_URL || 'https://davidecuni.typotek.space').replace(/\/$/, '')
-      const sitemapImages = entry.sitemapImages?.length ? entry.sitemapImages : [entry.ogImage]
-      const imageUrls = Array.from(
-        new Set(
-          sitemapImages.map((image) =>
-            image.startsWith('http')
-              ? image
-              : image.startsWith('/')
-                ? `${siteUrl}${image}`
-                : `${siteUrl}/${image}`
-          )
-        )
-      )
+      const typedEntry = entry as SitemapEntry
+      const siteUrl = process.env.NUXT_PUBLIC_SITE_URL.replace(/\/$/, '')
 
-      if (imageUrls.length > 0) {
-        url.images = imageUrls.map((loc) => ({ loc }))
+      const toAbsoluteImageUrl = (image: string) => {
+        if (image.startsWith('http')) return image
+        if (image.startsWith('/')) return `${siteUrl}${image}`
+
+        return `${siteUrl}/${image}`
       }
 
-      url.lastmod = entry.updatedAt || new Date(entry.publishedAt)
+      const sitemapImages = Array.isArray(typedEntry.sitemapImages) && typedEntry.sitemapImages.length > 0
+        ? typedEntry.sitemapImages
+        : [typedEntry.ogImage]
+      const imageEntries = Array.from(
+        new Set(
+          sitemapImages.map(toAbsoluteImageUrl)
+        )
+      ).map((loc) => ({ loc }))
+
+      if (imageEntries.length > 0) {
+        url.images = imageEntries
+      }
+
+      url.lastmod = typedEntry.updatedAt || new Date(typedEntry.publishedAt)
     }
   })
 })

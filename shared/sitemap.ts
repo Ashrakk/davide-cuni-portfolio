@@ -1,3 +1,5 @@
+import { toAbsoluteSiteUrl } from './site'
+
 export interface StaticSitemapPageImages {
   loc: string
   images: string[]
@@ -34,11 +36,15 @@ export const staticSitemapPageImages: StaticSitemapPageImages[] = [
   }
 ]
 
+export function createSitemapImageEntries(siteUrl: string, images: string[]) {
+  return Array.from(
+    new Set(images.map((image) => toAbsoluteSiteUrl(siteUrl, image)).filter((image): image is string => Boolean(image)))
+  ).map((loc) => ({ loc }))
+}
+
 export function createStaticPageSitemapUrls(siteUrl: string) {
   return staticSitemapPageImages.map((entry) => ({
     loc: entry.loc,
-    images: entry.images.map((image) => ({
-      loc: image.startsWith('http') ? image : `${siteUrl}${image}`
-    }))
+    images: createSitemapImageEntries(siteUrl, entry.images)
   }))
 }
