@@ -7,6 +7,9 @@ updatedAt: 2026-04-25
 image: /images/orobica_home.png
 compactImage: /images/orobica_home.png
 ogImage: /images/orobica_home.png
+sitemapImages:
+  - /images/orobica_home.png
+  - /images/blog/orobicalaser_servizi.png
 imageAlign: top
 alt: Orobica Laser Home
 author: Davide Cuni

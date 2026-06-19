@@ -7,6 +7,11 @@ updatedAt: 2026-04-25
 image: /images/printevolution_logo.png
 compactImage: /images/printevolution_logo.png
 ogImage: /images/printevolution_logo.png
+sitemapImages:
+  - /images/printevolution_logo.png
+  - /images/blog/printevolution_mockup_2.png
+  - /images/blog/printevolution_mockup_1.png
+  - /images/blog/printevolution_desktop.png
 imageAlign: center
 alt: Print Evolution Homepage Design
 author: Davide Cuni

@@ -10,6 +10,7 @@ const createPostSchema = (name: 'blog' | 'projects') => z.object({
   image: z.string(),
   compactImage: z.string().optional(),
   ogImage: z.string(),
+  sitemapImages: z.array(z.string()).optional(),
   imageAlign: z.string(),
   alt: z.string(),
   author: z.string(),
@@ -21,13 +22,23 @@ const createPostSchema = (name: 'blog' | 'projects') => z.object({
     name,
     onUrl: (url, entry) => {
       const siteUrl = (process.env.NUXT_SITE_URL || 'https://davidecuni.typotek.space').replace(/\/$/, '')
-      const imageUrl = entry.ogImage.startsWith('http')
-        ? entry.ogImage
-        : entry.ogImage.startsWith('/')
-          ? `${siteUrl}${entry.ogImage}`
-          : `${siteUrl}/${entry.ogImage}`
+      const sitemapImages = entry.sitemapImages?.length ? entry.sitemapImages : [entry.ogImage]
+      const imageUrls = Array.from(
+        new Set(
+          sitemapImages.map((image) =>
+            image.startsWith('http')
+              ? image
+              : image.startsWith('/')
+                ? `${siteUrl}${image}`
+                : `${siteUrl}/${image}`
+          )
+        )
+      )
 
-      url.images = [{ loc: imageUrl }]
+      if (imageUrls.length > 0) {
+        url.images = imageUrls.map((loc) => ({ loc }))
+      }
+
       url.lastmod = entry.updatedAt || new Date(entry.publishedAt)
     }
   })

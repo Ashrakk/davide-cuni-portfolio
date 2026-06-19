@@ -7,6 +7,9 @@ updatedAt: 2026-04-25
 image: /images/animaz_home.png
 compactImage: /images/animaz_home.png
 ogImage: /images/animaz_home.png
+sitemapImages:
+  - /images/animaz_home.png
+  - /images/blog/animaz_services.png
 imageAlign: top
 alt: Animazioni e Spettacoli Home
 author: Davide Cuni

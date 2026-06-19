@@ -7,6 +7,8 @@ updatedAt: 2026-04-23
 image: /images/sara_home.png
 compactImage: /images/sara_home.png
 ogImage: /images/sara_home.png
+sitemapImages:
+  - /images/sara_home.png
 imageAlign: top
 alt: Sara Cuni Portfolio Website Home
 author: Davide Cuni

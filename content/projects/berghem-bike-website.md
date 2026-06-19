@@ -7,6 +7,9 @@ updatedAt: 2026-04-23
 image: /images/berghembike_home.png
 ogImage: /images/berghembike_home.png
 compactImage: /images/berghembike_home.png
+sitemapImages:
+  - /images/berghembike_home.png
+  - /images/blog/berghembike_uml.png
 imageAlign: top
 alt: Berghem Bike Home
 author: Davide Cuni

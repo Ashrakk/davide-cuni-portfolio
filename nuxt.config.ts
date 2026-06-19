@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import svgLoader from 'vite-svg-loader'
+import { createStaticPageSitemapUrls } from './shared/sitemap'
 
 export default defineNuxtConfig({
 	compatibilityDate: '2026-04-30',
@@ -258,6 +259,10 @@ export default defineNuxtConfig({
 
 	sitemap: {
 		discoverImages: false,
+		urls: () => {
+			const siteUrl = (process.env.NUXT_SITE_URL || 'https://davidecuni.typotek.space').replace(/\/$/, '')
+			return createStaticPageSitemapUrls(siteUrl)
+		},
 	},
 
 	routeRules: {

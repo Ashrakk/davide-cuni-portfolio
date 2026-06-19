@@ -7,6 +7,8 @@ updatedAt: 2026-04-28
 image: /images/coding-full.png
 compactImage: /images/coding-compact.png
 ogImage: /images/coding-og.png
+sitemapImages:
+  - /images/coding-og.png
 imageAlign: center
 alt: "Coding Without Boundaries: The Playground Approach blog banner image"
 author: Davide Cuni
