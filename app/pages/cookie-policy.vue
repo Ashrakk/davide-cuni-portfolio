@@ -29,13 +29,17 @@ const fetchLegalPage = async () => {
 
 const { data, error } = await useAsyncData(`legal-${contentPath}`, fetchLegalPage);
 
-if (error.value || !data.value) navigateTo('/404');
+if (error.value || !data.value) {
+	throw createError({
+		statusCode: 404,
+		statusMessage: 'Page not found'
+	})
+}
 
 usePageSeo({
 	title: data.value?.title ?? 'Cookie Policy',
 	description:
 		data.value?.description ??
 		'Cookie policy for davidecuni.typotek.space covering consent preferences, analytics cookies, and Cloudflare Turnstile.',
-	noindex: true,
 });
 </script>

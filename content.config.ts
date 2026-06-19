@@ -1,7 +1,8 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content'
+import { defineSitemapSchema } from '@nuxtjs/sitemap/content'
 import { z } from 'zod'
 
-const postSchema = z.object({
+const createPostSchema = (name: 'blog' | 'projects') => z.object({
   title: z.string(),
   date: z.string(),
   publishedAt: z.string(),
@@ -14,7 +15,22 @@ const postSchema = z.object({
   author: z.string(),
   topic: z.string(),
   readTime: z.string(),
-  updatedAt: z.coerce.date().optional()
+  updatedAt: z.coerce.date().optional(),
+  sitemap: defineSitemapSchema({
+    z,
+    name,
+    onUrl: (url, entry) => {
+      const siteUrl = (process.env.NUXT_SITE_URL || 'https://davidecuni.typotek.space').replace(/\/$/, '')
+      const imageUrl = entry.ogImage.startsWith('http')
+        ? entry.ogImage
+        : entry.ogImage.startsWith('/')
+          ? `${siteUrl}${entry.ogImage}`
+          : `${siteUrl}/${entry.ogImage}`
+
+      url.images = [{ loc: imageUrl }]
+      url.lastmod = entry.updatedAt || new Date(entry.publishedAt)
+    }
+  })
 })
 
 export default defineContentConfig({
@@ -26,12 +42,12 @@ export default defineContentConfig({
     blog: defineCollection({
       type: 'page',
       source: 'blog/**/*.md',
-      schema: postSchema
+      schema: createPostSchema('blog')
     }),
     projects: defineCollection({
       type: 'page',
       source: 'projects/**/*.md',
-      schema: postSchema
+      schema: createPostSchema('projects')
     })
   }
 })

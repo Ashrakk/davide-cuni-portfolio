@@ -39,6 +39,8 @@
 </template>
 
 <script setup lang="ts">
+	import { toIsoDateTime } from '~/composables/useSeoHelpers'
+
 	const route = useRoute();
 
 	const fetchBlogArticle = async () => {
@@ -49,12 +51,12 @@
 
 	const { data, error } = await useAsyncData(`blog-${route.path}`, fetchBlogArticle);
 
-	if (error.value) navigateTo("/404");
-
-	const toIsoDateTime = (value: Date | string | undefined) => {
-		if (!value) return undefined;
-		return value instanceof Date ? value.toISOString() : new Date(value).toISOString();
-	};
+	if (error.value || !data.value) {
+		throw createError({
+			statusCode: 404,
+			statusMessage: 'Article not found'
+		})
+	}
 
 	const seoData = data.value;
 
@@ -64,7 +66,17 @@
 		documentTitle: seoData?.title ? `${seoData.title} | Davide Cuni Blog` : '',
 		author: seoData?.author,
 		section: 'Blog',
+		schemaType: 'BlogPosting',
 		image: seoData?.ogImage,
+		imageAlt: seoData?.alt,
+		keywords: seoData?.topic ? [seoData.topic] : undefined,
+		breadcrumb: seoData?.title
+			? [
+				{ name: 'Home', item: '/' },
+				{ name: 'Blog', item: '/blog' },
+				{ name: seoData.title },
+			]
+			: undefined,
 		publishedTime: seoData?.publishedAt,
 		modifiedTime: toIsoDateTime(seoData?.updatedAt),
 	})

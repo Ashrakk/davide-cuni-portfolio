@@ -60,17 +60,21 @@
 	const postsPerPage = 6;
 	const heroPost = "this-website";
 	const postsSection = ref<HTMLElement | null>(null);
+	const pageTitle = 'Project Case Studies';
+	const pageDescription = 'Explore case studies, web development projects, and scalable application work by a full-stack engineer based in Italy.';
 
 	usePageSeo({
-		title: 'Project Case Studies',
+		title: pageTitle,
 		documentTitle: 'Projects | Web Development Case Studies by Davide Cuni',
-		description:
-			'Explore case studies, web development projects, and scalable application work by a full-stack engineer based in Italy.',
+		description: pageDescription,
 		image: '/images/this_home.png',
+		keywords: ['Case Studies', 'Web Development Projects', 'Nuxt', 'Vue', 'Full-Stack Engineering'],
 	})
 
+	const { canonicalUrl, toAbsoluteUrl } = useSeoContext()
+
 	defineOgImage('Portfolio', {
-		title: 'Project Case Studies',
+		title: pageTitle,
 		description: 'Web development projects, case studies, and scalable application work from real builds.',
 		section: 'Projects',
 		label: 'Selected work',
@@ -112,6 +116,41 @@
 
 		return remainingPosts.slice(start, start + postsPerPage);
 	});
+	const visiblePosts = computed(() =>
+		heroArticle.value ? [heroArticle.value, ...paginatedPosts.value] : paginatedPosts.value
+	);
+
+	useSchemaOrg([
+		defineWebPage({
+			'@type': 'CollectionPage',
+			name: pageTitle,
+			description: pageDescription,
+			inLanguage: 'en',
+			url: canonicalUrl,
+		}),
+		defineBreadcrumb({
+			itemListElement: buildBreadcrumbListItems([
+				{ name: 'Home', item: '/' },
+				{ name: 'Projects' },
+			], toAbsoluteUrl),
+		}),
+		defineItemList({
+			name: 'Selected projects',
+			description: 'Recent case studies and project breakdowns from portfolio work.',
+			numberOfItems: visiblePosts.value.length,
+			itemListOrder: 'Descending',
+			itemListElement: visiblePosts.value.map((post, index) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				item: {
+					'@type': 'Article',
+					name: post.title,
+					description: post.description,
+					url: toAbsoluteUrl(post.path),
+				},
+			})),
+		}),
+	])
 
 	// Calculate number of totalPages
 	watchEffect(() => {

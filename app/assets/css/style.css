@@ -69,6 +69,10 @@
 	.text-h5 {
 		@apply text-3xl font-teko
 	}
+
+	p {
+		@apply leading-normal
+	}
 }
 
 @layer components {

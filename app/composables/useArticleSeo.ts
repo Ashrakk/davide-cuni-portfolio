@@ -1,3 +1,11 @@
+import type { SeoBreadcrumbItem } from './useSeoHelpers'
+import {
+	DEFAULT_AUTHOR_NAME,
+	buildAuthorSchema,
+	buildBreadcrumbListItems,
+	useSeoContext,
+} from './useSeoHelpers'
+
 export interface ArticleSeoOptions {
 	title: string
 	description: string
@@ -6,58 +14,75 @@ export interface ArticleSeoOptions {
 	author?: string
 	path?: string
 	image?: string
+	imageAlt?: string
+	keywords?: string[]
+	breadcrumb?: SeoBreadcrumbItem[]
+	schemaType?: 'Article' | 'BlogPosting'
 	noindex?: boolean
 	publishedTime?: string
 	modifiedTime?: string
 }
 
-const DEFAULT_SITE_URL = 'https://davidecuni.typotek.space'
-const DEFAULT_SITE_NAME = 'Davide Cuni Portfolio'
-const DEFAULT_OG_IMAGE = '/web-app-manifest-512x512.png'
-
 export function useArticleSeo(options: ArticleSeoOptions) {
-	const route = useRoute()
-	const site = useSiteConfig()
-
-	const siteUrl = (site.url || DEFAULT_SITE_URL).replace(/\/$/, '')
-	const siteName = site.name || DEFAULT_SITE_NAME
-	const canonicalPath = options.path || route.path
-	const canonicalUrl = canonicalPath.startsWith('http')
-		? canonicalPath
-		: `${siteUrl}${canonicalPath}`
-	const image = options.image?.trim()
-	const imageUrl = !image
-		? `${siteUrl}${DEFAULT_OG_IMAGE}`
-		: image.startsWith('http')
-			? image
-			: `${siteUrl}${image}`
+	const { canonicalUrl, imageUrl, siteUrl, toAbsoluteUrl } = useSeoContext({
+		path: options.path,
+		image: options.image,
+	})
 	const documentTitle = options.documentTitle || options.title
+	const authorName = options.author?.trim() || DEFAULT_AUTHOR_NAME
+	const keywords = options.keywords?.filter(Boolean)
 
 	useSeoMeta({
 		description: options.description,
-		author: options.author,
+		author: authorName,
+		keywords: keywords?.join(', '),
 		robots: options.noindex ? 'noindex, nofollow' : 'index, follow',
-		ogTitle: options.title,
+		ogTitle: documentTitle,
 		ogDescription: options.description,
 		ogType: 'article',
-		ogSiteName: siteName,
-		ogLocale: 'en_US',
-		ogUrl: canonicalUrl,
 		ogImage: imageUrl,
+		ogImageAlt: options.imageAlt,
 		twitterCard: 'summary_large_image',
-		twitterTitle: options.title,
+		twitterTitle: documentTitle,
 		twitterDescription: options.description,
 		twitterImage: imageUrl,
-		articleAuthor: options.author ? [options.author] : undefined,
+		articleAuthor: [authorName],
 		articlePublishedTime: options.publishedTime,
 		articleModifiedTime: options.modifiedTime,
+		articleSection: options.section,
+		articleTag: keywords,
 	})
 
 	useHead({
 		title: documentTitle,
 		titleTemplate: '%s',
-		link: [
-			{ rel: 'canonical', href: canonicalUrl },
-		],
 	})
+
+	const schemaNodes: Array<Record<string, any>> = [
+		defineArticle({
+			'@type': options.schemaType || 'Article',
+			headline: options.title,
+			name: options.title,
+			description: options.description,
+			author: buildAuthorSchema(siteUrl, authorName),
+			datePublished: options.publishedTime,
+			dateModified: options.modifiedTime || options.publishedTime,
+			image: imageUrl,
+			inLanguage: 'en',
+			isAccessibleForFree: true,
+			keywords,
+			url: canonicalUrl,
+			articleSection: options.section,
+		}),
+	]
+
+	if (options.breadcrumb?.length) {
+		schemaNodes.push(
+			defineBreadcrumb({
+				itemListElement: buildBreadcrumbListItems(options.breadcrumb, toAbsoluteUrl),
+			})
+		)
+	}
+
+	useSchemaOrg(schemaNodes)
 }

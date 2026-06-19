@@ -129,6 +129,11 @@ export default defineNuxtConfig({
 		identity: {
 			type: "Person",
 			name: "Davide Cuni",
+			image: "/images/profilepic.jpg",
+			jobTitle: "Full-Stack Engineer",
+			sameAs: [
+				"https://www.linkedin.com/in/davide-cuni",
+			],
 		},
 		indexable: true,
 	},
@@ -249,6 +254,10 @@ export default defineNuxtConfig({
 
 	linkChecker: {
 		excludeLinks: ["https://www.linkedin.com/in/davide-cuni"]
+	},
+
+	sitemap: {
+		discoverImages: false,
 	},
 
 	routeRules: {

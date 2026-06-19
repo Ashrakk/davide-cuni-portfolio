@@ -125,7 +125,7 @@
 						<AboutCircleIcon
 							custom-class="before:animate-[spin_4s_linear_infinite]"
 							icon-wrapper-class="p-2"
-							label="Nuxt 3"
+							label="Nuxt 4"
 						>
 							<template #default>
 								<SvgFrameworksNuxt class="size-full" />
@@ -134,19 +134,19 @@
 						<AboutCircleIcon
 							custom-class="before:animate-[spin_3.6s_linear_infinite]"
 							icon-wrapper-class="p-2"
-							label="ASP.NET Core"
+							label="Vue 3"
 						>
 							<template #default>
-								<SvgFrameworksDotnet class="size-full" />
+								<SvgFrameworksVue class="size-full" />
 							</template>
 						</AboutCircleIcon>
 						<AboutCircleIcon
 							custom-class="before:animate-[spin_3.2s_linear_infinite]"
 							icon-wrapper-class="p-2"
-							label="Laravel"
+							label="ASP.NET Core"
 						>
 							<template #default>
-								<SvgFrameworksLaravel class="size-full" />
+								<SvgFrameworksDotnet class="size-full" />
 							</template>
 						</AboutCircleIcon>
 					</div>
@@ -163,10 +163,10 @@
 						<AboutCircleIcon
 							custom-class="before:animate-[spin_3.4s_linear_infinite]"
 							icon-wrapper-class="p-2"
-							label="Photoshop"
+							label="Figma"
 						>
 							<template #default>
-								<SvgToolsPs class="size-full" />
+								<SvgToolsFigma class="size-full" />
 							</template>
 						</AboutCircleIcon>
 						<AboutCircleIcon
@@ -369,6 +369,14 @@
 					</template>
 				</AboutSkillCard>
 			</div>
+			<!--
+			<div class="border border-neutral-800 mt-12 md:mt-32"></div>
+			<h2 class="text-h2 mt-16 mb-4 md:mt-24 md:mb-12 text-center">
+				Latest Projects
+			</h2>
+			<div>
+			</div>
+			-->
 			<div class="border border-neutral-800 hidden md:block md:mt-32"></div>
 			<h3 class="text-h3 mt-24 text-center">
 				Shaping Digital Experiences with Passion
@@ -397,7 +405,7 @@
 	import {
 		SvgContentArrow,
 		SvgFrameworksDotnet,
-		SvgFrameworksLaravel,
+		SvgFrameworksVue,
 		SvgFrameworksNuxt,
 		SvgFrameworksWpLogoWhite,
 		SvgMarketingAdapt,
@@ -417,7 +425,7 @@
 		SvgProgrammingSqlLogo,
 		SvgProgrammingTsLogo128,
 		SvgToolsAi,
-		SvgToolsPs,
+		SvgToolsFigma,
 	} from '~/assets/icons/svg.components';
 
 	usePageSeo({

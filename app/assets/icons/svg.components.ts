@@ -9,10 +9,12 @@ export { default as SvgProgrammingCssLogo } from './programming/css-logo.svg'
 export { default as SvgProgrammingPhpLogo } from './programming/php-logo.svg'
 
 export { default as SvgFrameworksNuxt } from './frameworks/nuxt.svg'
+export { default as SvgFrameworksVue } from './frameworks/vue.svg'
 export { default as SvgFrameworksDotnet } from './frameworks/dotnet.svg'
-export { default as SvgFrameworksLaravel } from './frameworks/laravel.svg'
+//export { default as SvgFrameworksLaravel } from './frameworks/laravel.svg'
 export { default as SvgFrameworksWpLogoWhite } from './frameworks/wp-logo-white.svg?skipsvgo'
 
+export { default as SvgToolsFigma } from './tools/figma.svg'
 export { default as SvgToolsPs } from './tools/ps.svg'
 export { default as SvgToolsAi } from './tools/ai.svg'
 
